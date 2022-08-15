@@ -23,6 +23,8 @@ module.exports = {
         "workflow-section": "url('../public/workflow-background.svg')",
         "avatar-background": "url('../public/avatar-background.svg')",
         "our-works": "url('../public/our-works.svg')",
+        "about-us": "url('../public/about-us.svg')",
+        "how-we-work": "url('../public/how-we-work-background.svg')",
         hearth: "url('../public/hearth.svg')",
       },
     },
