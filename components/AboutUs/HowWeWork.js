@@ -3,10 +3,9 @@ import Link from "next/link";
 
 const HowWeWork = () => {
   return (
-    <section>
-      <div className="bg-how-we-work min-h-[250px] bg-center bg-no-repeat"></div>
-      <div className="bg-beige pb-14">
-        <div className="container mx-auto -mt-[120px]">
+    <section className="bg-how-we-work bg-top bg-[length:200%] bg-no-repeat lg:pt-[150px] pt-[50px]">
+      <div className="bg-beige">
+        <div className="container mx-auto bg-how-we-work-buddy bg-[center_bottom_0px] bg-no-repeat pb-[320px]">
           <div className="text-center text-white">
             <h2 className="lg:text-[40px] text-[24px] font-bold text-black">
               How we work
@@ -43,7 +42,7 @@ const HowWeWork = () => {
 
           <div className="mt-8 text-center">
             <Link href="/">
-              <button className="bg-orange mt-3 text-white text-base rounded-full py-[18px] px-6 font-extrabold min-w-[250px] w-auto">
+              <button className="bg-orange mt-3 text-white text-base rounded-full py-[18px] lg:px-6 px-10 font-extrabold min-w-[250px] w-auto">
                 Become Member
               </button>
             </Link>

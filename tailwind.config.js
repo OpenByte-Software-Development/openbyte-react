@@ -25,6 +25,7 @@ module.exports = {
         "our-works": "url('../public/our-works.svg')",
         "about-us": "url('../public/about-us.svg')",
         "how-we-work": "url('../public/how-we-work-background.svg')",
+        "how-we-work-buddy": "url('../public/how-we-work-buddy.svg')",
         hearth: "url('../public/hearth.svg')",
       },
     },
