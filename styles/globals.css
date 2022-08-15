@@ -57,3 +57,22 @@ body {
     padding-right: 24px;
   }
 }
+
+[type="radio"]:checked:hover {
+  background-color: transparent;
+  border: 2px solid #f94e1e;
+}
+
+[type="checkbox"] {
+  color: #f94e1e;
+}
+
+[type="radio"] {
+  border: 2px solid #f94e1e;
+  color: transparent;
+}
+
+[type="checkbox"],
+[type="radio"]:focus {
+  border: 2px solid #f94e1e !important;
+}

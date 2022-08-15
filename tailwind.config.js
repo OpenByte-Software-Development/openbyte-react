@@ -16,6 +16,9 @@ module.exports = {
       },
       backgroundImage: {
         noise: "url('../public/noise.svg')",
+        "select-icon": "url('../public/icons/arrow.svg')",
+        "radio-icon": "url('../public/icons/radio-background.svg')",
+        "checkbox-icon": "url('../public/icons/checkbox-checkmark.svg')",
         "hero-section": "url('../public/hero-background.svg')",
         "hero-wave": "url('../public/hero-wave.svg')",
         "cta-background": "url('../public/cta-background.svg')",
@@ -30,10 +33,13 @@ module.exports = {
       },
     },
     screens: {
-      lg: "1200px",
+      lg: "1184px",
     },
     colors: {
       orange: "#F94E1E",
+      "pale-orange": "#FEEDE9",
+      red: "#FF756C",
+      "pale-red": "#FFF2F1",
       beige: "#FFFAF6",
       yellow: "#FFD27C",
       white: "#FFFFFF",
