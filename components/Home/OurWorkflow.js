@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 // Images
 import workflow1 from "../../public/workflow-1.svg";

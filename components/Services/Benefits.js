@@ -59,7 +59,12 @@ const Benefits = () => {
           </div>
         </div>
       </div>
-      <div className="bg-benefits bg-no-repeat bg-[center_top_0px] min-w-full h-[84px]"></div>
+      <svg viewBox="0 0 1920 84">
+        <path
+          d="M0 4C0 4 387.5 84 960 84C1532.5 84 1920 4 1920 4V-381.5H960H0V4Z"
+          fill="#323232"
+        />
+      </svg>
     </section>
   );
 };

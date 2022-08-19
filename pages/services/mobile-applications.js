@@ -8,13 +8,12 @@ import {
   PreviousExperience,
 } from "../../components/Services/index";
 import {
-  WebFeatures,
-  BuildingExperience,
-} from "../../components/Services/WebDevelopment/index";
-import TechStack from "../../components/Services/TechStack";
-import SocialNetworks from "../../components/SocialNetworks";
+  ApplicationTypes,
+  MobileAppAdvantages,
+} from "../../components/Services/MobileApps/index";
 import { PriceEstimationCta, ContactFormCta } from "../../components/cta/index";
 import Faq from "../../components/Faq";
+import TechStack from "../../components/Services/TechStack";
 import {
   node,
   laravel,
@@ -23,51 +22,46 @@ import {
   mysql,
   mongo,
   aws,
-  react,
-  vue,
-  next,
-  tailwindcss,
   stripe,
   digitalOcean,
   googleCloud,
+  reactNative,
+  firebase,
 } from "../../lib/icons";
 
-// Images
-import WebDevelopmentHero from "../../public/web-development.svg";
+// Image
+import mobileAppsHero from "../../public/mobile-apps-hero.svg";
 
 const HERO_PROPS = {
-  title: "Web Development Services",
+  title: "Mobile Application Development",
   description:
-    "We have a wide experience in building awesome products in many industries using the latest tech stack technologies in order to deliver fast and stable applications.",
-  src: WebDevelopmentHero,
-  alt: "Web Development",
+    "We help you choose the best tech-stack for your mobile application taking into account your budget, idea and your audience.",
+  src: mobileAppsHero,
+  alt: "Mobile Application Development",
 };
 
 const FAQS = [
   {
-    question: "Which tech stack is the best for my product?",
+    question: "What are cross-platform mobile application means?",
     answer:
-      "We recommend starting development with the most stable and popular frameworks that are on the market simply because it’s much easier to maintain the project because of the availability of developers that knows these frameworks.",
+      "This is an approach that allows developers to build a mobile solution that is simultaneously compatible with several operating systems and platforms (Android, iOS).",
   },
   {
-    question: "What’s included in web development services?",
-    answer: "We usually follow these steps for each new project:",
-    bullets: [
-      "We gather all necessary information from customer.",
-      "Building a prototype using UX/UI wireframes.",
-      "Building actual design and getting your approval before development.",
-      "Building your product by using tech-stack we approved together.",
-      "Make your website go live.",
-    ],
+    question: "Why using React-Native for mobile development?",
+    answer:
+      "First of all because of cross-platform compatibility, which means one code base covers Android/IOS OS. That speeds development time and reduces the costs simply because are used the same language(Javascript).",
   },
   {
-    question: "What I get after product is done?",
-    answer:
-      "Basically, we gave everything that is related to our experience with you and your projects, below is listed what is included.",
+    question:
+      "What are benefits by using React-Native instead of native mobile apps?",
+    answer: "Here are listed some of most common benefits.",
     bullets: [
-      "Codebase & access to your repository.",
-      "Project documentation.",
-      "Credentials to all third-party services.",
+      "Cross-platform compatibility",
+      "Reusable code and pre-built components",
+      "Coding in a familiar programming language",
+      "Hot and Live Reloading",
+      "Rich UI",
+      "Reduced costs",
     ],
   },
 ];
@@ -94,24 +88,19 @@ const TECH_STACK = {
       },
     ],
   },
-  Frontend: {
-    body: "React and Vue is our favorite frameworks because they are part of almost any of our projects and we succeed to master them at a high level. Be sure that your application is based on a secure foundation.",
+  "Mobile Apps": {
+    body: (
+      <>
+        We use <span className="text-black">react-native</span> for building
+        cross-platform mobile applications and it combines the best parts of
+        native development with React, a best-in-class JavaScript library for
+        building user interfaces.
+      </>
+    ),
     stackIcons: [
       {
-        src: react,
-        name: "REACT.JS",
-      },
-      {
-        src: vue,
-        name: "VUE",
-      },
-      {
-        src: next,
-        name: "NEXT.JS",
-      },
-      {
-        src: tailwindcss,
-        name: "TAILWIND CSS",
+        src: reactNative,
+        name: "REACT NATIVE",
       },
     ],
   },
@@ -129,6 +118,10 @@ const TECH_STACK = {
       {
         src: aws,
         name: "AWS",
+      },
+      {
+        src: firebase,
+        name: "FIREBASE",
       },
     ],
   },
@@ -155,24 +148,20 @@ const TECH_STACK = {
   },
 };
 
-const WebDevelopment = () => {
+const MobileApplications = () => {
   return (
     <Layout>
-      <SocialNetworks />
       <ServicesHero {...HERO_PROPS} />
-      <IndustryExpertise
-        title="Our Industry expertise"
-        tags={["Consulting", "Finance", "Technology", "HR"]}
-      />
+      <IndustryExpertise title="Our Industry expertise" tags={["Technology"]} />
       <section className="relative">
         <PriceEstimationCta />
         <div className="bg-light-black absolute top-0 left-0 min-h-[50%] min-w-full -z-10"></div>
       </section>
-      <WebFeatures />
-      <BuildingExperience /> 
+      <ApplicationTypes />
+      <MobileAppAdvantages />
       <TechStack
         title="What tech-stack we’re using?"
-        description="We create responsive web applications using the latest tech-stack to help you focus on your business."
+        description="We rely on the most advanced and trustworthy solutions that completely address your business needs."
         techStack={TECH_STACK}
       />
       <CommunicationChannels />
@@ -180,7 +169,7 @@ const WebDevelopment = () => {
       <Benefits />
       <PreviousExperience />
       <div className="relative">
-        <ContactFormCta title="Ready to start your next project?" />
+        <ContactFormCta title="Still not sure if you need a mobile app?" />
         <div className="bg-beige absolute bottom-0 left-0 min-h-[50%] min-w-full -z-10"></div>
       </div>
       <Faq faqs={FAQS} />
@@ -188,4 +177,4 @@ const WebDevelopment = () => {
   );
 };
 
-export default WebDevelopment;
+export default MobileApplications;

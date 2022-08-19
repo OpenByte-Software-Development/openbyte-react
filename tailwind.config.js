@@ -36,6 +36,7 @@ module.exports = {
         "how-we-work": "url('../public/how-we-work-background.svg')",
         "how-we-work-buddy": "url('../public/how-we-work-buddy.svg')",
         "how-we-work-services": "url('../public/how-we-work-services.svg')",
+        "mobile-apps-background": "url('../public/mobile-apps-background.svg')",
         benefits: "url('../public/benefits-background.svg')",
         dots: "url('../public/dots-background.svg')",
         hearth: "url('../public/hearth.svg')",

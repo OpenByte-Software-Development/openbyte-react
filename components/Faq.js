@@ -9,29 +9,35 @@ import arrowDown from "../public/icons/arrow.svg";
 const FaqItem = ({ question, answer, bullets }) => {
   return (
     <Disclosure
-      className=" w-full max-w-[800px] border-2 border-black rounded-2xl relative"
+      className=" w-full max-w-[800px] border-2 border-black rounded-2xl"
       as="div"
     >
       {({ open }) => (
         <>
-          <Disclosure.Button
-            className={`relative p-8 bg-opacity-0 cursor-pointer bg-transparent ${
-              open ? "border-b-2 border-black" : ""
-            }`}
-            as="div"
-          >
-            <div className="flex justify-between items-center">
-              <span className="text-2xl font-bold leading-7">{question}</span>
-              <Image
-                src={arrowDown}
-                alt="open disclosure button"
-                className={`duration-75 ${
-                  open ? "rotate-180 origin-center duration-75" : ""
+          <div className="relative">
+            <div>
+              <Disclosure.Button
+                className={`relative p-8 bg-opacity-0 cursor-pointer bg-transparent z-30 ${
+                  open ? "border-b-2 border-black" : ""
                 }`}
-              />
+                as="div"
+              >
+                <div className="flex justify-between items-center">
+                  <span className="text-2xl font-bold leading-7">
+                    {question}
+                  </span>
+                  <Image
+                    src={arrowDown}
+                    alt="open disclosure button"
+                    className={`duration-75 ${
+                      open ? "rotate-180 origin-center duration-75" : ""
+                    }`}
+                  />
+                </div>
+              </Disclosure.Button>
             </div>
             <div className="bg-yellow absolute -top-2 -right-2 rounded-2xl min-w-[100%] min-h-[100%] -z-10"></div>
-          </Disclosure.Button>
+          </div>
           <Transition
             show={open}
             enter="transition duration-100 ease-out"
@@ -57,7 +63,7 @@ const FaqItem = ({ question, answer, bullets }) => {
 
 const Faq = ({ faqs }) => {
   return (
-    <section className="py-28">
+    <section className="py-28 z-10">
       <div className="container mx-auto lg:mt-36 my-14">
         <h2 className="font-bold text-4xl text-center">FAQ</h2>
         <div className="flex flex-col items-center gap-8 mt-7">
