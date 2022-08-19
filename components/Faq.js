@@ -1,24 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Image from "next/image";
-import { FAQS } from "../../lib/constants";
 import { Disclosure, Transition } from "@headlessui/react";
+import BulletPoints from "./BulletPoints";
 
 // Images
-import arrowDown from "../../public/icons/arrow.svg";
-import faqBullet from "../../public/icons/faq-bullet.svg";
-
-const FaqItemBullets = ({ bullets }) => {
-  return (
-    <ul className="flex flex-col gap-4 mt-4">
-      {bullets.map((bulletText) => (
-        <li key={bulletText} className="flex items-center">
-          <Image src={faqBullet} alt="bullet icon" />
-          <span className="ml-4">{bulletText}</span>
-        </li>
-      ))}
-    </ul>
-  );
-};
+import arrowDown from "../public/icons/arrow.svg";
 
 const FaqItem = ({ question, answer, bullets }) => {
   return (
@@ -60,7 +46,7 @@ const FaqItem = ({ question, answer, bullets }) => {
               as="div"
             >
               {answer}
-              {Array.isArray(bullets) && <FaqItemBullets bullets={bullets} />}
+              {Array.isArray(bullets) && <BulletPoints bullets={bullets} />}
             </Disclosure.Panel>
           </Transition>
         </>
@@ -69,13 +55,13 @@ const FaqItem = ({ question, answer, bullets }) => {
   );
 };
 
-const Faq = () => {
+const Faq = ({ faqs }) => {
   return (
-    <section>
+    <section className="py-28">
       <div className="container mx-auto lg:mt-36 my-14">
         <h2 className="font-bold text-4xl text-center">FAQ</h2>
         <div className="flex flex-col items-center gap-8 mt-7">
-          {FAQS.map((faq, index) => {
+          {faqs.map((faq, index) => {
             return <FaqItem {...faq} key={index} />;
           })}
         </div>

@@ -1,44 +1,9 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import { CLIENTS_REVIEWS } from "../../lib/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperNavigation from "../SwiperNavigation";
+import Review from "../Review";
 import "swiper/css";
-
-// Images
-import defaultAvatar from "../../public/default-review-avatar.png";
-
-const Review = ({ avatar, name, company, position, review, clutchReview }) => (
-  <div className="pl-2 pb-2">
-    <div className="border-2 border-white rounded-3xl relative p-8">
-      <div className="flex gap-4 items-center">
-        <div className="bg-avatar-background bg-no-repeat bg-center p-2 flex justify-center items-center">
-          <Image src={defaultAvatar} alt={`${name}'s avatar`} />
-        </div>
-
-        <div>
-          <span className="text-base text-light-black font-bold">{name}</span>
-          <div>
-            <span className="text-orange text-xs font-semibold">{company}</span>{" "}
-            <span className="text-light-black text-xs font-semibold">
-              {position}
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div className="mt-[20px]">
-        <p className="font-lato text-light-black text-lg leading-7">{review}</p>
-      </div>
-
-      <div className="mt-8">
-        {/* // TODO: replace with actual clutch review */}
-        <Image src={clutchReview} alt="clutch review" />
-      </div>
-      <div className="bg-yellow absolute -bottom-2 -left-2 rounded-3xl min-w-[100%] min-h-[100%] -z-10"></div>
-    </div>
-  </div>
-);
 
 const Testimonials = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);
@@ -70,7 +35,7 @@ const Testimonials = () => {
                 >
                   {CLIENTS_REVIEWS.map((review, index) => (
                     <SwiperSlide key={index}>
-                      <Review {...review} />
+                      <Review {...review} className="border-white" />
                     </SwiperSlide>
                   ))}
                 </Swiper>

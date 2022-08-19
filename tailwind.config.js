@@ -23,12 +23,21 @@ module.exports = {
         "hero-wave": "url('../public/hero-wave.svg')",
         "cta-background": "url('../public/cta-background.svg')",
         "cta-background-mobile": "url('../public/cta-background-mobile.svg')",
+        "building-experience-background":
+          "url('../public/building-experience-background.svg')",
+        "cta-price-estimation-background":
+          "url('../public/cta-price-estimation-background.svg')",
+        "cta-price-estimation-background-mobile":
+          "url('../public/cta-background.svg')",
         "workflow-section": "url('../public/workflow-background.svg')",
         "avatar-background": "url('../public/avatar-background.svg')",
         "our-works": "url('../public/our-works.svg')",
         "about-us": "url('../public/about-us.svg')",
         "how-we-work": "url('../public/how-we-work-background.svg')",
         "how-we-work-buddy": "url('../public/how-we-work-buddy.svg')",
+        "how-we-work-services": "url('../public/how-we-work-services.svg')",
+        benefits: "url('../public/benefits-background.svg')",
+        dots: "url('../public/dots-background.svg')",
         hearth: "url('../public/hearth.svg')",
       },
     },
@@ -53,7 +62,7 @@ module.exports = {
       transparent: "transparent",
     },
     fontFamily: {
-      lato: ["sans-serif", "Lato"],
+      lato: ["Lato", "sans-serif"],
       raleway: ["sans-serif", "Raleway"],
     },
   },

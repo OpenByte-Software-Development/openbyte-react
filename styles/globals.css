@@ -51,6 +51,14 @@ body {
   font-family: "Raleway";
 }
 
+.container {
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  height: auto !important;
+}
+
 @media screen and (max-width: 1199px) {
   .container {
     padding-left: 24px;

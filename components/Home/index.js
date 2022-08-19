@@ -6,7 +6,6 @@ import WorkingModels from "./WorkingModels";
 import OurSkills from "./OurSkills";
 import OurWorks from "./OurWorks";
 import Testimonials from "./Testimonials";
-import Faq from "./Faq";
 
 export {
   Hero,
@@ -16,6 +15,5 @@ export {
   WorkingModels,
   OurSkills,
   OurWorks,
-  Faq,
   Testimonials,
 };

@@ -4,14 +4,16 @@ import Image from "next/image";
 // Images
 import arrowRight from "../../public/icons/arrow-right.svg";
 
-const ContactFormCta = () => {
+const DEFAULT_TITLE = "Want to work with us?";
+
+const ContactFormCta = ({ title = DEFAULT_TITLE }) => {
   return (
     <section className="bg-orange lg:bg-opacity-0">
       <div className="bg-cta-background-mobile bg-right-bottom bg-no-repeat z-20 lg:bg-none">
         <div className="container lg:mx-auto lg:bg-orange bg-none lg:rounded-[30px]">
           <div className="lg:bg-cta-background bg-[right_48px_bottom_0] lg:py-[80px] py-8 lg:px-[96px] bg-no-repeat">
             <h2 className="text-white font-bold lg:leading-[70px] leading-[50px] lg:text-[56px] text-[40px] max-w-[330px] lg:max-w-none">
-              Want to work with us?
+              {title}
             </h2>
 
             <div>

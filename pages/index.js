@@ -7,11 +7,12 @@ import {
   WorkingModels,
   OurSkills,
   OurWorks,
-  Faq,
   Testimonials,
 } from "../components/Home/index";
+import Faq from "../components/Faq";
 import { ContactFormCta } from "../components/cta";
 import SocialNetworks from "../components/SocialNetworks";
+import { FAQS } from "../lib/constants";
 
 const Home = () => {
   return (
@@ -30,7 +31,7 @@ const Home = () => {
       <div className="-mt-[196px]">
         <ContactFormCta />
       </div>
-      <Faq />
+      <Faq faqs={FAQS} />
     </Layout>
   );
 };

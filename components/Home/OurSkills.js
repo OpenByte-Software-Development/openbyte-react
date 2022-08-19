@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import { Tag } from "../OpenbyteUI";
+import TechIcon from "../TechIcon";
 
 // Images
 import reactLogo from "../../public/icons/react.svg";
@@ -35,17 +35,7 @@ const ContainerTemplate = ({ title, children }) => {
   return (
     <div className="border-3 border-black rounded-3xl lg:px-[30px] px-4 lg:py-[25px] py-[32px]">
       <h3 className="text-center font-bold text-4xl">{title}</h3>
-
       <div className="mt-8">{children}</div>
-    </div>
-  );
-};
-
-const Skill = ({ icon, text }) => {
-  return (
-    <div className="text-center flex flex-col justify-between">
-      <Image src={icon} alt={`${text} logo`} />
-      <span className="block mt-[15px] text-orange font-bold">{text}</span>
     </div>
   );
 };
@@ -60,15 +50,15 @@ const OurSkills = () => {
               <div
                 className={`flex flex-wrap lg:flex-nowrap justify-around lg:justify-between gap-10`}
               >
-                {Object.keys(SKILLS_MAP).map((skill) => (
-                  <Skill icon={SKILLS_MAP[skill]} text={skill} key={skill} />
+                {Object.keys(SKILLS_MAP).map((skill, index) => (
+                  <TechIcon src={SKILLS_MAP[skill]} name={skill} key={index} />
                 ))}
               </div>
             </ContainerTemplate>
           </div>
 
           <ContainerTemplate title="Industries">
-            <div className="flex items-center gap-6 flex-wrap justify-start">
+            <div className="flex items-center gap-6 flex-wrap justify-center">
               {industries}
             </div>
           </ContainerTemplate>
