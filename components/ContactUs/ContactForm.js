@@ -20,11 +20,11 @@ const formInitialValues = {
 
 const ContactForm = () => {
   const formSubmitHandle = async (values) => {
-    console.log("first", values);
+    console.log("values", values);
   };
 
   return (
-    <div className="p-8 border-2 border-light-black rounded-[10px] mx-auto bg-white mt-14">
+    <div className="p-8 border-2 border-light-black rounded-[10px] mx-auto bg-white lg:mt-14 mt-[72px]">
       <Formik initialValues={formInitialValues} onSubmit={formSubmitHandle}>
         <Form>
           <div>
@@ -35,7 +35,7 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <div className="grid grid-rows-1 grid-cols-3 gap-8">
+            <div className="grid lg:grid-rows-1 lg:grid-cols-3 grid-rows-3 grid-cols-1 lg:gap-8 gap-6">
               <div>
                 <label
                   htmlFor="firstName"
@@ -47,7 +47,7 @@ const ContactForm = () => {
                   id="firstName"
                   name="firstName"
                   placeholder="Type something here"
-                  className="mt-4 py-[16px] px-4 text-black bg-white rounded-[10px] border-[1.5px] border-pale-orange focus:outline-none focus:border-orange"
+                  className="mt-4 py-4 px-4 text-black bg-white rounded-[10px] border-[1.5px] border-pale-orange focus:outline-none focus:border-orange w-full lg:w-auto"
                 />
               </div>
 
@@ -62,7 +62,7 @@ const ContactForm = () => {
                   id="lastName"
                   name="lastName"
                   placeholder="Type something here"
-                  className="mt-4 py-[16px] px-4 text-black bg-white rounded-[10px] border-[1.5px] border-pale-orange focus:outline-none focus:border-orange"
+                  className="mt-4 py-[16px] px-4 text-black bg-white rounded-[10px] border-[1.5px] border-pale-orange focus:outline-none focus:border-orange w-full lg:w-auto"
                 />
               </div>
 
@@ -78,12 +78,12 @@ const ContactForm = () => {
                   name="email"
                   type="email"
                   placeholder="email@example.com "
-                  className="mt-4 py-[16px] px-4 rounded-[10px] bg-white border-[1.5px] text-black focus:ring-0 focus:border-[1.5px] border-pale-orange focus:border-orange"
+                  className="mt-4 py-[16px] px-4 rounded-[10px] bg-white border-[1.5px] text-black focus:ring-0 focus:border-[1.5px] border-pale-orange focus:border-orange w-full lg:w-auto"
                 />
               </div>
             </div>
 
-            <div className="grid grid-rows-1 grid-cols-3 gap-8 mt-8">
+            <div className="grid lg:grid-rows-1 lg:grid-cols-3 grid-rows-3 grid-cols-1 lg:gap-8 gap-6 mt-8 ">
               <div>
                 <label
                   htmlFor="pnoneNumber"
@@ -95,7 +95,7 @@ const ContactForm = () => {
                   id="pnoneNumber"
                   name="pnoneNumber"
                   placeholder="Type something here"
-                  className="mt-4 py-[16px] px-4 text-black bg-white rounded-[10px] border-[1.5px] border-pale-orange focus:outline-none focus:border-orange"
+                  className="mt-4 py-[16px] px-4 text-black bg-white rounded-[10px] border-[1.5px] border-pale-orange focus:outline-none focus:border-orange  w-full lg:w-auto"
                 />
               </div>
 
@@ -131,7 +131,7 @@ const ContactForm = () => {
                   name="linkedin"
                   type="url"
                   placeholder="Type something here"
-                  className="mt-3 py-[16px] px-4 rounded-[10px] bg-white border-[1.5px] text-black focus:ring-0 focus:border-[1.5px] border-pale-orange focus:border-orange "
+                  className="mt-3 py-[16px] px-4 rounded-[10px] bg-white border-[1.5px] text-black focus:ring-0 focus:border-[1.5px] border-pale-orange focus:border-orange w-full lg:w-auto"
                 />
               </div>
             </div>
@@ -145,7 +145,7 @@ const ContactForm = () => {
             <HorizontalLine />
           </div>
 
-          <div className="grid grid-rows-1 grid-cols-2 gap-6">
+          <div className="grid lg:grid-rows-1 lg:grid-cols-2 grid-rows-2 grid-cols-1 gap-6">
             <div>
               <div
                 id="my-radio-group"
@@ -258,7 +258,7 @@ const ContactForm = () => {
                 <Field
                   type="checkbox"
                   name="conditionsAgree"
-                  className="mr-4 mt-1 rounded-sm checked:bg-checkbox-icon checked:bg-orange bg-center checked:bg-[length:10px_10px] border-2 w-[18px] h-[18px] focus:ring-0 checked:ring-0 focus:ring-offset-0 checked:ring-offset-0"
+                  className="mr-4 mt-1 rounded-[4px] checked:bg-checkbox-icon checked:bg-orange bg-center checked:bg-[length:10px_10px] border-2 w-[18px] h-[18px] focus:ring-0 checked:ring-0 focus:ring-offset-0 checked:ring-offset-0"
                 />
                 <span className="block">
                   I consent that OpenByte can process my personal data for the
