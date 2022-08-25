@@ -28,7 +28,7 @@ module.exports = {
         "cta-price-estimation-background":
           "url('../public/cta-price-estimation-background.svg')",
         "cta-price-estimation-background-mobile":
-          "url('../public/cta-background.svg')",
+          "url('../public/cta-price-estimation-background-mobile.svg')",
         "workflow-section": "url('../public/workflow-background.svg')",
         "avatar-background": "url('../public/avatar-background.svg')",
         "our-works": "url('../public/our-works.svg')",

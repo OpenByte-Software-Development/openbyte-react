@@ -9,7 +9,7 @@ const TechStack = ({ techStack, title, description }) => {
   return (
     <section>
       <div className="bg-beige pt-28 pb-[50px]">
-        <div className="container">
+        <div className="container ">
           <h2 className="text-[40px] font-bold leading-[50px] text-center text-light-black">
             {title}
           </h2>
@@ -21,19 +21,19 @@ const TechStack = ({ techStack, title, description }) => {
             <Image src={buddy} alt="tech buddy" />
           </div>
 
-          <div className="grid grid-rows-2 grid-cols-2 gap-x-[144px] gap-y-16 mt-16">
+          <div className="grid lg:grid-rows-2 lg:grid-cols-2 lg:gap-x-[144px] lg:gap-y-16 lg:mt-16 mt-12">
             {Object.keys(techStack).map((field) => {
               const { body, stackIcons } = techStack[field];
 
               return (
-                <div key={field} className="text-center">
-                  <h3 className="text-black text-2xl font-bold leading-[30px]">
+                <div key={field} className="text-center mt-6">
+                  <h3 className="text-black lg:text-2xl text-[22px] font-bold leading-[30px]">
                     {field}
                   </h3>
-                  <p className="font-lato text-darkGray text-[22px] mt-4  tracking-[0.02em]">
+                  <p className="font-lato text-darkGray lg:text-[22px] text-base mt-4  tracking-[0.02em]">
                     {body}
-                  </p> 
-                  <div className="flex justify-center gap-14 mt-4">
+                  </p>
+                  <div className="flex justify-center lg:gap-14 gap-12 mt-4">
                     {stackIcons.map((technology, index) => {
                       return <TechIcon {...technology} key={index} />;
                     })}

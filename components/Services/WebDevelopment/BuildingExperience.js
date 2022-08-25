@@ -17,12 +17,12 @@ const BUILDING_EXPERIENCE_COLUMNS = [
 
 const BuildingExperience = () => {
   return (
-    <section className="bg-light-black bg-building-experience-background bg-no-repeat bg-[top_48px_right_70px] py-28">
+    <section className="bg-light-black bg-building-experience-background bg-no-repeat lg:bg-[top_48px_right_70px] bg-[top_10px_right_5px] bg-[length:45px_45px] lg:bg-[length:auto_auto] lg:py-28 py-14">
       <div className="container text-white">
-        <h2 className="text-[50px] font-bold leading-[50px] text-center">
+        <h2 className="lg:text-[50px] text-[32px] font-bold leading-[50px] text-center">
           We have experience in building
         </h2>
-        <div className="grid grid-rows-1 grid-cols-3 gap-16 text-left mt-11">
+        <div className="grid lg:grid-rows-1 lg:grid-cols-3 gap-16 lg:text-left text-center mt-11">
           {BUILDING_EXPERIENCE_COLUMNS.map(({ title, body }) => {
             return (
               <div key={title}>

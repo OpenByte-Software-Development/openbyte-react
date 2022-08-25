@@ -4,53 +4,59 @@ import { Bullet } from "../BulletPoints";
 const Benefits = () => {
   return (
     <section>
-      <div className="bg-light-black pt-24 pb-12">
+      <div className="bg-light-black lg:pt-24 lg:pb-12 py-16">
         <div className="container text-white">
-          <h2 className="text-[40px] font-bold leading-[50px] text-center">
+          <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-center">
             Our benefits
           </h2>
           <div className="mt-12 text-white">
-            <div className="flex">
+            <div className="lg:flex">
               <Bullet
                 as="div"
-                className="ml-[170px]"
+                className="lg:ml-[170px] mb-4 lg:mb-0"
                 key={1}
+                light={true}
                 text={"All our talents know English well (B2)"}
               />
               <Bullet
                 as="div"
-                className="ml-[134px]"
+                className="lg:ml-[134px] mb-4 lg:mb-0"
                 key={2}
+                light={true}
                 text={"We’re open, flexible, and adaptive"}
               />
             </div>
-            <div className="flex mt-8">
+            <div className="lg:flex lg:mt-8">
               <Bullet
                 as="div"
-                className="ml-[85px]"
+                className="lg:ml-[85px] mb-4 lg:mb-0"
                 key={3}
+                light={true}
                 text={"We’re in the EU timezone "}
               />
               <Bullet
                 as="div"
-                className="ml-[182px]"
+                className="lg:ml-[182px] mb-4 lg:mb-0"
                 key={4}
+                light={true}
                 text={
                   "We’re continually asking questions (we follow Mental Models)"
                 }
               />
             </div>
-            <div className="mt-8 flex">
+            <div className="lg:mt-8 lg:flex">
               <Bullet
                 as="div"
-                className="ml-[175px]"
+                className="lg:ml-[175px] mb-4 lg:mb-0"
                 key={5}
+                light={true}
                 text={"Our work is transparent and predictable"}
               />
               <Bullet
                 as="div"
-                className="ml-[71px]"
+                className="lg:ml-[71px] mb-4 lg:mb-0"
                 key={6}
+                light={true}
                 text={
                   "We follow quality standards and aim for wide tech certification"
                 }

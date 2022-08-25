@@ -44,19 +44,19 @@ const COMMUNICATION_CHANNELS = [
 
 const CommunicationChannels = () => {
   return (
-    <section className="py-28">
+    <section className="lg:py-28 py-10">
       <div className="container">
-        <h2 className="text-[40px] font-bold leading-[50px] text-center text-light-black">
+        <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-center text-light-black">
           Communication channels we using
         </h2>
         <div
-          className={`grid grid-rows-1 grid-cols-6 gap-10 mt-9`}
+          className={`grid grid-rows-1 lg:grid-cols-6 grid-cols-2 gap-10 mt-9`}
         >
           {COMMUNICATION_CHANNELS.map(({ src, name, description }, index) => {
             return (
               <div key={index} className="">
                 <TechIcon name={name} src={src} />
-                <p className="mt-4 font-lato text-base text-darkGray leading-7 text-center">
+                <p className="mt-4 font-lato lg:text-base text-sm text-darkGray leading-7 text-center">
                   {description}
                 </p>
               </div>

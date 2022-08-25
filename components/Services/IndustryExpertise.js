@@ -6,12 +6,32 @@ import { Tag } from "../../components/OpenbyteUI/index";
 // Images
 import arrowRight from "../../public/icons/arrow-right-orange.svg";
 
+const ProjectMetadata = () => (
+  <div className="font-lato flex lg:flex-col lg:gap-10 flex-row justify-between lg:justify-start">
+    <div>
+      <span className="text-xs text-darkGray font-bold block lg:mb-[10px]">
+        PROJECT DURATION
+      </span>
+      <span className="text-lg text-lightGray">3 Months</span>
+    </div>
+
+    <div>
+      <span className="text-xs text-darkGray font-bold block lg:mb-[10px]">
+        PROJECT TEAM
+      </span>
+      <span className="text-lg text-lightGray">2 Developers, 1 PM</span>
+    </div>
+  </div>
+);
+
 const IndustryExpertise = ({ tags, title }) => {
   return (
-    <section className="bg-light-black py-[110px] text-white">
+    <section className="bg-light-black lg:py-[110px] py-16 text-white">
       <div className="container mx-auto">
-        <h2 className="font-bold text-[40px] leading-[50px]">{title}</h2>
-        <div className="flex mt-8 gap-4">
+        <h2 className="font-bold lg:text-[40px] text-[32px] leading-[50px]">
+          {title}
+        </h2>
+        <div className="flex mt-8 lg:gap-4 flex-wrap justify-between gap-y-4 lg:justify-start">
           {tags.map((tag, index) => {
             return (
               <div
@@ -27,7 +47,10 @@ const IndustryExpertise = ({ tags, title }) => {
         <div className="border-2 border-darkGray p-8 pb-[38px] rounded-3xl flex justify-between mt-12">
           <div className="text-white max-w-[766px]">
             <h3 className="text-[32px] font-bold leading-10">Ride-Sharing</h3>
-            <p className="text-[22px] leading-[32px] mt-[21px]">
+            <div className="block lg:hidden my-4">
+              <ProjectMetadata />
+            </div>
+            <p className="lg:text-[22px] text-base lg:leading-[32px] leading-[28px] mt-[21px] font-lato">
               The Ride-Sharing app helps to share your car with others during
               your trip, as a driver, you can add your car and set up your trip,
               also as a customer you can search for a destination and choose
@@ -45,20 +68,9 @@ const IndustryExpertise = ({ tags, title }) => {
               </Link>
             </div>
           </div>
-          <div className="font-lato flex flex-col gap-10">
-            <div>
-              <span className="text-xs text-darkGray font-bold block mb-[10px]">
-                PROJECT DURATION
-              </span>
-              <span className="text-lg text-lightGray">3 Months</span>
-            </div>
 
-            <div>
-              <span className="text-xs text-darkGray font-bold block mb-[10px]">
-                PROJECT TEAM
-              </span>
-              <span className="text-lg text-lightGray">2 Developers, 1 PM</span>
-            </div>
+          <div className="hidden lg:block">
+            <ProjectMetadata />
           </div>
         </div>
       </div>
