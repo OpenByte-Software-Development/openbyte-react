@@ -1,25 +1,40 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { activeNavItemStyle, inactiveNavItemStyle } from "./Header";
 import { Transition, Disclosure } from "@headlessui/react";
 import { HEADER_NAV } from "../../../lib/constants";
 
 // Images
 import arrowIcon from "../../../public/icons/arrow.svg";
 
-const MobileNavItem = ({ title, href }) => (
-  <li className="py-4 text-center text-xl font-bold text-black">
-    <Link href={href}>{title}</Link>
+const MobileNavItem = ({ title, href, basePath }) => (
+  <li className="relative mb-6">
+    <span
+      className={`${
+        basePath === href ? activeNavItemStyle : inactiveNavItemStyle
+      } max-w-fit text-center text-xl font-bold text-black cursor-pointer`}
+    >
+      <Link href={href}>
+        <span>{title}</span>
+      </Link>
+    </span>
   </li>
 );
 
-const MobileNavItemWithSubmenu = ({ title, subMenu, showMenu }) => {
+const MobileNavItemWithSubmenu = ({ title, subMenu, showMenu, basePath }) => {
   return (
-    <Disclosure as="li">
+    <Disclosure as="li" className="w-full">
       {({ open }) => (
-        <>
-          <Disclosure.Button className="py-2 flex mx-auto">
-            <span className=" text-center text-xl font-bold text-black">
+        <div className="relative">
+          <Disclosure.Button
+            className={`${
+              basePath === "/services"
+                ? activeNavItemStyle
+                : inactiveNavItemStyle
+            } mb-6 flex mx-auto cursor-pointer`}
+          >
+            <span className="text-center text-xl font-bold text-black">
               {title}
             </span>
             <div className="flex items-center p-[2px] pl-3">
@@ -32,13 +47,13 @@ const MobileNavItemWithSubmenu = ({ title, subMenu, showMenu }) => {
               />
             </div>
           </Disclosure.Button>
-          <Disclosure.Panel className="text-gray-500">
-            <ul className="bg-beige px-4">
+          <Disclosure.Panel className="text-gray-500 mb-6">
+            <ul className="bg-beige px-4 w-full">
               {subMenu.map(({ title: subMenuTitle, href }) => {
                 return (
                   <li
                     key={subMenuTitle}
-                    className="py-4 text-center text-xl font-bold text-black"
+                    className="py-4 text-center text-xl font-bold text-black cursor-pointer"
                   >
                     <Link href={href}>
                       <span>{subMenuTitle}</span>
@@ -48,13 +63,13 @@ const MobileNavItemWithSubmenu = ({ title, subMenu, showMenu }) => {
               })}
             </ul>
           </Disclosure.Panel>
-        </>
+        </div>
       )}
     </Disclosure>
   );
 };
 
-const MobileMenu = ({ show }) => {
+const MobileMenu = ({ show, basePath }) => {
   return (
     <Transition
       show={show}
@@ -66,17 +81,23 @@ const MobileMenu = ({ show }) => {
       leaveFrom="opacity-100 scale-100"
       leaveTo="opacity-0 scale-95"
     >
-      <div className="px-4 min-h-screen min-w-full bottom-0 left-0">
+      <div className="min-h-screen min-w-full bottom-0 left-0">
         <nav className="my-10">
-          <ul>
+          <ul className="flex flex-col items-center ">
             {HEADER_NAV.map((item) => {
               return item?.subMenu != null ? (
-                <MobileNavItemWithSubmenu {...item} key={item.title} />
+                <MobileNavItemWithSubmenu
+                  {...item}
+                  key={item.title}
+                  basePath={basePath}
+                />
               ) : (
-                <MobileNavItem {...item} key={item.title} />
+                <MobileNavItem {...item} key={item.title} basePath={basePath} />
               );
             })}
-            <li className="py-4 text-center text-xl font-bold text-black">
+            <li
+              className={`mb-6 text-center text-xl font-bold text-black cursor-pointer ${inactiveNavItemStyle}`}
+            >
               <Link href="/calculator">Estimate App Cost</Link>
             </li>
           </ul>
