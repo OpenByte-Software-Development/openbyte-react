@@ -44,22 +44,22 @@ const ADVANTAGES = [
 const MobileAppAdvantages = () => {
   return (
     <section className="">
-      <svg viewBox="0 0 1920 80">
+      <svg viewBox="0 0 1920 80" className="mb-[-1px]">
         <path
           d="M960 80C387.5 80 0 0 0 0V81H1920V0C1920 0 1532.5 80 960 80Z"
           fill="#323232"
         />
       </svg>
       <div className="bg-light-black pb-22">
-        <div className="container text-white">
-          <h2 className="text-[40px] font-bold leading-[50px] text-center">
+        <div className="container text-white lg:pt-[71px] py-14">
+          <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-center">
             5 Business Advantages to have a mobile app
           </h2>
-          <div className="grid grid-rows-2 grid-cols-3 gap-10 mt-11">
+          <div className="lg:grid grid-rows-2 grid-cols-3 gap-10 mt-11">
             {ADVANTAGES.map(({ src, title, description }) => {
               return (
                 <div
-                  className="grid grid-rows-1 grid-cols-12 gap-4 mt-8 lg:mt-0"
+                  className="grid grid-rows-1 grid-cols-12 gap-4 mt-10 lg:mt-0"
                   key={title}
                 >
                   <div className="col-span-3">

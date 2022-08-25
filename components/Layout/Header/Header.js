@@ -41,7 +41,9 @@ const Header = () => {
     <header className="lg:py-7 border-b-3 border-orange w-screen fixed t-0 bg-white z-50">
       <div className="container lg:flex mx-auto items-center hidden">
         <div className="flex item s-center h-8 cursor-pointer">
-          <Image src={logo} alt="Openbyte logo" className="h-8" height="32" />
+          <Link href="/">
+            <Image src={logo} alt="Openbyte logo" className="h-8" height="32" />
+          </Link>
         </div>
 
         <div className="w-full flex justify-end">
