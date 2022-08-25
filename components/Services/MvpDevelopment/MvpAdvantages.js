@@ -36,30 +36,30 @@ const MVP_ADVANTAGES = [
 
 const MvpAdvantages = () => {
   return (
-    <section className="bg-light-black py-[89px]">
+    <section className="bg-light-black lg:py-[89px] py-14">
       <div className="container text-white">
-        <h2 className="text-[40px] font-bold leading-[50px] text-center">
+        <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-center">
           Advantages to build an MVP
         </h2>
 
-        <div className="grid grid-rows-2 grid-cols-2 gap-x-16 gap-y-9 mt-11">
+        <div className="lg:grid grid-rows-2 grid-cols-2 lg:gap-x-16 lg:gap-y-9 mt-11">
           {MVP_ADVANTAGES.map(({ src, title, description }) => {
             return (
               <div
-                className="grid grid-rows-1 grid-cols-6 gap-4 mt-8 lg:mt-0"
+                className="grid grid-rows-1 lg:grid-cols-6 grid-cols-9 gap-4 lg:mt-8 mt-10"
                 key={title}
               >
-                <div className="col-span-1">
+                <div className="lg:col-span-1 col-span-2">
                   <Image src={src} alt={title} />
                 </div>
 
-                <div className="col-span-5">
+                <div className="lg:col-span-5 col-span-7">
                   <div className="flex justify-between flex-col h-full">
                     <div className="">
-                      <h3 className="text-[24px] font-bold leading-[30px]">
+                      <h3 className="lg:text-[24px] text-[22px] font-bold leading-[30px]">
                         {title}
                       </h3>
-                      <p className="text-[18px] font-lato text-lightGray leading-9  mt-4">
+                      <p className="lg:text-[18px] text-base font-lato text-lightGray lg:leading-9 leading-7 mt-4">
                         {description}
                       </p>
                     </div>

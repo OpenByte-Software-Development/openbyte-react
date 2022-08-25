@@ -44,9 +44,9 @@ const STEPS = [
 
 const MvpDevProcess = () => {
   return (
-    <section className="mb-28 mt-20">
+    <section className="lg:mb-28 lg:mt-20 my-14">
       <div className="container  text-center">
-        <h2 className="text-[40px] font-bold leading-[50px] text-light-black">
+        <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-light-black">
           MVP development process
         </h2>
 
