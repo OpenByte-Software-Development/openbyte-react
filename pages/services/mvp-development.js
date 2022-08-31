@@ -1,9 +1,7 @@
 import Layout from "../../components/Layout/index";
 import {
   ServicesHero,
-  IndustryExpertise,
   CommunicationChannels,
-  HowWeWork,
   Benefits,
   PreviousExperience,
 } from "../../components/Services/index";
@@ -11,6 +9,7 @@ import {
   HowMvpWorks,
   MvpDevProcess,
   MvpAdvantages,
+  ProjectTimeline,
 } from "../../components/Services/MvpDevelopment/index";
 import { PriceEstimationCta, ContactFormCta } from "../../components/cta/index";
 import Faq from "../../components/Faq";
@@ -162,7 +161,7 @@ const MvpDevelopment = () => {
         techStack={TECH_STACK}
       />
       <CommunicationChannels />
-      <HowWeWork />
+      <ProjectTimeline />
       <Benefits />
       <PreviousExperience />
       <div className="relative">

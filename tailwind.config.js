@@ -40,6 +40,7 @@ module.exports = {
         benefits: "url('../public/benefits-background.svg')",
         dots: "url('../public/dots-background.svg')",
         hearth: "url('../public/hearth.svg')",
+        "project-timeline": "url('../public/project-timeline-background.svg')",
       },
     },
     screens: {
