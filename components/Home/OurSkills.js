@@ -48,7 +48,7 @@ const OurSkills = () => {
           <div className="mb-6 lg:mb-0">
             <ContainerTemplate title="Our Skills">
               <div
-                className={`flex flex-wrap lg:flex-nowrap justify-around lg:justify-between gap-10`}
+                className={`grid lg:grid-rows-1 lg:grid-cols-6 grid-cols-3 grid-rows-2 gap-8`}
               >
                 {Object.keys(SKILLS_MAP).map((skill, index) => (
                   <TechIcon src={SKILLS_MAP[skill]} name={skill} key={index} />

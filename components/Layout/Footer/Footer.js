@@ -138,11 +138,12 @@ const Footer = () => {
 
                 <div className="flex items-center">
                   <div>
-                    <Link href="mailto: hi@openbyte.dev" className="block">
-                      <a className="font-bold text-orange text-base">
-                        hi@openbyte.dev
-                      </a>
-                    </Link>
+                    <a
+                      href="mailto: hi@openbyte.dev"
+                      className="block font-bold text-orange text-base"
+                    >
+                      hi@openbyte.dev
+                    </a>
                   </div>
                   <div className="ml-6 flex items-center">
                     <Image src={email} alt="email icon" />

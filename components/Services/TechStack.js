@@ -30,7 +30,7 @@ const TechStack = ({ techStack, title, description }) => {
                   <h3 className="text-black lg:text-2xl text-[22px] font-bold leading-[30px]">
                     {field}
                   </h3>
-                  <p className="font-lato text-darkGray lg:text-[22px] text-base mt-4  tracking-[0.02em]">
+                  <p className="font-lato text-darkGray lg:text-[22px] text-base mt-4 tracking-[0.02em]">
                     {body}
                   </p>
                   <div className="flex justify-center lg:gap-14 gap-12 mt-4">

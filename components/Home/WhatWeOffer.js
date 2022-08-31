@@ -52,7 +52,7 @@ const WhatWeOffer = () => {
 
               <div className="mt-4">
                 <Link href="/calculator">
-                  <button className="lg:bg-orange lg:text-white text-orange text-base lg:rounded-full py-5 lg:px-14 font-extrabold lg:w-full">
+                  <button className="lg:bg-orange lg:text-white text-orange text-base lg:rounded-full p-5 font-extrabold lg:w-full">
                     <div className="flex items-center lg:block">
                       <span className="mr-2 lg:mr-0">
                         Choose from developers
@@ -87,7 +87,7 @@ const WhatWeOffer = () => {
 
               <div className="mt-4">
                 <Link href="/calculator">
-                  <button className="lg:bg-orange lg:text-white text-orange text-base lg:rounded-full py-5 lg:px-14 font-extrabold lg:w-full">
+                  <button className="lg:bg-orange lg:text-white text-orange text-base lg:rounded-full p-5 font-extrabold lg:w-full">
                     <div className="flex items-center lg:block">
                       <span className="mr-2 lg:mr-0">Estimate App Cost</span>
                       <span className="block lg:hidden">

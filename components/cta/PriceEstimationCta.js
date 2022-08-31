@@ -16,7 +16,7 @@ const PriceEstimationCta = () => {
               </h2>
 
               <div>
-                <div className="mt-8 max-w-[220px]">
+                <div className="mt-8">
                   <div className="mt-[50px]">
                     <button
                       role="submit"

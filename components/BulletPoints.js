@@ -20,7 +20,7 @@ const doubleCheckMarkLight = (
     />
   </svg>
 );
-const doubleCheckMark = (
+const doubleCheckMarkDark = (
   <svg
     width="21"
     height="20"
@@ -44,21 +44,18 @@ export const Bullet = ({ as = "li", text, className = "", light = false }) => {
   return (
     <Element key={text} className={`flex items-center ${className}`}>
       <div className="w-[21px] h-[21px]">
-        {light ? doubleCheckMarkLight : doubleCheckMark}
+        {light ? doubleCheckMarkLight : doubleCheckMarkDark}
       </div>
       <span className="ml-4 font-lato text-lg block">{text}</span>
     </Element>
   );
 };
 
-const BulletPoints = ({ bullets }) => {
+const BulletPoints = ({ bullets, light = false }) => {
   return (
     <ul className="flex flex-col gap-4 mt-4">
       {bullets.map((bulletText) => (
-        <li key={bulletText} className="flex items-center">
-          <Image src={doubleCheckMark} alt="bullet icon" />
-          <span className="ml-4 font-lato text-lg">{bulletText}</span>
-        </li>
+        <Bullet key={bulletText} text={bulletText} />
       ))}
     </ul>
   );

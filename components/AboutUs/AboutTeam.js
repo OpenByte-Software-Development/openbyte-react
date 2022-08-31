@@ -42,7 +42,7 @@ const TeamMember = ({ photo, name, position, skills }) => {
   return (
     <div className="lg:p-4 p-0 border-2 border-black relative rounded-lg max-w-[175px] lg:max-w-[236px]">
       <div className="w-[100%] lg:h-[250px] lg:rounded-lg lg:border-none border-b-2 border-black">
-        <img
+        <img // TODO: replace with Image from next
           src={photo}
           alt={`${name}'s avatar`}
           className="object-cover object-center w-[100%] lg:h-[250px] rounded-t-lg"
@@ -105,11 +105,11 @@ const AboutTeam = () => {
                 JOIN OUR TEAM
               </span>
 
-              <Link href="/">
+              <a href="mailto: hi@openbyte.dev">
                 <button className="bg-orange mt-3 text-white text-base rounded-full py-[11px] px-6 font-extrabold w-auto">
                   Become Member
                 </button>
-              </Link>
+              </a>
             </div>
 
             <div className="bg-beige absolute -top-2 -right-2 rounded-lg min-w-[100%] min-h-[100%] -z-10"></div>

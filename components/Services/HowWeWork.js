@@ -58,8 +58,8 @@ const HowWeWork = () => {
         </p>
       </div>
 
-      <div className="lg:bg-how-we-work-services bg-no-repeat bg-[center_top_135px] pb-[70px] mt-8">
-        <div className="container lg:grid grid-rows-2 grid-cols-3 gap-x-[64px] gap-y-[85px] mt-4">
+      <div className="lg:bg-how-we-work-services bg-no-repeat bg-[center_top_120px] pb-[70px] mt-8">
+        <div className="container lg:grid grid-rows-2 grid-cols-3 gap-x-[64px] gap-y-[105px] mt-4">
           {STEPS.map(({ src, title, description }, index) => {
             return (
               <div key={index} className="lg:mt-0 mt-8">
