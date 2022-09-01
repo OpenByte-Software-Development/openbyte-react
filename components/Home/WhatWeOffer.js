@@ -51,7 +51,7 @@ const WhatWeOffer = () => {
               </div>
 
               <div className="mt-4">
-                <Link href="/calculator">
+                <Link href="/about-us#team">
                   <button className="lg:bg-orange lg:text-white text-orange text-base lg:rounded-full p-5 font-extrabold lg:w-full">
                     <div className="flex items-center lg:block">
                       <span className="mr-2 lg:mr-0">

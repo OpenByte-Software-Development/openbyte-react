@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 // Images
 import arrowRight from "../../public/icons/arrow-right.svg";
@@ -18,12 +18,16 @@ const PriceEstimationCta = () => {
               <div>
                 <div className="mt-8">
                   <div className="mt-[50px]">
-                    <button
-                      role="submit"
-                      className="text-orange bg-white text-base font-extrabold rounded-full px-10 py-[18px]"
-                    >
-                      Get a cost estimation
-                    </button>
+                    <Link href="/calculator">
+                      <a>
+                        <button
+                          role="submit"
+                          className="text-orange bg-white text-base font-extrabold rounded-full px-10 py-[18px]"
+                        >
+                          Get a cost estimation
+                        </button>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>

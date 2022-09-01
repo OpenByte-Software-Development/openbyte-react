@@ -70,22 +70,22 @@ const Footer = () => {
                 <ul>
                   <li className="font-bold text-gray text-base">SERVICES</li>
                   <li className="font-bold text-white text-base mt-6">
-                    <Link href="#">
+                    <Link href="/services/web-development">
                       <a>Web Development Services</a>
                     </Link>
                   </li>
                   <li className="font-bold text-white text-base mt-6">
-                    <Link href="#">
+                    <Link href="/services/mobile-applications">
                       <a>Mobile Application Development</a>
                     </Link>
                   </li>
                   <li className="font-bold text-white text-base mt-6">
-                    <Link href="#">
+                    <Link href="/services/mvp-development">
                       <a>MVP App Development</a>
                     </Link>
                   </li>
                   <li className="font-bold text-white text-base mt-6">
-                    <Link href="#">
+                    <Link href="/about-us#team">
                       <a>Dedicated Developers</a>
                     </Link>
                   </li>
@@ -98,17 +98,17 @@ const Footer = () => {
                 <ul>
                   <li className="font-bold text-gray text-base">LINKS</li>
                   <li className="font-bold text-white text-base mt-6">
-                    <Link href="#">
+                    <Link href="/about-us">
                       <a>About Us</a>
                     </Link>
                   </li>
                   <li className="font-bold text-white text-base mt-6">
-                    <Link href="#">
+                    <Link href="/case-studies">
                       <a>Case Studies</a>
                     </Link>
                   </li>
                   <li className="font-bold text-white text-base mt-6">
-                    <Link href="#">
+                    <Link href="/calculator">
                       <a>Estimate App cost</a>
                     </Link>
                   </li>

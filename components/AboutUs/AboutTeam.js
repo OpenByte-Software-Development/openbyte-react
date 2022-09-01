@@ -85,7 +85,10 @@ const AboutTeam = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center lg:justify-start lg:gap-[78px] gap-[16px] my-[72px]">
+        <div
+          className="flex flex-wrap justify-center lg:justify-start lg:gap-[78px] gap-[16px] my-[72px] scroll-m-40"
+          id="team"
+        >
           {TEAM.map((member, index) => {
             return <TeamMember {...member} key={index} />;
           })}

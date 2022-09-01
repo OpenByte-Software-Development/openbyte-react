@@ -10,7 +10,7 @@ import gmailLogo from "../public/icons/gmail-black.svg";
 
 const SocialNetworks = () => {
   return (
-    <div className="absolute left-0 top-[300px] border-3 border-light-black rounded-tr-3xl rounded-br-3xl hidden lg:block">
+    <div className="absolute left-0 top-[300px] border-3 border-light-black rounded-tr-3xl rounded-br-3xl hidden lg:block bg-beige">
       <div className="p-6 flex flex-col gap-6">
         <a
           href="https://www.instagram.com/open_byte/"

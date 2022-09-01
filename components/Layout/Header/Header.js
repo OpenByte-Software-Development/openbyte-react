@@ -118,7 +118,7 @@ const Header = () => {
                             MVP App Development
                           </a>
                         </Link>
-                        <Link href="/about-us">
+                        <Link href="/about-us#team">
                           <a
                             className={`max-w-fit w-auto text-base font-bold ${inactiveNavItemStyle}`}
                           >

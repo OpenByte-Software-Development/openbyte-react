@@ -32,12 +32,12 @@ const MobileNavItemWithSubmenu = ({ title, subMenu, showMenu, basePath }) => {
               basePath === "/services"
                 ? activeNavItemStyle
                 : inactiveNavItemStyle
-            } mb-6 flex mx-auto cursor-pointer`}
+            } mb-6 flex mx-auto cursor-pointer items-center`}
           >
             <span className="text-center text-xl font-bold text-black">
               {title}
             </span>
-            <div className="flex items-center p-[2px] pl-3">
+            <div className="flex items-center justify-center p-[2px] pl-3">
               <Image
                 src={arrowIcon}
                 alt="open submenu arrow"
@@ -83,7 +83,7 @@ const MobileMenu = ({ show, basePath }) => {
     >
       <div className="min-h-screen min-w-full bottom-0 left-0">
         <nav className="my-10">
-          <ul className="flex flex-col items-center ">
+          <ul className="flex flex-col items-center">
             {HEADER_NAV.map((item) => {
               return item?.subMenu != null ? (
                 <MobileNavItemWithSubmenu

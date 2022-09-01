@@ -14,9 +14,13 @@ const ServicesHero = ({ title, description, ...imageProps }) => {
               {description}
             </p>
 
-            <button className="py-[14px] px-8 bg-orange text-white text-base rounded-full font-extrabold lg:w-auto mt-11 w-full">
-              {"Let's talk"}
-            </button>
+            <Link href="/contact">
+              <a>
+                <button className="py-[14px] px-8 bg-orange text-white text-base rounded-full font-extrabold lg:w-auto mt-11 w-full">
+                  {"Let's talk"}
+                </button>
+              </a>
+            </Link>
           </div>
           <div className="lg:mr-[48px] max-w-[145px] lg:w-auto mb-9 lg:mb-0">
             <Image src={imageProps.src} alt={imageProps.alt} />
