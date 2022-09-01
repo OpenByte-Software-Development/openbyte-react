@@ -41,6 +41,8 @@ module.exports = {
         dots: "url('../public/dots-background.svg')",
         hearth: "url('../public/hearth.svg')",
         "project-timeline": "url('../public/project-timeline-background.svg')",
+        "dark-gradient":
+          "linear-gradient(180deg, rgba(0, 0, 0, 0) 2.23%, rgba(0, 0, 0, 0.335) 42.46%, rgba(0, 0, 0, 0.5762) 74.54%, rgba(0, 0, 0, 0.67) 100%);",
       },
     },
     screens: {

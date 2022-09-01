@@ -9,9 +9,11 @@ const Tag = ({ variant, text }) => {
   const backgroundColor = VARIANTS[variant] || VARIANTS.blue;
   return (
     <div
-      className={`border-2 border-black rounded-[30px] px-[8px] py-[1px] flex items-center ${backgroundColor}`}
+      className={`border-2 border-black rounded-[30px] px-[8px] py-[1px] flex items-center w-fit ${backgroundColor}`}
     >
-      <span className="text-base font-medium leading-7 whitespace-nowrap">{text}</span>
+      <span className="text-base font-medium leading-7 whitespace-nowrap">
+        {text}
+      </span>
     </div>
   );
 };

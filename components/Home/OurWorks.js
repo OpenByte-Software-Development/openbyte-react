@@ -28,37 +28,57 @@ const Project = ({
   ));
   return (
     <div className="border-3 border-black rounded-3xl">
-      <div className="my-8 ml-12 mr-0">
-        <div className="grid grid-rows-1 grid-cols-2 gap-20">
-          <div>
-            <h3 className="text-black text-[56px] font-bold leading-[70px]">
+      <div className="lg:my-8 lg:ml-12 lg:mr-0 my-6 mx-9">
+        <div className="grid lg:grid-rows-1 lg:grid-cols-2 grid-rows-1 grid-cols-1 lg:gap-20">
+          <div className="order-2 lg:order-1">
+            <h3 className="text-black text-[56px] font-bold leading-[70px] hidden lg:block">
               {title}
             </h3>
-            <h4 className="text-black text-[32px] font-bold leading-10">
+            <h4 className="text-black text-[32px] font-bold leading-10 hidden lg:block">
               {description}
             </h4>
 
-            <div className="flex my-8 gap-4">{projectTags}</div>
+            <div className="my-6 lg:my-0">
+              <div className="grid grid-rows-1 grid-cols-2 lg:block">
+                <div className="flex lg:my-8 gap-4 lg:flex-row flex-col justify-start">
+                  {projectTags}
+                </div>
+
+                <div className="lg:hidden flex items-end">
+                  <Image src={clutchReview} alt="clutch review" />
+                </div>
+              </div>
+            </div>
 
             <p className="font-lato text-lg text-darkGray">{body}</p>
 
-            <div className="mt-11 flex justify-between items-end">
-              <div>
+            <div className="mt-11 flex justify-between items-end w-full">
+              <div className="w-full">
                 <Link href="/">
-                  <button className="lg:bg-transparent text-orange text-base rounded-full border-orange border-3 py-4 px-8 font-extrabold">
+                  <button className="bg-transparent text-orange text-base rounded-full border-orange border-3 py-4 px-8 font-extrabold lg:w-auto w-full">
                     Learn more
                   </button>
                 </Link>
               </div>
-              <div>
+              <div className="hidden lg:block">
                 <Image src={clutchReview} alt="clutch review" />
               </div>
             </div>
           </div>
 
-          <div className="flex justify-end h-auto">
-            <div className="rounded-l-[25px] border-3 border-r-[0px] border-black grid">
-              <Image src={preview} alt="Mevuo app preview" />
+          <div className="flex justify-end order-1 w-full relative">
+            <div className="lg:rounded-l-[27px] rounded-[25px] lg:rounded-none border-3 lg:border-r-[0px] border-black grid overflow-hidden w-full h-[224px] lg:h-auto">
+              <Image
+                src={preview}
+                alt="Mevuo app preview"
+              />
+            </div>
+
+            <div className="w-full h-full absolute top-0 left-0 rounded-[25px] flex justify-end flex-col bg-dark-gradient px-4 pb-3 lg:hidden">
+              <h3 className="text-white text-[32px] font-bold">{title}</h3>
+              <h4 className="text-white text-[22px] font-bold">
+                {description}
+              </h4>
             </div>
           </div>
         </div>
@@ -79,7 +99,7 @@ const OurWorks = () => {
         />
       </svg>
       <div className="container mx-auto">
-        <h2 className="text-[56px] font-bold text-light-black leading-[70px]">
+        <h2 className="lg:text-[56px] text-[32px] font-bold text-light-black leading-[70px] text-center lg:text-left">
           Our works
         </h2>
 
