@@ -68,10 +68,7 @@ const Project = ({
 
           <div className="flex justify-end order-1 w-full relative">
             <div className="lg:rounded-l-[27px] rounded-[25px] lg:rounded-none border-3 lg:border-r-[0px] border-black grid overflow-hidden w-full h-[224px] lg:h-auto">
-              <Image
-                src={preview}
-                alt="Mevuo app preview"
-              />
+              <Image src={preview} alt="Mevuo app preview" />
             </div>
 
             <div className="w-full h-full absolute top-0 left-0 rounded-[25px] flex justify-end flex-col bg-dark-gradient px-4 pb-3 lg:hidden">
@@ -92,7 +89,13 @@ const OurWorks = () => {
 
   return (
     <section className="mt-[72px] relative">
-      <svg viewBox="0 0 1920 350" className="absolute bottom-0">
+      <div className="bg-light-black absolute bottom-0 left-0 min-h-[30%] min-w-full -z-10 block lg:hidden"></div>
+      <svg
+        viewBox="0 0 1920 350"
+        className="absolute bottom-0"
+        height="100%"
+        width="100vw"
+      >
         <path
           d="M2012 1026L2025.5 394.709C2003.52 366.8 1981.55 338.891 1952.25 310.983C1849.69 215.296 1710.51 139.544 1527.38 83.7261C1344.25 27.9087 1153.79 0 956.012 0C670.327 0 421.268 51.8305 208.836 159.478C69.6557 227.257 -25.5727 306.996 -91.5 390.722L-105 1026H2012Z"
           fill="#323232"
