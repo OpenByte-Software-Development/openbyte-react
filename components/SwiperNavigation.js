@@ -4,9 +4,9 @@ import Image from "next/image";
 // Images
 import arrowLeft from "../public/arrow-left.svg";
 
-const SwiperNavigation = ({ swiper }) => {
+const SwiperNavigation = ({ swiper, className = "" }) => {
   return (
-    <>
+    <div className={className}>
       <div className="h-min absolute top-0 bottom-0 -left-[35px] cursor-pointer my-auto">
         <button onClick={() => swiper.slidePrev()}>
           <Image src={arrowLeft} alt="swiper arrow left" className="z-40" />
@@ -18,7 +18,7 @@ const SwiperNavigation = ({ swiper }) => {
           <Image src={arrowLeft} alt="swiper arrow right" />
         </button>
       </div>
-    </>
+    </div>
   );
 };
 
