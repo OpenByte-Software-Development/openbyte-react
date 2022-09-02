@@ -4,48 +4,61 @@ import Link from "next/link";
 
 // Image
 import teamBuddy from "../../public/team-buddy.png";
+// Team
+import nasco from "../../public/team-members/nasco.png";
+import bordei from "../../public/team-members/bordei.png";
+import ciuchitu from "../../public/team-members/ciuchitu.png";
+import dodon from "../../public/team-members/dodon.png";
+import popcov from "../../public/team-members/popcov.png";
+import lozan from "../../public/team-members/lozan.png";
 
 const TEAM = [
   {
-    photo: "https://i.pravatar.cc/300",
-    name: "Alexandru Cernobrovciuc",
-    position: "SCRUM MASTER",
+    photo: nasco,
+    name: "Nasco Grigore",
+    position: "DevOps",
+    skills: ["JS/TS", "Python"],
+  },
+  {
+    photo: bordei,
+    name: "Bordei Radu",
+    position: "Full-Stack",
     skills: ["Python", "Tkinter"],
   },
   {
-    photo: "https://i.pravatar.cc/300",
-    name: "Alexandru Cernobrovciuc",
-    position: "SCRUM MASTER",
-    skills: ["Python", "Tkinter"],
+    photo: dodon,
+    name: "Dodon Aurel",
+    position: "Full-Stack",
+    skills: ["JS/TS", "NodeJS"],
   },
   {
-    photo: "https://i.pravatar.cc/300",
-    name: "Alexandru Cernobrovciuc",
-    position: "SCRUM MASTER",
-    skills: ["Python", "Tkinter"],
+    photo: ciuchitu,
+    name: "Ciuchitu Nichita",
+    position: "Full-Stack",
+    skills: ["JS/TS", "NodeJS"],
   },
   {
-    photo: "https://i.pravatar.cc/300",
-    name: "Alexandru Cernobrovciuc",
-    position: "SCRUM MASTER",
-    skills: ["Python", "Tkinter"],
+    photo: lozan,
+    name: "Lozan Alexandru",
+    position: "Full-Stack",
+    skills: ["JS/TS", "C/C++"],
   },
   {
-    photo: "https://i.pravatar.cc/300",
-    name: "Alexandru Cernobrovciuc",
-    position: "SCRUM MASTER",
-    skills: ["Python", "Tkinter"],
+    photo: popcov,
+    name: "Popcov Artiom",
+    position: "Front-End",
+    skills: ["JS/TS", "NodeJS"],
   },
 ];
 
 const TeamMember = ({ photo, name, position, skills }) => {
   return (
     <div className="lg:p-4 p-0 border-2 border-black relative rounded-lg max-w-[175px] lg:max-w-[236px]">
-      <div className="w-[100%] lg:h-[250px] lg:rounded-lg lg:border-none border-b-2 border-black">
-        <img // TODO: replace with Image from next
+      <div className="w-[100%] lg:rounded-lg lg:border-none border-b-2 border-black grid min-h-[245px]">
+        <Image
           src={photo}
           alt={`${name}'s avatar`}
-          className="object-cover object-center w-[100%] lg:h-[250px] rounded-t-lg"
+          className="object-cover object-center w-[100%] rounded-lg min-h-[245px]"
         />
       </div>
 
