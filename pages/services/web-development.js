@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/index";
+import Head from "next/head";
 import {
   ServicesHero,
   IndustryExpertise,
@@ -31,6 +32,7 @@ import {
   digitalOcean,
   googleCloud,
 } from "../../lib/icons";
+import { PAGE_TITLES } from "../../lib/constants";
 
 // Images
 import WebDevelopmentHero from "../../public/web-development.svg";
@@ -158,6 +160,9 @@ const TECH_STACK = {
 const WebDevelopment = () => {
   return (
     <Layout>
+      <Head>
+        <title>{PAGE_TITLES.services.webDev}</title>
+      </Head>
       <SocialNetworks />
       <ServicesHero {...HERO_PROPS} />
       <IndustryExpertise
@@ -169,7 +174,7 @@ const WebDevelopment = () => {
         <div className="bg-light-black absolute top-0 left-0 min-h-[50%] min-w-full -z-10"></div>
       </section>
       <WebFeatures />
-      <BuildingExperience /> 
+      <BuildingExperience />
       <TechStack
         title="What tech-stack we’re using?"
         description="We create responsive web applications using the latest tech-stack to help you focus on your business."

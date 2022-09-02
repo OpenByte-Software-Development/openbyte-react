@@ -42,7 +42,14 @@ const Header = () => {
       <div className="container lg:flex mx-auto items-center hidden">
         <div className="flex item s-center h-8 cursor-pointer">
           <Link href="/">
-            <Image src={logo} alt="Openbyte logo" className="h-8" height="32" />
+            <a>
+              <Image
+                src={logo}
+                alt="Openbyte logo"
+                className="h-8"
+                height="32"
+              />
+            </a>
           </Link>
         </div>
 
@@ -50,13 +57,17 @@ const Header = () => {
           <nav className="flex justify-end items-center">
             <div className="ml-10 relative">
               <Link href="/">
-                <span
-                  className={`${
-                    basePath === "/" ? activeNavItemStyle : inactiveNavItemStyle
-                  } text-base font-bold cursor-pointer`}
-                >
-                  Home
-                </span>
+                <a>
+                  <span
+                    className={`${
+                      basePath === "/"
+                        ? activeNavItemStyle
+                        : inactiveNavItemStyle
+                    } text-base font-bold cursor-pointer`}
+                  >
+                    Home
+                  </span>
+                </a>
               </Link>
             </div>
 

@@ -19,7 +19,9 @@ const Footer = () => {
             <div className="flex flex-col justify-between lg:justify-start">
               <div className="max-w-[100px] lg:w-auto">
                 <Link href="/" className="cursor-pointer">
-                  <Image src={logo} alt="Openbyte logo" />
+                  <a>
+                    <Image src={logo} alt="Openbyte logo" />
+                  </a>
                 </Link>
               </div>
 

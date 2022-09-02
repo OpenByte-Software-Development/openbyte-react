@@ -1,4 +1,5 @@
 import Layout from "../../components/Layout/index";
+import Head from "next/head";
 import {
   ServicesHero,
   IndustryExpertise,
@@ -28,6 +29,7 @@ import {
   reactNative,
   firebase,
 } from "../../lib/icons";
+import { PAGE_TITLES } from "../../lib/constants";
 
 // Image
 import mobileAppsHero from "../../public/mobile-apps-hero.svg";
@@ -151,6 +153,9 @@ const TECH_STACK = {
 const MobileApplications = () => {
   return (
     <Layout>
+      <Head>
+        <title>{PAGE_TITLES.services.mobileDev}</title>
+      </Head>
       <ServicesHero {...HERO_PROPS} />
       <IndustryExpertise title="Our Industry expertise" tags={["Technology"]} />
       <section className="relative">
