@@ -22,8 +22,8 @@ const SKILLS_MAP = {
 const INDUSTRIES = [
   "Knowledge Sharing",
   "Banking and Finance",
-  "Information and Technology",
   "Logistics",
+  "Information and Technology",
   "Human Resources",
 ];
 
