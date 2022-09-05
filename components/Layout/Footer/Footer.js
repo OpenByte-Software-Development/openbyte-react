@@ -65,6 +65,13 @@ const Footer = () => {
                   </a>
                 </div>
               </div>
+              <div className="font-bold text-gray text-base mt-6">
+                <Link href="/privacy-policy">
+                  <a target="_blank" rel="noreferrer">
+                    PRIVACY POLICY
+                  </a>
+                </Link>
+              </div>
             </div>
 
             <div className="hidden lg:block">

@@ -1,4 +1,5 @@
 import CookieConsent from "react-cookie-consent";
+import Link from "next/link";
 
 const CookiesConsent = () => {
   return (
@@ -15,7 +16,12 @@ const CookiesConsent = () => {
     >
       We use cookies to enhance your browsing experience, serve personalized ads
       or content, and analyze our traffic. By clicking &quot;Accept All&quot;,
-      you consent to our use of cookies.
+      you consent to our use of cookies.{" "}
+      <Link href="/privacy-policy">
+        <a className="text-orange" target="_blank" rel="noreferrer">
+          Privacy Policy
+        </a>
+      </Link>
     </CookieConsent>
   );
 };
