@@ -1,12 +1,25 @@
 import React from "react";
 import Image from "next/image";
+import { Form, Formik, Field } from "formik";
+import { api } from "../../lib/api";
 
 // Images
 import arrowRight from "../../public/icons/arrow-right.svg";
 
 const DEFAULT_TITLE = "Want to work with us?";
+const formInitialValues = {
+  email: "",
+  firstname: "",
+};
 
 const ContactFormCta = ({ title = DEFAULT_TITLE }) => {
+  const formSubmitHandler = async (values) => {
+    console.log('values', values)
+    const submitResult = await api.contact.cta(values);
+
+    if (submitResult) console.log("success");
+  };
+
   return (
     <section className="bg-orange lg:bg-opacity-0">
       <div className="bg-cta-background-mobile bg-right-bottom bg-no-repeat z-20 lg:bg-none">
@@ -18,34 +31,39 @@ const ContactFormCta = ({ title = DEFAULT_TITLE }) => {
 
             <div>
               <div className="mt-8 max-w-[220px]">
-                <form>
-                  <div className="flex gap-4 lg:flex-row flex-col">
-                    <input
-                      name="name"
-                      id="name"
-                      placeholder="Your Name"
-                      className="rounded-[10px] px-4 py-3 text-darkGray"
-                    />
-                    <input
-                      name="email"
-                      id="email"
-                      placeholder="Your Email"
-                      className="rounded-[10px] px-4 py-3 text-darkGray"
-                    />
-                  </div>
+                <Formik
+                  initialValues={formInitialValues}
+                  onSubmit={formSubmitHandler}
+                >
+                  <Form>
+                    <div className="flex gap-4 lg:flex-row flex-col">
+                      <Field
+                        name="firstname"
+                        id="firstname"
+                        placeholder="Your Name"
+                        className="rounded-[10px] px-4 py-3 text-darkGray"
+                      />
+                      <Field
+                        name="email"
+                        id="email"
+                        placeholder="Your Email"
+                        className="rounded-[10px] px-4 py-3 text-darkGray"
+                      />
+                    </div>
 
-                  <div className="mt-[50px]">
-                    <button
-                      role="submit"
-                      className="text-white text-base font-extrabold"
-                    >
-                      <div className="flex items-center gap-[10px]">
-                        <span>Contact Us</span>
-                        <Image src={arrowRight} alt="arrow icon" />
-                      </div>
-                    </button>
-                  </div>
-                </form>
+                    <div className="mt-[50px]">
+                      <button
+                        type="submit"
+                        className="text-white text-base font-extrabold"
+                      >
+                        <div className="flex items-center gap-[10px]">
+                          <span>Contact Us</span>
+                          <Image src={arrowRight} alt="arrow icon" />
+                        </div>
+                      </button>
+                    </div>
+                  </Form>
+                </Formik>
               </div>
             </div>
           </div>

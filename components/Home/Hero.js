@@ -1,10 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import Script from "next/script";
 // Images
 import heroBuddy from "../../public/hero-buddy.png";
-import clutchFake from "../../public/clutch-fake.png";
 
 const Hero = () => {
   return (
@@ -31,9 +30,18 @@ const Hero = () => {
                   </button>
                 </Link>
               </div>
-              <div className="mt-14 flex justify-center lg:block">
-                <Image src={clutchFake} alt="fake clutch review" />
-                {/* // Replace with clutch widget */}
+              <div className="mt-14 flex justify-center items-center lg:block">
+                <Script src="https://widget.clutch.co/static/js/widget.js" />
+                <div
+                  className="clutch-widget hero-clutch-widget w-auto mx-auto focus"
+                  data-url="https://widget.clutch.co"
+                  data-widget-type="2"
+                  data-height="50"
+                  data-nofollow="true"
+                  data-expandifr="true"
+                  data-scale="100"
+                  data-clutchcompany-id="573596"
+                ></div>
               </div>
             </div>
             <div className="hidden lg:block">
@@ -43,7 +51,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* <div className="bg-hero-wave min-h-[150px] bg-no-repeat bg-center hidden lg:block"></div> */}
       <svg className="block" viewBox="0 0 1920 154">
         <path
           d="M2005 -744.5L2019 -54.6457C1997.02 -39.9072 1975.05 -25.1686 1945.75 -10.43C1843.19 40.1021 1704.01 80.1066 1520.88 109.584C1337.75 139.061 1147.29 153.799 949.512 153.799C663.827 153.799 414.768 126.428 202.336 69.5791C63.1557 33.7856 -32.0727 -8.32452 -98 -52.5401L-112 -744.5H2005Z"

@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Formik, Field } from "formik";
+import { api } from "../../lib/api";
 
 const HorizontalLine = () => (
   <div className="my-6 h-[2px] w-full bg-orange bg-opacity-20"></div>
@@ -12,7 +13,7 @@ const formInitialValues = {
   firstName: "",
   lastName: "",
   email: "",
-  pnoneNumber: "",
+  phoneNumber: "",
   country: "",
   linkedin: "",
   description: "",
@@ -20,7 +21,9 @@ const formInitialValues = {
 
 const ContactForm = () => {
   const formSubmitHandle = async (values) => {
-    console.log("values", values);
+    const submitStatus = await api.contact.contactForm(values);
+
+    if (submitStatus) console.log("Success");
   };
 
   return (
@@ -86,14 +89,14 @@ const ContactForm = () => {
             <div className="grid lg:grid-rows-1 lg:grid-cols-3 grid-rows-3 grid-cols-1 lg:gap-8 gap-6 mt-8 ">
               <div>
                 <label
-                  htmlFor="pnoneNumber"
+                  htmlFor="phoneNumber"
                   className="text-black font-bold text-[10px]"
                 >
                   PHONE NUMBER
                 </label>
                 <Field
-                  id="pnoneNumber"
-                  name="pnoneNumber"
+                  id="phoneNumber"
+                  name="phoneNumber"
                   placeholder="Type something here"
                   className="mt-4 py-[16px] px-4 text-black bg-white rounded-[10px] border-[1.5px] border-pale-orange focus:outline-none focus:border-orange  w-full lg:w-auto"
                 />

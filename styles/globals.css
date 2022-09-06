@@ -59,11 +59,19 @@ body {
   height: auto !important;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1183px) {
   .container {
     padding-left: 24px;
     padding-right: 24px;
   }
+
+  .hero-clutch-widget iframe {
+    max-width: 200px;
+  }
+}
+
+.hero-clutch-widget iframe:focus-visible {
+  outline: none;
 }
 
 [type="radio"]:checked:hover {
