@@ -1,18 +1,18 @@
 import "swiper/css";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperNavigation from "../SwiperNavigation";
-import { CLIENTS_REVIEWS } from "../../lib/constants";
-import Review from "../Review";
+import SwiperNavigation from "./SwiperNavigation";
+import { CLIENTS_REVIEWS } from "../lib/constants";
+import Review from "./Review";
 
-const PreviousExperience = () => {
+const PreviousExperience = ({ title = "Our previous experience" }) => {
   const [swiperInstance, setSwiperInstance] = useState(null);
 
   return (
     <section className="lg:pb-32 lg:pt-20 pt-11 pb-[72px]">
       <div className="container">
         <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-center text-light-black">
-          Our previous experience 
+          {title}
         </h2>
 
         <div className=" px-[35px]">

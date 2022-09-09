@@ -34,7 +34,7 @@ const Review = ({
             {review}
           </p>
         </div>
-
+ 
         <div className="pt-8">
           {/* // TODO: replace with actual clutch review */}
           <Image src={clutchReview} alt="clutch review" />
