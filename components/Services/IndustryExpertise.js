@@ -6,6 +6,8 @@ import { Tag } from "../../components/OpenbyteUI/index";
 // Images
 import arrowRight from "../../public/icons/arrow-right-orange.svg";
 
+const tagActiveStyles = "bg-babyBlue text-light-black";
+
 const ProjectMetadata = () => (
   <div className="font-lato flex lg:flex-col lg:gap-10 flex-row justify-between lg:justify-start">
     <div>
@@ -32,13 +34,15 @@ const IndustryExpertise = ({ tags, title }) => {
           {title}
         </h2>
         <div className="flex mt-8 lg:gap-4 flex-wrap justify-between gap-y-4 lg:justify-start">
-          {tags.map((tag, index) => {
+          {tags.map(({ title, active = false }, index) => {
             return (
               <div
                 key={index}
-                className="border-3 border-babyBlue rounded-full px-6 py-[9px] text-babyBlue font-extrabold text-sm hover:bg-babyBlue hover:text-light-black cursor-pointer"
+                className={`border-3 border-babyBlue rounded-full px-6 py-[9px] font-extrabold text-sm ${
+                  active ? tagActiveStyles : "text-babyBlue"
+                }`}
               >
-                {tag}
+                {title}
               </div>
             );
           })}

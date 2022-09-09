@@ -1,3 +1,5 @@
+/* Font Raleway */
+
 @font-face {
   font-family: "Raleway";
   src: url("../public/fonts/Raleway-Light.ttf");
@@ -46,6 +48,24 @@
   font-weight: 900;
   font-style: normal;
 }
+
+/* Lato font */
+
+@font-face {
+  font-family: "Lato";
+  src: url("../public/fonts/Lato-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../public/fonts/Lato-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Global styles */
 
 body {
   font-family: "Raleway";

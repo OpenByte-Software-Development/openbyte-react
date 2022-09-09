@@ -150,6 +150,11 @@ const TECH_STACK = {
   },
 };
 
+const INDUSTRY_EXPERTISE = {
+  title: "Our Industry expertise",
+  tags: [{ title: "Technology", active: true }],
+};
+
 const MobileApplications = () => {
   return (
     <Layout>
@@ -157,7 +162,7 @@ const MobileApplications = () => {
         <title>{PAGE_TITLES.services.mobileDev}</title>
       </Head>
       <ServicesHero {...HERO_PROPS} />
-      <IndustryExpertise title="Our Industry expertise" tags={["Technology"]} />
+      <IndustryExpertise {...INDUSTRY_EXPERTISE} />
       <section className="relative">
         <PriceEstimationCta />
         <div className="bg-light-black absolute top-0 left-0 min-h-[50%] min-w-full -z-10"></div>

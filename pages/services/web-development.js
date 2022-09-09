@@ -157,6 +157,16 @@ const TECH_STACK = {
   },
 };
 
+const INDUSTRY_EXPERTISE = {
+  title: "Our Industry expertise",
+  tags: [
+    { title: "Consulting" },
+    { title: "Finance" },
+    { title: "Technology", active: true },
+    { title: "HR" },
+  ],
+};
+
 const WebDevelopment = () => {
   return (
     <Layout>
@@ -165,10 +175,7 @@ const WebDevelopment = () => {
       </Head>
       <SocialNetworks />
       <ServicesHero {...HERO_PROPS} />
-      <IndustryExpertise
-        title="Our Industry expertise"
-        tags={["Consulting", "Finance", "Technology", "HR"]}
-      />
+      <IndustryExpertise {...INDUSTRY_EXPERTISE} />
       <section className="relative">
         <PriceEstimationCta />
         <div className="bg-light-black absolute top-0 left-0 min-h-[50%] min-w-full -z-10"></div>
