@@ -1,17 +1,25 @@
 import React from "react";
 import Layout from "../../components/Layout/index";
 import PreviousExperience from "../../components/PreviousExperience";
+import SocialNetworks from "../../components/SocialNetworks";
+import {
+  PreviousClients,
+  CaseStudies,
+} from "../../components/CaseStudies/CaseStudiesPage/index";
 
-const CaseStudies = () => {
+const CaseStudiesHomepage = () => {
   return (
     <Layout>
-      <div className="bg-beige pt-14 pb-32">
-        <div className="container">
-          <PreviousExperience title="What our partners said:" />
-        </div>
+      <SocialNetworks />
+      <div className="container pt-16">
+        <PreviousClients />
+        <CaseStudies />
+      </div>
+      <div className="bg-beige">
+        <PreviousExperience title="What our partners said:" />
       </div>
     </Layout>
   );
 };
 
-export default CaseStudies;
+export default CaseStudiesHomepage;

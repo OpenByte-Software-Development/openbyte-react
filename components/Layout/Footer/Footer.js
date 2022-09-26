@@ -3,17 +3,53 @@ import Image from "next/image";
 import Link from "next/link";
 
 //Images
-import logo from "../../../public/logo-white.svg";
-import instagramLogo from "../../../public/icons/instagram.svg";
-import linkedinLogo from "../../../public/icons/linkedin.svg";
-import facebookLogo from "../../../public/icons/facebook.svg";
-import githubLogo from "../../../public/icons/github.svg";
 import email from "../../../public/icons/email.svg";
+import logoLight from "../../../public/logo-white.svg";
+import logoDark from "../../../public/logo-dark.svg";
+import instagramLight from "../../../public/icons/instagram.svg";
+import linkedinLight from "../../../public/icons/linkedin.svg";
+import facebookLight from "../../../public/icons/facebook.svg";
+import githubLight from "../../../public/icons/github.svg";
 
-const Footer = () => {
+import instagramDark from "../../../public/icons/instagram-black.svg";
+import linkedinDark from "../../../public/icons/linkedin-black.svg";
+import facebookDark from "../../../public/icons/facebook-black.svg";
+import githubDark from "../../../public/icons/github-black.svg";
+
+const FOOTER_STYLE = {
+  light: {
+    logo: logoDark,
+    background: "bg-white",
+    textColor: "text-light-black",
+    addressColor: "text-black",
+    socialIcons: {
+      instagram: instagramDark,
+      linkedin: linkedinDark,
+      facebook: facebookDark,
+      github: githubDark,
+    },
+  },
+  dark: {
+    logo: logoLight,
+    background: "bg-light-black",
+    textColor: "text-white",
+    addressColor: "text-white",
+    socialIcons: {
+      instagram: instagramLight,
+      linkedin: linkedinLight,
+      facebook: facebookLight,
+      github: githubLight,
+    },
+  },
+};
+
+const Footer = ({ variant = "dark" }) => {
+  const { logo, background, textColor, addressColor, socialIcons } =
+    FOOTER_STYLE[variant];
+
   return (
     <div>
-      <div className="bg-light-black px-6 lg:p-0">
+      <div className={`${background} px-6 lg:p-0`}>
         <div className="container mx-auto lg:py-16 py-8">
           <div className="grid grid-rows-1 grid-cols-2 lg:grid-cols-4">
             <div className="flex flex-col justify-between lg:justify-start">
@@ -33,7 +69,7 @@ const Footer = () => {
                     rel="noreferrer"
                     className="min-w-[22px]"
                   >
-                    <Image src={instagramLogo} alt="instagram logo" />
+                    <Image src={socialIcons.instagram} alt="instagram logo" />
                   </a>
 
                   <a
@@ -42,7 +78,7 @@ const Footer = () => {
                     rel="noreferrer"
                     className="min-w-[22px]"
                   >
-                    <Image src={linkedinLogo} alt="linkedin logo" />
+                    <Image src={socialIcons.linkedin} alt="linkedin logo" />
                   </a>
                 </div>
                 <div className="flex gap-8">
@@ -52,7 +88,7 @@ const Footer = () => {
                     rel="noreferrer"
                     className="min-w-[22px]"
                   >
-                    <Image src={facebookLogo} alt="facebook logo" />
+                    <Image src={socialIcons.facebook} alt="facebook logo" />
                   </a>
 
                   <a
@@ -61,7 +97,7 @@ const Footer = () => {
                     rel="noreferrer"
                     className="min-w-[22px]"
                   >
-                    <Image src={githubLogo} alt="github logo" />
+                    <Image src={socialIcons.github} alt="github logo" />
                   </a>
                 </div>
               </div>
@@ -75,25 +111,25 @@ const Footer = () => {
             </div>
 
             <div className="hidden lg:block">
-              <nav>
+              <nav className={`${textColor} font-bold text-base`}>
                 <ul>
-                  <li className="font-bold text-gray text-base">SERVICES</li>
-                  <li className="font-bold text-white text-base mt-6">
+                  <li className=" text-gray">SERVICES</li>
+                  <li className="mt-6">
                     <Link href="/services/web-development">
                       <a>Web Development Services</a>
                     </Link>
                   </li>
-                  <li className="font-bold text-white text-base mt-6">
+                  <li className="mt-6">
                     <Link href="/services/mobile-applications">
                       <a>Mobile Application Development</a>
                     </Link>
                   </li>
-                  <li className="font-bold text-white text-base mt-6">
+                  <li className="mt-6">
                     <Link href="/services/mvp-development">
                       <a>MVP App Development</a>
                     </Link>
                   </li>
-                  <li className="font-bold text-white text-base mt-6">
+                  <li className="mt-6">
                     <Link href="/about-us#team">
                       <a>Dedicated Developers</a>
                     </Link>
@@ -103,20 +139,20 @@ const Footer = () => {
             </div>
 
             <div className="hidden lg:block">
-              <nav>
+              <nav className={`${textColor} font-bold text-base`}>
                 <ul>
                   <li className="font-bold text-gray text-base">LINKS</li>
-                  <li className="font-bold text-white text-base mt-6">
+                  <li className="mt-6">
                     <Link href="/about-us">
                       <a>About Us</a>
                     </Link>
                   </li>
-                  <li className="font-bold text-white text-base mt-6">
+                  <li className="mt-6">
                     <Link href="/case-studies">
                       <a>Case Studies</a>
                     </Link>
                   </li>
-                  <li className="font-bold text-white text-base mt-6">
+                  <li className="mt-6">
                     <Link href="/calculator">
                       <a>Estimate App cost</a>
                     </Link>
@@ -135,7 +171,7 @@ const Footer = () => {
                   Office:
                 </span>
 
-                <p className="font-bold text-white text-base mt-2">
+                <p className={`font-bold ${addressColor} text-base mt-2`}>
                   Strada 31 August 1989 78, Chișinău
                 </p>
               </div>
@@ -163,7 +199,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center py-5 text-gray border-t-2 border-b-gray bg-light-black">
+      <div
+        className={`${background} flex justify-center items-center py-5 text-gray border-t-2 border-b-gray`}
+      >
         Designed with love by Kody©
       </div>
     </div>
