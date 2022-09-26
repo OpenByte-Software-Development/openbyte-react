@@ -102,7 +102,7 @@ const Footer = ({ variant = "dark" }) => {
                 </div>
               </div>
               <div className="font-bold text-gray text-base mt-6">
-                <Link href="/privacy-policy">
+                <Link href="/privacy-and-policy">
                   <a target="_blank" rel="noreferrer">
                     PRIVACY POLICY
                   </a>

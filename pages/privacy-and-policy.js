@@ -669,7 +669,7 @@ const PrivacyAndPolicy = () => {
                 authority. You can find their contact details here:{" "}
                 <a
                   href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm"
-                  targe="_blank"
+                  target="_blank"
                   rel="noreferrer"
                   className="text-orange"
                 >
@@ -682,7 +682,7 @@ const PrivacyAndPolicy = () => {
                 data protection authorities are available here:{" "}
                 <a
                   href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm"
-                  targe="_blank"
+                  target="_blank"
                   rel="noreferrer"
                   className="text-orange"
                 >
@@ -721,7 +721,7 @@ const PrivacyAndPolicy = () => {
                 advertising by advertisers on our Services visit:{" "}
                 <a
                   href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm"
-                  targe="_blank"
+                  target="_blank"
                   rel="noreferrer"
                   className="text-orange"
                 >
@@ -1227,7 +1227,7 @@ const PrivacyAndPolicy = () => {
                 submit a request form by clicking{" "}
                 <a
                   href="https://app.termly.io/notify/70495f9e-1aa3-4e5c-8c9f-7ee2e3012eee"
-                  targe="_blank"
+                  target="_blank"
                   rel="noreferrer"
                   className="text-orange"
                 >
