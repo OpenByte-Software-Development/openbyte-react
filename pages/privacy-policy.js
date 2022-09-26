@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Head from "next/head";
 import Layout from "../components/Layout/index";
+import { PAGE_TITLES } from "../lib/constants";
 
 const PointTitle = ({ children }) => {
   return <h3 className="text-lg">{children}</h3>;
@@ -16,6 +18,9 @@ const Bold = ({ children }) => {
 const PrivacyAndPolicy = () => {
   return (
     <Layout>
+      <Head>
+        <title>{PAGE_TITLES.privacyPolicy}</title>
+      </Head>
       <div className="py-36">
         <div className="container">
           <h2 className="font-bold text-center text-3xl">PRIVACY NOTICE</h2>
