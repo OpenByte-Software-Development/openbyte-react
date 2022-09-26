@@ -8,13 +8,13 @@ const HorizontalLine = () => (
 
 const formInitialValues = {
   conditionsAgree: false,
-  companySize: "",
-  budget: "",
+  // companySize: "",
+  // budget: "",
   firstName: "",
   lastName: "",
   email: "",
   phoneNumber: "",
-  country: "",
+  // country: "",
   linkedin: "",
   description: "",
 };
@@ -102,7 +102,7 @@ const ContactForm = () => {
                 />
               </div>
 
-              <div>
+              {/* <div>
                 <label
                   htmlFor="country"
                   className="text-black font-bold text-[10px]"
@@ -119,7 +119,7 @@ const ContactForm = () => {
                   <option>Moldova, Republic of</option>
                   <option>Romania</option>
                 </Field>
-              </div>
+              </div> */}
 
               <div>
                 <label
@@ -141,14 +141,14 @@ const ContactForm = () => {
           </div>
           <HorizontalLine />
 
-          <div>
+          {/* <div>
             <h3 className="lg:text-left text-2xl text-black font-bold">
               Project info
             </h3>
             <HorizontalLine />
-          </div>
+          </div> */}
 
-          <div className="grid lg:grid-rows-1 lg:grid-cols-2 grid-rows-2 grid-cols-1 gap-6">
+          {/* <div className="grid lg:grid-rows-1 lg:grid-cols-2 grid-rows-2 grid-cols-1 gap-6">
             <div>
               <div
                 id="my-radio-group"
@@ -233,7 +233,7 @@ const ContactForm = () => {
                 </label>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="mt-10">
             <div className="flex flex-col">
