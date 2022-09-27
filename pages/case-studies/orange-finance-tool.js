@@ -9,6 +9,7 @@ import {
   Solution,
   TechStack,
   CaseStudyReview,
+  Screens
 } from "../../components/CaseStudies";
 import {
   redLaravel,
@@ -30,6 +31,14 @@ import orangeFinanceToolArchitecture from "../../public/case-studies/orange-finc
 import orangeFinanceToolMobileArchitecture from "../../public/case-studies/orange-fincance-tool-mobile-architecture.png";
 
 import clientAvatar from "../../public/victor-bivol.png";
+
+// Screens
+import screen1_1 from "../../public/case-studies/app-screens/orange-finance/1-1.png";
+import screen1_2 from "../../public/case-studies/app-screens/orange-finance/1-2.png";
+import screen1_3 from "../../public/case-studies/app-screens/orange-finance/1-3.png";
+import screen2_1 from "../../public/case-studies/app-screens/orange-finance/2-1.png";
+import screen2_2 from "../../public/case-studies/app-screens/orange-finance/2-2.png";
+import screen2_3 from "../../public/case-studies/app-screens/orange-finance/2-3.png";
 
 const ORANGE_FINANCE_TOOL = {
   heroImage: orangeLogo,
@@ -179,7 +188,38 @@ const CLIENT_REVIEW = {
   clientAvatar,
 };
 
-const Mevuo = () => {
+const SCREENS = [
+  [
+    {
+      src: screen1_1,
+      alt: "app screen",
+    },
+    {
+      src: screen1_2,
+      alt: "app screen",
+    },
+    {
+      src: screen1_3,
+      alt: "app screen",
+    },
+  ],
+  [
+    {
+      src: screen2_1,
+      alt: "app screen",
+    },
+    {
+      src: screen2_2,
+      alt: "app screen",
+    },
+    {
+      src: screen2_3,
+      alt: "app screen",
+    },
+  ],
+];
+
+const OranceFinance = () => {
   return (
     <Layout footer="light">
       <SocialNetworks />
@@ -195,6 +235,7 @@ const Mevuo = () => {
         alt="Orange Finance Tool Architecure"
       />
       <TechStack techStack={TECH_STACK} />
+      <Screens screensRows={SCREENS} />
       <CaseStudyReview {...CLIENT_REVIEW} />
       <section className="relative">
         <ContactFormCta />
@@ -204,4 +245,4 @@ const Mevuo = () => {
   );
 };
 
-export default Mevuo;
+export default OranceFinance;

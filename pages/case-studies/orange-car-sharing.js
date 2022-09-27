@@ -9,6 +9,7 @@ import {
   Solution,
   TechStack,
   CaseStudyReview,
+  Screens
 } from "../../components/CaseStudies";
 import {
   redDigitalOcean,
@@ -30,6 +31,25 @@ import orangeLogo from "../../public/case-studies/orange-logo-big.png";
 import orangeCarSharingArchitecture from "../../public/case-studies/orange-car-sharing-architecture.png";
 import orangeCarSharingMobileArchitecture from "../../public/case-studies/orange-car-sharing-mobile-architecture.png";
 import clientAvatar from "../../public/eugen-gavrev.png";
+
+// Screens
+import screen1_1 from "../../public/case-studies/app-screens/orange-car-sharing/1-1.png";
+import screen1_2 from "../../public/case-studies/app-screens/orange-car-sharing/1-2.png";
+import screen1_3 from "../../public/case-studies/app-screens/orange-car-sharing/1-3.png";
+import screen1_4 from "../../public/case-studies/app-screens/orange-car-sharing/1-4.png";
+import screen1_5 from "../../public/case-studies/app-screens/orange-car-sharing/1-5.png";
+import screen2_1 from "../../public/case-studies/app-screens/orange-car-sharing/2-1.png";
+import screen2_2 from "../../public/case-studies/app-screens/orange-car-sharing/2-2.png";
+import screen2_3 from "../../public/case-studies/app-screens/orange-car-sharing/2-3.png";
+import screen2_4 from "../../public/case-studies/app-screens/orange-car-sharing/2-4.png";
+import screen2_5 from "../../public/case-studies/app-screens/orange-car-sharing/2-5.png";
+import screen2_6 from "../../public/case-studies/app-screens/orange-car-sharing/2-6.png";
+import screen3_1 from "../../public/case-studies/app-screens/orange-car-sharing/3-1.png";
+import screen3_2 from "../../public/case-studies/app-screens/orange-car-sharing/3-2.png";
+import screen3_3 from "../../public/case-studies/app-screens/orange-car-sharing/3-3.png";
+import screen3_4 from "../../public/case-studies/app-screens/orange-car-sharing/3-4.png";
+import screen3_5 from "../../public/case-studies/app-screens/orange-car-sharing/3-5.png";
+
 
 const ORANGE_CAR_SHARING = {
   heroImage: orangeLogo,
@@ -150,7 +170,81 @@ const CLIENT_REVIEW = {
   clientAvatar,
 };
 
-const Mevuo = () => {
+const SCREENS = [
+  [
+    {
+      src: screen1_1,
+      alt: "app screen",
+    },
+    {
+      src: screen1_2,
+      alt: "app screen",
+    },
+    {
+      src: screen1_3,
+      alt: "app screen",
+    },
+    
+    {
+      src: screen1_4,
+      alt: "app screen",
+    },
+    {
+      src: screen1_5,
+      alt: "app screen",
+    },
+  ],
+  [
+    {
+      src: screen2_1,
+      alt: "app screen",
+    },
+    {
+      src: screen2_2,
+      alt: "app screen",
+    },
+    {
+      src: screen2_3,
+      alt: "app screen",
+    },
+    {
+      src: screen2_4,
+      alt: "app screen",
+    },
+    {
+      src: screen2_5,
+      alt: "app screen",
+    },
+    {
+      src: screen2_6,
+      alt: "app screen",
+    },
+  ],
+  [
+    {
+      src: screen3_1,
+      alt: "app screen",
+    },
+    {
+      src: screen3_2,
+      alt: "app screen",
+    },
+    {
+      src: screen3_3,
+      alt: "app screen",
+    },
+    {
+      src: screen3_4,
+      alt: "app screen",
+    },
+    {
+      src: screen3_5,
+      alt: "app screen",
+    },
+  ],
+];
+
+const OrangeCarSharing = () => {
   return (
     <Layout footer="light">
       <SocialNetworks />
@@ -166,6 +260,7 @@ const Mevuo = () => {
         alt="Orange Car Sharing Architecure"
       />
       <TechStack techStack={TECH_STACK} />
+      <Screens screensRows={SCREENS} />
       <CaseStudyReview {...CLIENT_REVIEW} />
       <section className="relative">
         <ContactFormCta />
@@ -175,4 +270,4 @@ const Mevuo = () => {
   );
 };
 
-export default Mevuo;
+export default OrangeCarSharing;

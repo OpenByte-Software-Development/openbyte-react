@@ -8,11 +8,13 @@ const CaseStudy = ({
   description,
   tags,
   body,
+  imageAlt,
   ctaLink,
   preview,
   clutchReview,
   clutchProjectLink,
   className,
+  previewBorder = true,
 }) => {
   const projectTags = tags.map((tagText, index) => (
     <Tag text={tagText} variant="blue" key={index} />
@@ -67,8 +69,12 @@ const CaseStudy = ({
           </div>
 
           <div className="flex justify-end order-1 w-full relative">
-            <div className="lg:rounded-l-[27px] rounded-[25px] lg:rounded-none border-3 lg:border-r-[0px] border-black grid overflow-hidden w-full h-[224px] lg:h-auto">
-              <Image src={preview} alt="Mevuo app preview" />
+            <div
+              className={`${
+                previewBorder && "border-3 lg:border-r-[0px] border-black lg:rounded-l-[27px] rounded-[25px] lg:rounded-none"
+              } grid overflow-hidden w-full h-[224px] lg:h-auto`}
+            >
+              <Image src={preview} alt={imageAlt} />
             </div>
 
             <div className="w-full h-full absolute top-0 left-0 rounded-[25px] flex justify-end flex-col bg-dark-gradient px-4 pb-3 lg:hidden">

@@ -4,6 +4,7 @@ import Architecture from "./Architecture";
 import Solution from "./Solution";
 import TechStack from "./TechStack";
 import CaseStudyReview from "./CaseStudyReview";
+import Screens from "./Screens";
 
 export {
   CaseStudyHero,
@@ -12,4 +13,5 @@ export {
   Solution,
   TechStack,
   CaseStudyReview,
+  Screens
 };

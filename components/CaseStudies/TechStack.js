@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import TechIcon from "../TechIcon";
 
 const TechStack = ({ techStack }) => {
@@ -11,7 +10,7 @@ const TechStack = ({ techStack }) => {
           fill="#323232"
         />
       </svg>
-      <div className="bg-light-black pt-20">
+      <div className="bg-light-black pt-20 pb-24">
         <h2 className="lg:text-[40px] text-[24px] font-bold lg:leading-[50px]">
           Tech Stack
         </h2>

@@ -9,6 +9,7 @@ import {
   Solution,
   TechStack,
   CaseStudyReview,
+  Screens,
 } from "../../components/CaseStudies";
 import {
   redLaravel,
@@ -30,6 +31,13 @@ import mevuoLogo from "../../public/case-studies/mevuo-logo-big.png";
 import mevuoArchitecture from "../../public/case-studies/mevuo-architecture.png";
 import mevuoMobileArchitecture from "../../public/case-studies/mevuo-mobile-architecture.png";
 import avatarPlaholder from "../../public/avatar-placeholder.png";
+
+// Screens
+import screen1_1 from "../../public/case-studies/app-screens/mevuo/1-1.png";
+import screen1_2 from "../../public/case-studies/app-screens/mevuo/1-2.png";
+import screen1_3 from "../../public/case-studies/app-screens/mevuo/1-3.png";
+import screen2_1 from "../../public/case-studies/app-screens/mevuo/2-1.png";
+import screen2_2 from "../../public/case-studies/app-screens/mevuo/2-2.png";
 
 const MEVUO = {
   heroImage: mevuoLogo,
@@ -159,6 +167,33 @@ const CLIENT_REVIEW = {
   clientAvatar: avatarPlaholder,
 };
 
+const SCREENS = [
+  [
+    {
+      src: screen1_1,
+      alt: "app screen",
+    },
+    {
+      src: screen1_2,
+      alt: "app screen",
+    },
+    {
+      src: screen1_3,
+      alt: "app screen",
+    },
+  ],
+  [
+    {
+      src: screen2_1,
+      alt: "app screen",
+    },
+    {
+      src: screen2_2,
+      alt: "app screen",
+    },
+  ],
+];
+
 const Mevuo = () => {
   return (
     <Layout footer="light">
@@ -172,6 +207,7 @@ const Mevuo = () => {
         alt="mevuo architecure"
       />
       <TechStack techStack={TECH_STACK} />
+      <Screens screensRows={SCREENS} />
       <CaseStudyReview {...CLIENT_REVIEW} />
       <section className="relative">
         <ContactFormCta />

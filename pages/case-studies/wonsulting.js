@@ -9,6 +9,7 @@ import {
   Solution,
   TechStack,
   CaseStudyReview,
+  Screens
 } from "../../components/CaseStudies";
 import {
   redLaravel,
@@ -33,6 +34,15 @@ import wonsultingLogo from "../../public/case-studies/wonsulting-logo-big.png";
 import wonsultingArchitecture from "../../public/case-studies/wonsulting-architecture.png";
 import wonsultingMobileArchitecture from "../../public/case-studies/wonsulting-mobile-architecture.png";
 import clientAvatar from "../../public/ron-hyman.png";
+
+// Screens
+import screen1_1 from "../../public/case-studies/app-screens/wonsulting/1-1.png";
+import screen1_2 from "../../public/case-studies/app-screens/wonsulting/1-2.png";
+import screen2_1 from "../../public/case-studies/app-screens/wonsulting/2-1.png";
+import screen2_2 from "../../public/case-studies/app-screens/wonsulting/2-2.png";
+import screen2_3 from "../../public/case-studies/app-screens/wonsulting/2-3.png";
+import screen3_1 from "../../public/case-studies/app-screens/wonsulting/3-1.png";
+import screen3_2 from "../../public/case-studies/app-screens/wonsulting/3-2.png";
 
 const WONSULTING = {
   heroImage: wonsultingLogo,
@@ -173,7 +183,44 @@ const CLIENT_REVIEW = {
   clientAvatar,
 };
 
-const Mevuo = () => {
+const SCREENS = [
+  [
+    {
+      src: screen1_1,
+      alt: "app screen",
+    },
+    {
+      src: screen1_2,
+      alt: "app screen",
+    },
+  ],
+  [
+    {
+      src: screen2_1,
+      alt: "app screen",
+    },
+    {
+      src: screen2_2,
+      alt: "app screen",
+    },
+    {
+      src: screen2_3,
+      alt: "app screen",
+    },
+  ],
+  [
+    {
+      src: screen3_1,
+      alt: "app screen",
+    },
+    {
+      src: screen3_2,
+      alt: "app screen",
+    },
+  ],
+];
+
+const Wonsulting = () => {
   return (
     <Layout footer="light">
       <SocialNetworks />
@@ -189,6 +236,7 @@ const Mevuo = () => {
         alt="wonsulting architecure"
       />
       <TechStack techStack={TECH_STACK} />
+      <Screens screensRows={SCREENS} />
       <CaseStudyReview {...CLIENT_REVIEW} />
       <section className="relative">
         <ContactFormCta />
@@ -198,4 +246,4 @@ const Mevuo = () => {
   );
 };
 
-export default Mevuo;
+export default Wonsulting;

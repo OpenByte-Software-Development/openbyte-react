@@ -9,6 +9,7 @@ import {
   Solution,
   TechStack,
   CaseStudyReview,
+  Screens
 } from "../../components/CaseStudies";
 import {
   redLaravel,
@@ -31,6 +32,15 @@ import interviewSchoolLogo from "../../public/case-studies/interview-school-logo
 import interviewSchoolArchitecture from "../../public/case-studies/interview-school-architecture.png";
 import interviewSchoolMobileArchitecture from "../../public/case-studies/interview-school-mobile-architecture.png";
 import clientAvatar from "../../public/peter-gratale.png";
+
+// Screens
+import screen1_1 from "../../public/case-studies/app-screens/interview-school/1-1.png";
+import screen1_2 from "../../public/case-studies/app-screens/interview-school/1-2.png";
+import screen2_1 from "../../public/case-studies/app-screens/interview-school/2-1.png";
+import screen2_2 from "../../public/case-studies/app-screens/interview-school/2-2.png";
+import screen2_3 from "../../public/case-studies/app-screens/interview-school/2-3.png";
+import screen3_1 from "../../public/case-studies/app-screens/interview-school/3-1.png";
+import screen3_2 from "../../public/case-studies/app-screens/interview-school/3-2.png";
 
 const INTERVIEW_SCHOOL = {
   heroImage: interviewSchoolLogo,
@@ -159,7 +169,44 @@ const CLIENT_REVIEW = {
   clientAvatar,
 };
 
-const Mevuo = () => {
+const SCREENS = [
+  [
+    {
+      src: screen1_1,
+      alt: "app screen",
+    },
+    {
+      src: screen1_2,
+      alt: "app screen",
+    },
+  ],
+  [
+    {
+      src: screen2_1,
+      alt: "app screen",
+    },
+    {
+      src: screen2_2,
+      alt: "app screen",
+    },
+    {
+      src: screen2_3,
+      alt: "app screen",
+    },
+  ],
+  [
+    {
+      src: screen3_1,
+      alt: "app screen",
+    },
+    {
+      src: screen3_2,
+      alt: "app screen",
+    },
+  ],
+];
+
+const InterviewSchool = () => {
   return (
     <Layout footer="light">
       <SocialNetworks />
@@ -175,6 +222,7 @@ const Mevuo = () => {
         alt="Interview School Architecure"
       />
       <TechStack techStack={TECH_STACK} />
+      <Screens screensRows={SCREENS} />
       <CaseStudyReview {...CLIENT_REVIEW} />
       <section className="relative">
         <ContactFormCta />
@@ -184,4 +232,4 @@ const Mevuo = () => {
   );
 };
 
-export default Mevuo;
+export default InterviewSchool;

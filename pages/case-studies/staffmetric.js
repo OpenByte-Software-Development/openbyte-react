@@ -9,6 +9,7 @@ import {
   Solution,
   TechStack,
   CaseStudyReview,
+  Screens,
 } from "../../components/CaseStudies";
 import {
   redLaravel,
@@ -31,6 +32,15 @@ import staffmetricLogo from "../../public/case-studies/staff-logo-big.png";
 import staffmetricArchitecture from "../../public/case-studies/staff-architecture.png";
 import staffmetricMobileArchitecture from "../../public/case-studies/staff-mobile-architecture.png";
 import clientAvatar from "../../public/vladimir-grosu.png";
+
+// Screens
+import screen1_1 from "../../public/case-studies/app-screens/staffmetric/1-1.png";
+import screen1_2 from "../../public/case-studies/app-screens/staffmetric/1-2.png";
+import screen2_1 from "../../public/case-studies/app-screens/staffmetric/2-1.png";
+import screen2_2 from "../../public/case-studies/app-screens/staffmetric/2-2.png";
+import screen2_3 from "../../public/case-studies/app-screens/staffmetric/2-3.png";
+import screen3_1 from "../../public/case-studies/app-screens/staffmetric/3-1.png";
+import screen3_2 from "../../public/case-studies/app-screens/staffmetric/3-2.png";
 
 const STAFFMETRIC = {
   heroImage: staffmetricLogo,
@@ -164,7 +174,44 @@ const CLIENT_REVIEW = {
   clientAvatar,
 };
 
-const Mevuo = () => {
+const SCREENS = [
+  [
+    {
+      src: screen1_1,
+      alt: "app screen",
+    },
+    {
+      src: screen1_2,
+      alt: "app screen",
+    },
+  ],
+  [
+    {
+      src: screen2_1,
+      alt: "app screen",
+    },
+    {
+      src: screen2_2,
+      alt: "app screen",
+    },
+    {
+      src: screen2_3,
+      alt: "app screen",
+    },
+  ],
+  [
+    {
+      src: screen3_1,
+      alt: "app screen",
+    },
+    {
+      src: screen3_2,
+      alt: "app screen",
+    },
+  ],
+];
+
+const Staffmetric = () => {
   return (
     <Layout footer="light">
       <SocialNetworks />
@@ -180,6 +227,7 @@ const Mevuo = () => {
         alt="Staff Metric Architecure"
       />
       <TechStack techStack={TECH_STACK} />
+      <Screens screensRows={SCREENS} />
       <CaseStudyReview {...CLIENT_REVIEW} />
       <section className="relative">
         <ContactFormCta />
@@ -189,4 +237,4 @@ const Mevuo = () => {
   );
 };
 
-export default Mevuo;
+export default Staffmetric;

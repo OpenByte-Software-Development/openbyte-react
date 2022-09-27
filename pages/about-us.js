@@ -14,7 +14,7 @@ const AboutUs = () => {
   return (
     <Layout>
       <Head>
-        <title>{PAGE_TITLES.aboutUs}</title>
+        <title>{PAGE_TITLES.aboutUs}</title> 
       </Head>
       <SociaNetworks />
       <Hero />
