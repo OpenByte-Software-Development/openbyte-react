@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Formik, Field } from "formik";
 import { api } from "../../lib/api";
+import Link from "next/link";
 
 const HorizontalLine = () => (
   <div className="my-6 h-[2px] w-full bg-orange bg-opacity-20"></div>
@@ -266,7 +267,10 @@ const ContactForm = () => {
                 <span className="block">
                   I consent that OpenByte can process my personal data for the
                   purpose of making me an offer for their services.
-                  <span className="text-orange"> Read our Privacy Policy</span>.
+                  <Link href="/privacy-and-policy">
+                    <a className="text-orange"> Read our Privacy Policy</a>
+                  </Link>
+                  .
                 </span>
               </div>
             </label>
