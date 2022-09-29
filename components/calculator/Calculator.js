@@ -41,6 +41,72 @@ const CALCULATOR_ACTIONS = {
   NEXT_STEP: "next_step",
   PREVIOUS_STEP: "previous_step",
   SELECT_TAB: "select_tab",
+  RESET_CALCULATOR: "reset_calculator",
+};
+
+const getDaysFromHours = (hours) => Math.floor(hours / 24);
+const getPriceFromHours = (hours) => Math.floor(hours * 40);
+
+const OverviewCard = ({ title, options }) => (
+  <div className="bg-beige">
+    <div className="bg-light-black p-4 text-white capitalize">{title}:</div>
+
+    <div className="mt-[10px] py-5 px-4">
+      <ul className="uppercase flex gap-6 flex-col">
+        {options
+          .filter((option) => option.isSelected)
+          .map((option) => (
+            <li key={option.title} className="flex flex-col gap-10 font-lato">
+              {option.title}
+            </li>
+          ))}
+      </ul>
+    </div>
+  </div>
+);
+
+const OverviewStep = ({ steps }) => {
+  return (
+    <Tab.Panel className="pt-14 pb-16">
+      <div className="text-center text-light-black">
+        <h3 className="text-[32px] leading-[40px] font-bold">
+          Calculation results
+        </h3>
+
+        <div className="my-6">
+          <div className="flex justify-center text-center gap-11">
+            <div className="text-light-black font-bold">
+              <span className="block uppercase">
+                Estimative price
+                <span className="text-xl leading-[30px]">*</span>
+              </span>
+              <span className="block text-orange text-2xl">{`$ ${"0000"}`}</span>
+            </div>
+            <div className="text-light-black font-bold">
+              <span className="block uppercase">
+                Estimative time<span className="text-xl leading-[30px]">*</span>
+              </span>
+              <span className="block text-orange text-2xl">{`days ${"00"}`}</span>
+            </div>
+          </div>
+
+          <p className="uppercase font-bold font-lato text-lightGray text-xs mt-[21px]">
+            <span className="text-black text-xl leading-[30px]">* </span>The
+            calculated time and price could variate to 50%
+          </p>
+        </div>
+      </div>
+
+      <div className="grid grid-rows-1 grid-cols-6 gap-[10px] rounded-[24px] selection:overflow-hidden">
+        {Object.keys(steps)
+          .filter((step) => step !== "additional")
+          .map((step) => {
+            const { title, options } = steps[step];
+            return <OverviewCard title={step} options={options} key={title} />;
+          })}
+      </div>
+    </Tab.Panel>
+  );
 };
 
 const CALCULATOR_STEPS = {
@@ -267,6 +333,12 @@ const CALCULATOR_STEPS = {
         },
       ],
     },
+    additional: {
+      isCompleted: false,
+      title: " ",
+      description: " ",
+      options: [],
+    },
   },
 };
 
@@ -280,6 +352,14 @@ const calculatorReducer = (state, action) => {
       const { index } = action;
       const step = calculatorStepOptions[stepIndex];
       const selectedOption = calculatorState.steps[step].options[index];
+
+      if (selectedOption.isSelected) {
+        calculatorState.countedHours =
+          calculatorState.countedHours - selectedOption.hours;
+      } else {
+        calculatorState.countedHours =
+          calculatorState.countedHours + selectedOption.hours;
+      }
 
       const updatedStep = {
         ...selectedOption,
@@ -326,32 +406,39 @@ const calculatorReducer = (state, action) => {
 
       return calculatorState;
     }
+    case CALCULATOR_ACTIONS.RESET_CALCULATOR: {
+      const { initialState } = action;
+      return initialState;
+    }
     default:
-      return calculatorState;
+      return state;
   }
 };
 
 const Calculator = () => {
-  const [calculator, dispatch] = useReducer(
-    calculatorReducer,
-    CALCULATOR_STEPS
-  );
+  const [calculator, dispatch] = useReducer(calculatorReducer, {
+    ...CALCULATOR_STEPS,
+  });
 
   const cardClickHandler = (index) => {
     dispatch({ type: CALCULATOR_ACTIONS.CARD_CLICK, index });
   };
-
   const nextStep = () => {
     dispatch({ type: CALCULATOR_ACTIONS.COMPLETE_STEP });
     dispatch({ type: CALCULATOR_ACTIONS.NEXT_STEP });
   };
-
   const previousStep = () => {
     dispatch({ type: CALCULATOR_ACTIONS.PREVIOUS_STEP });
   };
-
   const selectTab = (index) => {
     dispatch({ type: CALCULATOR_ACTIONS.SELECT_TAB, index });
+  };
+
+  const resetCalculator = () => {
+    dispatch({
+      type: CALCULATOR_ACTIONS.RESET_CALCULATOR,
+      initialState: { ...CALCULATOR_STEPS },
+    });
   };
 
   return (
@@ -360,18 +447,32 @@ const Calculator = () => {
         <CalculatorHeader calculator={calculator} />
 
         <Tab.Panels>
-          {Object.keys(calculator.steps).map((step, index) => (
-            <CalculatorStep
-              {...calculator.steps[step]}
-              key={index}
-              cardClickHandler={cardClickHandler}
-            />
-          ))}
+          {Object.keys(calculator.steps).map((step, index) => {
+            return step === "additional" ? (
+              <OverviewStep
+                key={index}
+                steps={calculator.steps}
+                cardClickHandler={cardClickHandler}
+              />
+            ) : (
+              <CalculatorStep
+                {...calculator.steps[step]}
+                key={index}
+                cardClickHandler={cardClickHandler}
+              />
+            );
+          })}
         </Tab.Panels>
+
         <CalculatorFooter
           nextStep={nextStep}
           previousStep={previousStep}
-          countedHours={calculator.countedHours}
+          resetCalculator={resetCalculator}
+          days={Math.floor(calculator.countedHours / 8)}
+          price={Math.floor(calculator.countedHours * 40)}
+          isFinalStep={
+            calculator.stepIndex === Object.keys(calculator.steps).length - 1
+          }
         />
       </Tab.Group>
     </section>

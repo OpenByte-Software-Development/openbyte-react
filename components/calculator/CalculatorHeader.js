@@ -9,7 +9,9 @@ import stepCompletedIcon from "../../public/calculator/check.png";
 const StepIcon = ({ isCompleted, stepName, disabled }) => {
   return (
     <Tab
-      className={`flex items-center ${!disabled && "opacity-50 cursor-default"}`}
+      className={`flex items-center ${
+        !disabled && "opacity-50 cursor-default"
+      }`}
       disabled={!disabled}
     >
       <div className="">
@@ -34,7 +36,6 @@ const StepIcon = ({ isCompleted, stepName, disabled }) => {
 
 const CalculatorHeader = ({ calculator }) => {
   const steps = Object.keys(calculator.steps);
-  console.log("calculator.maxTab", calculator.maxTab);
   return (
     <Tab.List className="flex justify-around">
       {steps.map((step, index) => (

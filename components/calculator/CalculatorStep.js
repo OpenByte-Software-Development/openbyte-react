@@ -50,12 +50,7 @@ const FeatureCard = ({
   );
 };
 
-const CalculatorStep = ({
-  title,
-  description,
-  options,
-  cardClickHandler,
-}) => {
+const CalculatorStep = ({ title, description, options, cardClickHandler }) => {
   return (
     <Tab.Panel className="py-[52px]">
       <div>
