@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Review = ({
   avatar,
@@ -8,6 +9,7 @@ const Review = ({
   position,
   review,
   clutchReview,
+  clutchLink,
   className = "",
 }) => (
   <div className="pl-2 pb-2 flex items-stretch h-full">
@@ -34,10 +36,13 @@ const Review = ({
             {review}
           </p>
         </div>
- 
+
         <div className="pt-8">
-          {/* // TODO: replace with actual clutch review */}
-          <Image src={clutchReview} alt="clutch review" />
+          <Link href={clutchLink}>
+            <a target="_blank" rel="noreferrer">
+              <Image src={clutchReview} alt="clutch review" />
+            </a>
+          </Link>
         </div>
       </div>
       <div className="bg-yellow absolute -bottom-2 -left-2 rounded-3xl min-w-[100%] min-h-[100%] -z-10"></div>

@@ -3,6 +3,9 @@ import "../styles/globals.css";
 import CookiesConsent from "../components/CookiesConsent";
 import Head from "next/head";
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
+import { ToastContainer } from "react-toastify";
+
+import 'react-toastify/dist/ReactToastify.css';
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -14,6 +17,7 @@ const MyApp = ({ Component, pageProps }) => {
         />
       </Head>
       <Component {...pageProps} />
+      <ToastContainer autoClose={4000} position="bottom-center" className="mt-"/>
       <TawkMessengerReact
         propertyId="624c4d1a2abe5b455fc50397"
         widgetId="1fvt0qc0v"

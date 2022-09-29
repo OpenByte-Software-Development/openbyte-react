@@ -3,7 +3,7 @@ import Image from "next/image";
 import { CASE_STUDIES } from "../../../lib/constants";
 
 const previosClientsLogos = CASE_STUDIES.filter(
-  (caseStudy) => caseStudy.projectIcon
+  (client) => client?.previewIcon != null
 ).map((caseStudy) => ({
   src: caseStudy.previewIcon,
   alt: caseStudy.title,

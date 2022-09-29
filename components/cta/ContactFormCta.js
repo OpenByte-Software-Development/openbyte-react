@@ -1,23 +1,32 @@
 import React from "react";
 import Image from "next/image";
 import { Form, Formik, Field } from "formik";
-import { api } from "../../lib/api";
+import { toast } from "react-toastify";
+import api from "../../lib/api";
 
 // Images
 import arrowRight from "../../public/icons/arrow-right.svg";
 
 const DEFAULT_TITLE = "Want to work with us?";
+
 const formInitialValues = {
   email: "",
-  firstname: "",
+  name: "",
 };
 
 const ContactFormCta = ({ title = DEFAULT_TITLE }) => {
-  const formSubmitHandler = async (values) => {
-    console.log('values', values)
-    const submitResult = await api.contact.cta(values);
+  const formSubmitHandler = async (values, { resetForm }) => {
+    const response = await api.contact(values);
 
-    if (submitResult) console.log("success");
+    if (response.status === 201) {
+      toast.success(
+        "Thank you for your message! We will contact you as soon as possible."
+      );
+
+      resetForm();
+    } else {
+      toast.error("Something went wrong!");
+    }
   };
 
   return (
@@ -38,8 +47,8 @@ const ContactFormCta = ({ title = DEFAULT_TITLE }) => {
                   <Form>
                     <div className="flex gap-4 lg:flex-row flex-col">
                       <Field
-                        name="firstname"
-                        id="firstname"
+                        name="name"
+                        id="name"
                         placeholder="Your Name"
                         className="rounded-[10px] px-4 py-3 text-darkGray"
                       />

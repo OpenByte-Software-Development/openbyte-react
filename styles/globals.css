@@ -112,3 +112,29 @@ body {
 [type="radio"]:focus {
   border: 2px solid #f94e1e !important;
 }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  font-family: "Lato";
+  visibility: hidden;
+  width: max-content;
+  background-color: #767676;
+  color: #fff;
+  text-align: center;
+  padding: 9px 16px;
+  border-radius: 11px;
+  margin: 0 auto;
+  
+  position: absolute;
+  top: -45px;
+  left: -100px;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
