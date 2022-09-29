@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Tab } from "@headlessui/react";
+import { v4 as uuid } from "uuid";
 
 // Images
 import emptyCheck from "../../public/calculator/empty-check.png";
@@ -40,9 +41,9 @@ const CalculatorHeader = ({ calculator }) => {
     <Tab.List className="flex justify-around">
       {steps.map((step, index) => (
         <StepIcon
-          key={step}
+          key={uuid()}
           stepName={step}
-          disabled={index <= calculator.maxTab}
+          disabled={index <= calculator.maxTab || true  }
           isCompleted={calculator.steps[step].isCompleted}
         />
       ))}

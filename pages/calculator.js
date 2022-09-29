@@ -37,7 +37,10 @@ const CalculatorPage = () => {
       </Head>
       <CalculatorHero />
       <Calculator />
-      <Faq faqs={FAQS} />
+      <section className="relative">
+        <Faq faqs={FAQS} />
+        <div className="bg-beige absolute top-0 left-0 rounded-2xl min-w-[100%] min-h-[100%] -z-20"></div>
+      </section>
     </Layout>
   );
 };

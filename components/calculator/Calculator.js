@@ -1,8 +1,12 @@
-import React, { useState, useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import { Tab } from "@headlessui/react";
 import CalculatorFooter from "./CalculatorFooter";
 import CalculatorHeader from "./CalculatorHeader";
 import CalculatorStep from "./CalculatorStep";
+import CalculatorCompleteModal from "./CalculatorCompleteModal";
+import { v4 as uuid } from "uuid";
+
+const hourlyRate = parseInt(process.env.NEXT_PUBLIC_HOURLY_RATE);
 
 //icons
 // screen 1
@@ -44,19 +48,21 @@ const CALCULATOR_ACTIONS = {
   RESET_CALCULATOR: "reset_calculator",
 };
 
-const getDaysFromHours = (hours) => Math.floor(hours / 24);
-const getPriceFromHours = (hours) => Math.floor(hours * 40);
-
 const OverviewCard = ({ title, options }) => (
   <div className="bg-beige">
-    <div className="bg-light-black p-4 text-white capitalize">{title}:</div>
+    <div className="bg-light-black p-4 text-white capitalize font-lato text-lg">
+      {title}:
+    </div>
 
     <div className="mt-[10px] py-5 px-4">
       <ul className="uppercase flex gap-6 flex-col">
         {options
           .filter((option) => option.isSelected)
           .map((option) => (
-            <li key={option.title} className="flex flex-col gap-10 font-lato">
+            <li
+              key={uuid()}
+              className="flex flex-col gap-10 font-lato font-bold text-xs"
+            >
               {option.title}
             </li>
           ))}
@@ -65,7 +71,7 @@ const OverviewCard = ({ title, options }) => (
   </div>
 );
 
-const OverviewStep = ({ steps }) => {
+const OverviewStep = ({ steps, price, days }) => {
   return (
     <Tab.Panel className="pt-14 pb-16">
       <div className="text-center text-light-black">
@@ -80,13 +86,13 @@ const OverviewStep = ({ steps }) => {
                 Estimative price
                 <span className="text-xl leading-[30px]">*</span>
               </span>
-              <span className="block text-orange text-2xl">{`$ ${"0000"}`}</span>
+              <span className="block text-orange text-2xl">{`$ ${price}`}</span>
             </div>
             <div className="text-light-black font-bold">
               <span className="block uppercase">
                 Estimative time<span className="text-xl leading-[30px]">*</span>
               </span>
-              <span className="block text-orange text-2xl">{`days ${"00"}`}</span>
+              <span className="block text-orange text-2xl">{`days ${days}`}</span>
             </div>
           </div>
 
@@ -97,13 +103,16 @@ const OverviewStep = ({ steps }) => {
         </div>
       </div>
 
-      <div className="grid grid-rows-1 grid-cols-6 gap-[10px] rounded-[24px] selection:overflow-hidden">
+      <div className="grid grid-rows-1 grid-cols-6 gap-[10px] rounded-[24px] overflow-hidden">
         {Object.keys(steps)
           .filter((step) => step !== "additional")
-          .map((step) => {
-            const { title, options } = steps[step];
-            return <OverviewCard title={step} options={options} key={title} />;
-          })}
+          .map((step) => (
+            <OverviewCard
+              title={step}
+              options={steps[step].options}
+              key={uuid()}
+            />
+          ))}
       </div>
     </Tab.Panel>
   );
@@ -407,23 +416,27 @@ const calculatorReducer = (state, action) => {
       return calculatorState;
     }
     case CALCULATOR_ACTIONS.RESET_CALCULATOR: {
-      const { initialState } = action;
-      return initialState;
+      return CALCULATOR_STEPS;
     }
     default:
-      return state;
+      return calculatorState;
   }
 };
 
 const Calculator = () => {
-  const [calculator, dispatch] = useReducer(calculatorReducer, {
-    ...CALCULATOR_STEPS,
-  });
+  const [showModal, setShowModal] = useState(false);
+  const [calculator, dispatch] = useReducer(
+    calculatorReducer,
+    CALCULATOR_STEPS
+  );
 
   const cardClickHandler = (index) => {
     dispatch({ type: CALCULATOR_ACTIONS.CARD_CLICK, index });
   };
   const nextStep = () => {
+    if (calculator.stepIndex + 1 === Object.keys(calculator.steps).length) {
+      setShowModal(true);
+    }
     dispatch({ type: CALCULATOR_ACTIONS.COMPLETE_STEP });
     dispatch({ type: CALCULATOR_ACTIONS.NEXT_STEP });
   };
@@ -437,12 +450,11 @@ const Calculator = () => {
   const resetCalculator = () => {
     dispatch({
       type: CALCULATOR_ACTIONS.RESET_CALCULATOR,
-      initialState: { ...CALCULATOR_STEPS },
     });
   };
 
   return (
-    <section className="container pt-[88px]">
+    <section className="container pt-[88px] pb-28">
       <Tab.Group selectedIndex={calculator.stepIndex} onChange={selectTab}>
         <CalculatorHeader calculator={calculator} />
 
@@ -450,14 +462,16 @@ const Calculator = () => {
           {Object.keys(calculator.steps).map((step, index) => {
             return step === "additional" ? (
               <OverviewStep
-                key={index}
+                key={uuid()}
+                days={Math.floor(calculator.countedHours / 8)}
+                price={Math.floor(calculator.countedHours * hourlyRate)}
                 steps={calculator.steps}
                 cardClickHandler={cardClickHandler}
               />
             ) : (
               <CalculatorStep
                 {...calculator.steps[step]}
-                key={index}
+                key={uuid()}
                 cardClickHandler={cardClickHandler}
               />
             );
@@ -469,12 +483,20 @@ const Calculator = () => {
           previousStep={previousStep}
           resetCalculator={resetCalculator}
           days={Math.floor(calculator.countedHours / 8)}
-          price={Math.floor(calculator.countedHours * 40)}
+          price={Math.floor(calculator.countedHours * hourlyRate)}
           isFinalStep={
             calculator.stepIndex === Object.keys(calculator.steps).length - 1
           }
         />
       </Tab.Group>
+      <CalculatorCompleteModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        options={{
+          hours: calculator.countedHours,
+          price: Math.floor(calculator.countedHours * hourlyRate),
+        }}
+      />
     </section>
   );
 };

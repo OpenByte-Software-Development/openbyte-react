@@ -15,9 +15,9 @@ const FaqItem = ({ question, answer, bullets }) => {
       {({ open }) => (
         <>
           <div className="relative">
-            <div>
+            <div className="z-50">
               <Disclosure.Button
-                className={`relative p-8 bg-opacity-0 cursor-pointer bg-transparent z-30 ${
+                className={`relative p-8 bg-opacity-0 cursor-pointer bg-transparent ${
                   open ? "border-b-2 border-black" : ""
                 }`}
                 as="div"
@@ -36,6 +36,7 @@ const FaqItem = ({ question, answer, bullets }) => {
                 </div>
               </Disclosure.Button>
             </div>
+
             <div className="bg-yellow absolute -top-2 -right-2 rounded-2xl min-w-[100%] min-h-[100%] -z-10"></div>
           </div>
           <Transition
@@ -63,7 +64,7 @@ const FaqItem = ({ question, answer, bullets }) => {
 
 const Faq = ({ faqs }) => {
   return (
-    <section className="py-28 z-10">
+    <div className="py-28 z-10">
       <div className="container mx-auto lg:mt-36 my-14">
         <h2 className="font-bold text-4xl text-center">FAQ</h2>
         <div className="flex flex-col items-center gap-8 mt-7">
@@ -72,7 +73,7 @@ const Faq = ({ faqs }) => {
           })}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

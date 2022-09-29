@@ -182,7 +182,10 @@ const MobileApplications = () => {
         <ContactFormCta title="Still not sure if you need a mobile app?" />
         <div className="bg-beige absolute bottom-0 left-0 min-h-[50%] min-w-full -z-10"></div>
       </div>
-      <Faq faqs={FAQS} />
+      <section className="relative">
+        <Faq faqs={FAQS} />
+        <div className="bg-beige absolute top-0 left-0 rounded-2xl min-w-[100%] min-h-[100%] -z-20"></div>
+      </section>
     </Layout>
   );
 };

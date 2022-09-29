@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Tab } from "@headlessui/react";
+import { v4 as uuid } from "uuid";
 
 import cardTooltipIcon from "../../public/calculator/card-tooltip.png";
 
@@ -62,7 +63,7 @@ const CalculatorStep = ({ title, description, options, cardClickHandler }) => {
           {options.map((option, index) => (
             <FeatureCard
               {...option}
-              key={option.title}
+              key={uuid()}
               cardClickHandler={() => cardClickHandler(index)}
             />
           ))}

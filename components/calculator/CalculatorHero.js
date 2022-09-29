@@ -4,8 +4,8 @@ const CalclulatorHero = () => {
   return (
     <section className="bg-light-black text-white text-center py-28">
       <div className="container">
-        <div className="max-w-[766px] mx-auto">
-          <span className="uppercase block text-orange">
+        <div className="max-w-[750px] mx-auto">
+          <span className="uppercase block text-orange font-lato font-bold">
             HOW MUCH DOES IT COST TO MAKE AN APP FOR YOUR BUSINESS?
           </span>
           <h2 className="text-[56px] leading-[70px] font-bold">
