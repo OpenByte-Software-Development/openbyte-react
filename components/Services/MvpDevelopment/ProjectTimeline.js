@@ -23,7 +23,7 @@ const ProjectTimeline = () => {
           the moment.
         </p>
 
-        <div className="grid grid-rows-1 lg:grid-cols-6 grid-cols-1 lg:gap-8 gap-12 mt-4 place-items-end justify-items-center container pt-6 pb-14 bg-project-timeline-mobile bg-no-repeat bg-[center_top_183px] lg:bg-none">
+        <div className="grid grid-rows-1 lg:grid-cols-6 grid-cols-1 lg:gap-8 gap-12 mt-4 place-items-end justify-items-center container pt-6 pb-14 lg:pb-0 bg-project-timeline-mobile bg-no-repeat bg-[center_top_183px] lg:bg-none">
           <div className="">
             <div className="flex justify-center">
               <Image src={projectTimeline1} alt="Discovery" />
