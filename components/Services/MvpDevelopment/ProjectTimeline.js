@@ -23,49 +23,49 @@ const ProjectTimeline = () => {
           the moment.
         </p>
 
-        <div className="grid grid-rows-1 grid-cols-6 gap-8 mt-4 place-items-end justify-items-center container">
+        <div className="grid grid-rows-1 lg:grid-cols-6 grid-cols-1 lg:gap-8 gap-12 mt-4 place-items-end justify-items-center container pt-6 pb-14 bg-project-timeline-mobile bg-no-repeat bg-[center_top_183px] lg:bg-none">
           <div className="">
-            <div className="">
+            <div className="flex justify-center">
               <Image src={projectTimeline1} alt="Discovery" />
             </div>
 
-            <span className="text-[24px] text-black font-bold leading-8 mt-4 block lg:hidden">
+            <span className="text-[24px] text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
               Discovery
             </span>
           </div>
 
           <div>
-            <div className="">
+            <div className="flex justify-center">
               <Image src={projectTimeline2} alt="Minimum Viable Product" />
             </div>
 
-            <span className="text-[24px] text-black font-bold leading-8 mt-4 block lg:hidden">
+            <span className="text-[24px] text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
               Minimum Viable Product
             </span>
           </div>
 
           <div>
-            <div className="">
+            <div className="flex justify-center">
               <Image src={projectTimeline3} alt="Product Backlog" />
             </div>
 
-            <span className="text-[24px] text-black font-bold leading-8 mt-4 block lg:hidden">
+            <span className="text-[24px] text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
               Product Backlog
             </span>
           </div>
 
           <div>
-            <div className="">
+            <div className="flex justify-center">
               <Image src={projectTimeline4} alt="Sprint Backlog" />
             </div>
 
-            <span className="text-[24px] text-black font-bold leading-8 mt-4 block lg:hidden">
+            <span className="text-[24px] text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
               Sprint Backlog
             </span>
           </div>
 
           <div>
-            <div className="flex flex-col items-end">
+            <div className="flex lg:flex-col lg:items-end items-center">
               <div className="max-w-[143px] w-auto">
                 <Image src={projectTimeline51} alt="Daily cycle" />
               </div>
@@ -74,23 +74,23 @@ const ProjectTimeline = () => {
               </div>
             </div>
 
-            <span className="text-[24px] text-black font-bold leading-8 mt-4 block lg:hidden">
+            <span className="text-[24px] text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
               Sprint Stories
             </span>
           </div>
 
           <div>
-            <div className="">
+            <div className="flex justify-center">
               <Image src={projectTimeline6} alt="Delivered Product" />
             </div>
 
-            <span className="text-[24px] text-black font-bold leading-8 mt-4 block lg:hidden">
+            <span className="text-[24px] text-black font-bold leading-[30px] mt-[14px]block lg:hidden">
               Delivered Product
             </span>
           </div>
         </div>
 
-        <div className="hiden bg-project-timeline bg-no-repeat bg-[top_5px_center] pt-4 -mt-4">
+        <div className="hidden lg:block bg-project-timeline bg-no-repeat bg-[top_5px_center] pt-4 -mt-4">
           <div className="container lg:grid grid-rows-1 grid-cols-6 gap-8">
             <div className="">
               <span className="text-[24px] text-black font-bold leading-8 mt-4 block">
