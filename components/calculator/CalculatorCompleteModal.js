@@ -34,7 +34,7 @@ const CalculatorCompleteModal = ({ showModal, setShowModal, options }) => {
               leaveTo="opacity-0 scale-95"
             >
               <Dialog.Panel className="container w-full transform overflow-hidden rounded-2xl p-6 text-left align-middle transition-all">
-                <Dialog.Description>
+                <Dialog.Description as="div">
                   <div className="relative">
                     <ContactFormWithLinkedInCta
                       title="We will reply ASAP"
