@@ -12,7 +12,9 @@ const getStepLineHeight = (disabled, stepIndex, isCompleted) => {
 
   if (disabled) {
     if (stepIndex === 0) {
-      lineWidth = "w-1/2 right-0";
+      if (isCompleted) {
+        lineWidth = "w-1/2 right-0";
+      }
     } else if (stepIndex === 6) {
       lineWidth = "w-1/2 left-0";
     } else if (isCompleted) {
