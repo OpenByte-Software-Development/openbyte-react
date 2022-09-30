@@ -28,7 +28,7 @@ const WorkingModels = () => {
               <h3 className="lg:text-[32px] text-[22px] text-light-black font-bold leading-10">
                 Continuous Development & Agile
               </h3>
-              <p className="text-[18px] text-gray leading-9 mt-4">
+              <p className="text-[18px] text-gray leading-9 mt-4 font-lato">
                 We will work to provide an estimation on time and money with
                 maximum details for each milestone.
               </p>
@@ -44,7 +44,7 @@ const WorkingModels = () => {
               <h3 className="lg:text-[32px] text-[22px] text-light-black font-bold leading-10">
                 Fixed price & <br /> Waterfall
               </h3>
-              <p className="text-[18px] text-gray text leading-9 mt-4">
+              <p className="text-[18px] text-gray text leading-9 mt-4 font-lato">
                 We will work to provide an estimation on time and money with
                 maximum details for each milestone.
               </p>
@@ -60,7 +60,7 @@ const WorkingModels = () => {
               <h3 className="lg:text-[32px] text-[22px] text-light-black font-bold leading-10">
                 Support & Monthly Package
               </h3>
-              <p className="text-[18px] text-gray leading-9 mt-4">
+              <p className="text-[18px] text-gray leading-9 mt-4 font-lato">
                 We will work to provide an estimation on time and money with
                 maximum details for each milestone.
               </p>

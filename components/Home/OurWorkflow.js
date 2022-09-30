@@ -23,7 +23,7 @@ const OurWorkflow = () => {
             <h3 className="text-[32px] text-light-black font-bold leading-10">
               Tell us your business requirements
             </h3>
-            <p className="text-[18px] text-gray leading-9 mt-4">
+            <p className="text-[18px] text-gray leading-9 mt-4 font-lato">
               Talk to our advisor about your exact needs, product specifics, and
               team dynamics. The more we know at this step, the better the
               future match will be.
@@ -40,7 +40,7 @@ const OurWorkflow = () => {
             <h3 className="text-[32px] text-light-black font-bold leading-10">
               Get in short period an estimation
             </h3>
-            <p className="text-[18px] text-gray text leading-9 mt-4">
+            <p className="text-[18px] text-gray text leading-9 mt-4 font-lato">
               We will work to provide an estimation on time and money with
               maximum details for each milestone.
             </p>
@@ -56,7 +56,7 @@ const OurWorkflow = () => {
             <h3 className="text-[32px] text-light-black font-bold leading-10">
               Get the right team
             </h3>
-            <p className="text-[18px] text-gray leading-9 mt-4">
+            <p className="text-[18px] text-gray leading-9 mt-4 font-lato">
               We select the candidates that match your project requirements and
               have the best experience in this field to help you build the right
               product.

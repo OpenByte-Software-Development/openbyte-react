@@ -15,35 +15,35 @@ const FeatureCard = ({
   return (
     <div
       onClick={cardClickHandler}
-      className={`p-6 border-3  rounded-3xl min-w-[217px] cursor-pointer ${
+      className={`lg:p-6 py-[14px] px-6 border-3 rounded-3xl lg:min-w-[217px] cursor-pointer ${
         isSelected
           ? "border-orange bg-beige"
           : "hover:border-orange border-lightGray"
       }`}
     >
-      <div>
-        <div className="flex justify-end">
-          <div className="flex items-center">
-            <div className="tooltip">
-              <Image src={cardTooltipIcon} alt={tooltip} />
+      <div className="lg:block grid grid-rows-1 grid-cols-5">
+        <div className="flex justify-end order-2 lg:-order-none col-span-1 items-center">
+          <div className="lg:flex items-center">
+            <div className="tooltip flex items-center">
               <span className="tooltiptext">{tooltip}</span>
+              <Image src={cardTooltipIcon} alt={tooltip} />
             </div>
           </div>
         </div>
 
-        <div className="mt-2 mx-auto">
-          <div className="w-[100px] h-[100px] flex justify-center items-center mx-auto">
+        <div className="lg:mt-2 mx-auto flex lg:flex-col items-center justify-start order-1 col-span-3 w-full lg:-order-none">
+          <div className="lg:w-[100px] lg:h-[100px] w-[56px] h-[56px] flex lg:justify-center justify-start items-center lg:mx-auto">
             <Image src={icon} alt={title} />
           </div>
 
-          <span className="block text-center uppercase font-lato text-xs font-bold text-light-black">
+          <span className="block text-center uppercase font-lato text-xs font-bold text-light-black ml-2">
             {title}
           </span>
         </div>
 
-        <div className="mt-5">
+        <div className="lg:mt-5 order-3 lg:-order-none col-span-1 flex justify-end items-center">
           <div
-            className={`w-[19px] h-[19px] border-3 border-orange rounded-[4px] bg-checkbox-icon bg-no-repeat bg-center mx-auto ${
+            className={`w-[19px] h-[19px] border-3 border-orange rounded-[4px] bg-checkbox-icon bg-no-repeat bg-center lg:mx-auto ${
               isSelected && "border-orange bg-orange"
             }`}
           ></div>
@@ -55,13 +55,15 @@ const FeatureCard = ({
 
 const CalculatorStep = ({ title, description, options, cardClickHandler }) => {
   return (
-    <Tab.Panel className="py-[52px]">
+    <Tab.Panel className="lg:py-[52px] py-8">
       <div>
         <div className="text-center text-light-black">
-          <h3 className="text-[32px] leading-[40px] font-bold">{title}</h3>
-          <p className="font-lato ">{description}</p>
+          <h3 className="lg:text-[32px] text-[22px] lg:leading-[40px] leading-[30px] font-bold">
+            {title}
+          </h3>
+          <p className="font-lato">{description}</p>
         </div>
-        <div className="flex justify-center gap-6 mt-8">
+        <div className="flex justify-center gap-6 mt-8 lg:flex-row flex-col">
           {options.map((option, index) => (
             <FeatureCard
               {...option}

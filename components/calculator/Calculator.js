@@ -1,6 +1,7 @@
 import React, { useReducer, useState } from "react";
 import { Tab } from "@headlessui/react";
 import CalculatorFooter from "./CalculatorFooter";
+import CalculatorFooterMobile from "./CalculatorFooterMobile";
 import CalculatorHeader from "./CalculatorHeader";
 import CalculatorStep from "./CalculatorStep";
 import CalculatorCompleteModal from "./CalculatorCompleteModal";
@@ -103,7 +104,7 @@ const OverviewStep = ({ steps, price, days }) => {
         </div>
       </div>
 
-      <div className="grid grid-rows-1 grid-cols-6 gap-[10px] rounded-[24px] overflow-hidden">
+      <div className="grid grid-rows-1 lg:grid-cols-6 gap-[10px] rounded-[24px] overflow-hidden">
         {Object.keys(steps)
           .filter((step) => step !== "additional")
           .map((step) => (
@@ -486,20 +487,41 @@ const Calculator = () => {
             );
           })}
         </Tab.Panels>
+        <div className="lg:block hidden">
+          <CalculatorFooter
+            nextStep={nextStep}
+            previousStep={previousStep}
+            resetCalculator={resetCalculator}
+            days={Math.floor(calculator.countedHours / 8)}
+            price={Math.floor(calculator.countedHours * hourlyRate)}
+            isFinalStep={
+              calculator.stepIndex === Object.keys(calculator.steps).length - 1
+            }
+            isNextStepAvailable={getIsNextStepAvailable(
+              calculator.steps[
+                Object.keys(calculator.steps)[calculator.stepIndex]
+              ]
+            )}
+          />
+        </div>
 
-        <CalculatorFooter
-          nextStep={nextStep}
-          previousStep={previousStep}
-          resetCalculator={resetCalculator}
-          days={Math.floor(calculator.countedHours / 8)}
-          price={Math.floor(calculator.countedHours * hourlyRate)}
-          isFinalStep={
-            calculator.stepIndex === Object.keys(calculator.steps).length - 1
-          }
-          isNextStepAvailable={getIsNextStepAvailable(
-            calculator.steps[Object.keys(calculator.steps)[calculator.stepIndex]]
-          )}
-        />
+        <div className="lg:hidden">
+          <CalculatorFooterMobile
+            nextStep={nextStep}
+            previousStep={previousStep}
+            resetCalculator={resetCalculator}
+            days={Math.floor(calculator.countedHours / 8)}
+            price={Math.floor(calculator.countedHours * hourlyRate)}
+            isFinalStep={
+              calculator.stepIndex === Object.keys(calculator.steps).length - 1
+            }
+            isNextStepAvailable={getIsNextStepAvailable(
+              calculator.steps[
+                Object.keys(calculator.steps)[calculator.stepIndex]
+              ]
+            )}
+          />
+        </div>
       </Tab.Group>
       <CalculatorCompleteModal
         showModal={showModal}

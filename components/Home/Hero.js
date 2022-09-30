@@ -15,7 +15,7 @@ const Hero = () => {
               <h1 className="lg:text-left text-center font-bold lg:text-6xl text-[40px] text-light-black">
                 We build software.
               </h1>
-              <p className="text-gray text-lg lg:max-w-md mt-4 text-center lg:text-left">
+              <p className="text-gray text-lg lg:max-w-md mt-4 text-center lg:text-left font-lato">
                 We provide end-to-end web/mobile software-based solutions for
                 your business.
               </p>

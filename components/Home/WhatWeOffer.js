@@ -25,7 +25,7 @@ const WhatWeOffer = () => {
             <h3 className="text-[32px] text-light-black font-bold leading-10">
               Outsourcing
             </h3>
-            <p className="text-[18px] text-gray leading-9  mt-4">
+            <p className="text-[18px] text-gray leading-9 mt-4 font-lato">
               We provide a variety of web development services that solve real
               business problems, and respond to market challenges.
             </p>
@@ -43,7 +43,7 @@ const WhatWeOffer = () => {
                 <h3 className="text-[32px] text-light-black font-bold leading-10">
                   Remote Agile Teams
                 </h3>
-                <p className="text-[18px] text-gray text leading-9 mt-4">
+                <p className="text-[18px] text-gray text leading-9 mt-4 font-lato">
                   We help businesses to build a highly dedicated team of
                   professionals, with a strong culture that provides quality by
                   following agile methodologies.
@@ -79,7 +79,7 @@ const WhatWeOffer = () => {
                 <h3 className="text-[32px] text-light-black font-bold leading-10">
                   Estimate your project
                 </h3>
-                <p className="text-[18px] text-gray leading-9  mt-4">
+                <p className="text-[18px] text-gray leading-9 mt-4 font-lato">
                   Feel free to use our software development calculator and get
                   an average price in a matter of minutes.
                 </p>
