@@ -344,6 +344,7 @@ const CALCULATOR_STEPS = {
     },
     additional: {
       isCompleted: false,
+      required: false,
       title: " ",
       description: " ",
       options: [],
@@ -423,6 +424,14 @@ const calculatorReducer = (state, action) => {
   }
 };
 
+const getIsNextStepAvailable = (currentStep) => {
+  const { options, required } = currentStep;
+
+  if (!required) return true;
+
+  return options.some((option) => option.isSelected);
+};
+
 const Calculator = () => {
   const [showModal, setShowModal] = useState(false);
   const [calculator, dispatch] = useReducer(
@@ -459,7 +468,7 @@ const Calculator = () => {
         <CalculatorHeader calculator={calculator} />
 
         <Tab.Panels>
-          {Object.keys(calculator.steps).map((step, index) => {
+          {Object.keys(calculator.steps).map((step) => {
             return step === "additional" ? (
               <OverviewStep
                 key={uuid()}
@@ -487,6 +496,9 @@ const Calculator = () => {
           isFinalStep={
             calculator.stepIndex === Object.keys(calculator.steps).length - 1
           }
+          isNextStepAvailable={getIsNextStepAvailable(
+            calculator.steps[Object.keys(calculator.steps)[calculator.stepIndex]]
+          )}
         />
       </Tab.Group>
       <CalculatorCompleteModal

@@ -1,5 +1,7 @@
 import React from "react";
 
+const disabledButtonStyle = "opacity-50";
+
 const CalculatorFooter = ({
   nextStep,
   previousStep,
@@ -7,6 +9,7 @@ const CalculatorFooter = ({
   days,
   price,
   isFinalStep,
+  isNextStepAvailable,
 }) => {
   return (
     <div className="flex justify-between items-center">
@@ -54,8 +57,11 @@ const CalculatorFooter = ({
         </button>
 
         <button
-          className="py-[14px] px-8 bg-orange text-white text-sm leading-[18px] rounded-full font-extrabold"
+          className={`py-[14px] px-8 bg-orange text-white text-sm leading-[18px] rounded-full font-extrabold ${
+            !isNextStepAvailable && disabledButtonStyle
+          }`}
           onClick={nextStep}
+          disabled={!isNextStepAvailable}
         >
           Next step
         </button>
