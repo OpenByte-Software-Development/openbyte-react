@@ -3,8 +3,8 @@ import BackgroundNumber from "./BackgroundNumber";
 
 const Solution = ({ solutions }) => {
   return (
-    <section className="">
-      <div className="mx-auto bg-beige lg:pt-28 pt-14 lg:bg-puzzle bg-no-repeat bg-[right_80px_top_20px]">
+    <section className="relative">
+      <div className="mx-auto bg-beige lg:pt-28 pt-14 bg-solution bg-no-repeat lg:bg-[position:right_100px_top_20px,_bottom_left] bg-[position:right_60px_bottom_50px,_bottom_left] bg-[length:52px_52px,_140px] pb-20">
         <div className="relative">
           <BackgroundNumber variant="4" />
           <h2 className="font-bold lg:text-[40px] text-2xl lg:leading-[50px] text-black text-center">
@@ -14,51 +14,25 @@ const Solution = ({ solutions }) => {
 
         <div className="text-center max-w-[766px] mx-auto container pb-10">
           {solutions.map((solution, index) => (
-            <p key={index} className="font-lato lg:text-lg text-darkGray lg:mt-8 mt-2">
+            <p
+              key={index}
+              className="font-lato lg:text-lg text-darkGray lg:mt-8 mt-2"
+            >
               {solution}
             </p>
           ))}
         </div>
       </div>
-      <div>
+      <div className="absolute bottom-0 left-0">
         <svg
-          viewBox="0 0 1920 151"
+          viewBox="0 0 1920 154"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <g>
-            <g>
-              <path
-                d="M2011 -582L2025 -57.445C2003.02 -42.7065 1981.05 -27.9679 1951.75 -13.2293C1849.19 37.3028 1710.01 77.3073 1526.88 106.784C1343.75 136.261 1153.29 151 955.512 151C669.827 151 420.768 123.628 208.336 66.7798C69.1557 30.9862 -26.0727 -11.1238 -92 -55.3394L-106 -582H2011Z"
-                fill="#FFFAF7"
-              />
-              <mask
-                id="mask0_2848_17682"
-                maskUnits="userSpaceOnUse"
-                x="-106"
-                y="-582"
-                width="2131"
-                height="733"
-              >
-                <path
-                  d="M2011 -582L2025 -57.445C2003.02 -42.7065 1981.05 -27.9679 1951.75 -13.2293C1849.19 37.3028 1710.01 77.3073 1526.88 106.784C1343.75 136.261 1153.29 151 955.512 151C669.827 151 420.768 123.628 208.336 66.7798C69.1557 30.9862 -26.0727 -11.1238 -92 -55.3394L-106 -582H2011Z"
-                  fill="white"
-                />
-              </mask>
-              <g mask="url(#mask0_2848_17682)"></g>
-            </g>
-          </g>
-          <defs>
-            <clipPath id="clip0_2848_17682">
-              <rect width="1920" height="151" fill="white" />
-            </clipPath>
-            <clipPath id="clip1_2848_17682">
-              <rect
-                width="1920"
-                height="383"
-                fill="white"
-                transform="translate(0 -232)"
-              />
-            </clipPath>
-          </defs>
+          <path
+            d="M0 0V770.064H1920V2.48674C1820.52 46.8925 1690 82.5368 1522.88 109.42C1339.75 138.878 1149.29 153.608 951.512 153.608C665.827 153.608 416.768 126.253 204.336 69.4399C121.779 48.2215 54.6861 24.7822 0 0Z"
+            fill="white"
+          />
         </svg>
       </div>
     </section>

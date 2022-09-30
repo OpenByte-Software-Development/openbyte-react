@@ -33,7 +33,8 @@ module.exports = {
         "avatar-background": "url('../public/avatar-background.svg')",
         "our-works": "url('../public/our-works.svg')",
         "about-us": "url('../public/about-us.svg')",
-        puzzle: "url('../public/puzzle.png')",
+        solution:
+          "url('../public/puzzle.png'), url('../public/puzzle-buddy.png')",
         "how-we-work": "url('../public/how-we-work-background.svg')",
         "how-we-work-buddy": "url('../public/how-we-work-buddy.svg')",
         "how-we-work-services": "url('../public/how-we-work-services.svg')",
