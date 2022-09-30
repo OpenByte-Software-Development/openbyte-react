@@ -12,7 +12,7 @@ const Review = ({
   clutchLink,
   className = "",
 }) => (
-  <div className="pl-2 pb-2 flex items-stretch h-full">
+  <div className="pl-2 pb-2 flex h-full">
     <div className={`border-2 rounded-3xl relative p-8 ${className}`}>
       <div className="flex gap-4 items-center">
         <div className="bg-avatar-background bg-no-repeat bg-center p-2 flex justify-center items-center">
@@ -30,7 +30,7 @@ const Review = ({
         </div>
       </div>
 
-      <div className="flex flex-col justify-between mt-[20px] h-auto">
+      <div className="flex flex-col justify-between mt-[20px]">
         <div>
           <p className="font-lato text-light-black text-lg leading-7">
             {review}

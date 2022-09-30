@@ -62,7 +62,7 @@ const IndustryExpertise = ({ tags, title }) => {
             </p>
 
             <div className="mt-[21px]">
-              <Link href="/case-studies">
+              <Link href="/case-studies/orange-car-sharing">
                 <button className=" text-orange text-sm py-5 font-extrabold ">
                   <div className="flex items-center">
                     <span className="mr-2 block">View Case Study</span>

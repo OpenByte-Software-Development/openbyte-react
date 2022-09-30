@@ -7,16 +7,40 @@ import { v4 as uuid } from "uuid";
 import emptyCheck from "../../public/calculator/empty-check.png";
 import stepCompletedIcon from "../../public/calculator/check.png";
 
-const StepIcon = ({ isCompleted, stepName, disabled }) => {
+const getStepLineHeight = (disabled, stepIndex, isCompleted) => {
+  let lineWidth = "";
+
+  if (disabled) {
+    if (stepIndex === 0) {
+      lineWidth = "w-1/2 right-0";
+    } else if (stepIndex === 6) {
+      lineWidth = "w-1/2 left-0";
+    } else if (isCompleted) {
+      lineWidth = "w-full";
+    } else {
+      lineWidth = "w-1/2 left-0";
+    }
+  }
+
+  return lineWidth;
+};
+
+const StepIcon = ({
+  isCompleted,
+  stepName,
+  disabled,
+  stepIndex,
+  currentStep,
+}) => {
   return (
     <Tab
-      className={`flex items-center ${
+      className={`flex items-center relative ${
         !disabled && "opacity-50 cursor-default"
       }`}
       disabled={!disabled}
     >
-      <div className="">
-        <div className="flex items-center flex-col w-full">
+      <div className="mx-auto">
+        <div className="flex items-center flex-col w-full mx-auto z-10">
           <Image
             src={isCompleted ? stepCompletedIcon : emptyCheck}
             alt="step icon"
@@ -24,13 +48,18 @@ const StepIcon = ({ isCompleted, stepName, disabled }) => {
             width="45"
             layout="fixed"
           />
-          <span className="block mt-3 uppercase text-xs font-lato font-bold">
+          <span className="lg:block mt-3 uppercase text-xs font-lato font-bold hidden">
             {stepName}
           </span>
         </div>
       </div>
-
-      <div className="bg-light-black w-full uppercase"></div>
+      <div
+        className={`h-[3px] bg-light-black absolute top-[22.5px] -z-10 ${getStepLineHeight(
+          disabled,
+          stepIndex,
+          isCompleted
+        )}`}
+      ></div>
     </Tab>
   );
 };
@@ -38,13 +67,15 @@ const StepIcon = ({ isCompleted, stepName, disabled }) => {
 const CalculatorHeader = ({ calculator }) => {
   const steps = Object.keys(calculator.steps);
   return (
-    <Tab.List className="flex justify-around">
+    <Tab.List className="grid grid-rows-1 grid-cols-7">
       {steps.map((step, index) => (
         <StepIcon
           key={uuid()}
           stepName={step}
-          disabled={index <= calculator.maxTab || true  }
+          disabled={index <= calculator.maxTab}
           isCompleted={calculator.steps[step].isCompleted}
+          stepIndex={index}
+          currentStep={calculator.stepIndex}
         />
       ))}
     </Tab.List>

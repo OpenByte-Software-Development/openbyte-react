@@ -23,9 +23,11 @@ const FeatureCard = ({
     >
       <div>
         <div className="flex justify-end">
-          <div className="flex tooltip items-center">
-            <Image src={cardTooltipIcon} alt={tooltip} />
-            <span className="tooltiptext">{tooltip}</span>
+          <div className="flex items-center">
+            <div className="tooltip">
+              <Image src={cardTooltipIcon} alt={tooltip} />
+              <span className="tooltiptext">{tooltip}</span>
+            </div>
           </div>
         </div>
 
