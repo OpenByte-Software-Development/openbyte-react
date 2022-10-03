@@ -1,6 +1,5 @@
-import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { v4 as uuid } from "uuid";
 
 // Image
 import teamBuddy from "../../public/team-buddy.png";
@@ -53,12 +52,12 @@ const TEAM = [
 
 const TeamMember = ({ photo, name, position, skills }) => {
   return (
-    <div className="lg:p-4 p-0 border-2 border-black relative rounded-lg max-w-[175px] lg:max-w-[236px]">
-      <div className="w-[100%] lg:rounded-lg lg:border-none border-b-2 border-black grid min-h-[245px]">
+    <div className="lg:p-4 border-2 border-black relative rounded-lg lg:max-w-[236px] max-w-[175px] min-h-[280px] overflow-hidden">
+      <div className="w-[100%] lg:rounded-lg lg:border-none border-b-2 border-black grid lg:min-h-[245px] overflow-hidden">
         <Image
           src={photo}
           alt={`${name}'s avatar`}
-          className="object-cover object-center w-[100%] rounded-lg min-h-[245px]"
+          className="object-cover object-center w-[100%] lg:min-h-[245px]"
         />
       </div>
 
@@ -68,7 +67,7 @@ const TeamMember = ({ photo, name, position, skills }) => {
         <span className="block text-orange mt-3">{skills.join(" | ")}</span>
       </div>
 
-      <div className="bg-beige absolute -top-2 -right-2 rounded-lg min-w-[100%] min-h-[100%] -z-10"></div>
+      <div className="bg-beige absolute -top-2 -right-2 rounded-lg min-w-[100%] min-h-[100%] -z-10 hidden lg:block"></div>
     </div>
   );
 };
@@ -99,36 +98,35 @@ const AboutTeam = () => {
         </div>
 
         <div
-          className="flex flex-wrap justify-center lg:justify-start lg:gap-[78px] gap-[16px] my-[72px] scroll-m-40"
+          className={`lg:grid lg:grid-rows-2 lg:grid-cols-4 lg:gap-[78px] gap-4 scroll-m-40 pb-36 pt-20 flex flex-wrap justify-center`}
           id="team"
         >
-          {TEAM.map((member, index) => {
-            return <TeamMember {...member} key={index} />;
+          {TEAM.map((member) => {
+            return <TeamMember {...member} key={uuid()} />;
           })}
 
-          <div className="p-4 border-2 border-black relative rounded-lg hidden lg:block">
-            <div className="w-[200px] h-[250px] rounded-lg">
+          <div className="lg:p-4 border-2 border-black relative rounded-lg lg:max-w-[236px] max-w-[175px] min-h-[280px] overflow-hidden">
+            <div className="w-[100%] lg:rounded-lg lg:border-none border-b-2 border-black grid lg:min-h-[245px] overflow-hidden">
               <Image
                 src={teamBuddy}
                 alt="become member"
-                width={200}
-                className="object-cover object-center w-[200px] h-[250px] rounded-lg"
+                className="object-cover object-center w-[100%] lg:min-h-[245px]"
               />
             </div>
 
-            <div className="text-center font-bold mt-6">
-              <span className="block text-black text-[12px]">
+            <div className="text-center font-bold lg:mt-6 p-4 lg:p-0 lg:block flex justify-center items-center">
+              <span className="text-black text-[12px] hidden lg:block">
                 JOIN OUR TEAM
               </span>
 
               <a href="mailto: hi@openbyte.dev">
-                <button className="bg-orange mt-3 text-white text-base rounded-full py-[11px] px-6 font-extrabold w-auto">
+                <button className="bg-orange lg:mt-3 text-white text-base rounded-full py-[11px] px-6 font-extrabold w-auto whitespace-nowrap">
                   Become Member
                 </button>
               </a>
             </div>
 
-            <div className="bg-beige absolute -top-2 -right-2 rounded-lg min-w-[100%] min-h-[100%] -z-10"></div>
+            <div className="bg-beige absolute -top-2 -right-2 rounded-lg min-w-[100%] min-h-[100%] -z-10 hidden lg:block"></div>
           </div>
         </div>
       </div>
