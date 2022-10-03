@@ -1,9 +1,9 @@
 import "../styles/styles.css";
 import "../styles/globals.css";
 import dynamic from "next/dynamic";
-const CookiesConsent = dynamic(() => import("../components/CookiesConsent"));
 import Head from "next/head";
-import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
+const CookiesConsent = dynamic(() => import("../components/CookiesConsent"));
+const TawkMessengerReact = dynamic(() => import("@tawk.to/tawk-messenger-react"));
 import { ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
