@@ -26,3 +26,6 @@ yarn-error.log*
 .pnpm-debug.log*
 
 _static
+*.map
+workbox-*.js
+sw.js

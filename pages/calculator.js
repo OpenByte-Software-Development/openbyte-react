@@ -1,8 +1,13 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import Layout from "../components/Layout";
-import { Calculator, CalculatorHero } from "../components/calculator/index";
-import Faq from "../components/Faq";
+const Faq = dynamic(() => import("../components/Faq"));
+const Layout = dynamic(() => import("../components/Layout/index"));
+const Calculator = dynamic(() => import("../components/calculator/Calculator"));
+const CalculatorHero = dynamic(() =>
+  import("../components/calculator/CalculatorHero")
+);
+
 import { PAGE_TITLES } from "../lib/constants";
 
 const FAQS = [

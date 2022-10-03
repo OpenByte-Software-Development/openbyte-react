@@ -50,7 +50,7 @@ const OurWorks = () => {
           </div>
 
           <div className="mt-14">
-            <Link href="/case-studies">
+            <Link prefetch={false}  href="/case-studies">
               <button className="font-extrabold text-orange bg-white rounded-full py-4 px-11 block mx-auto">
                 See All Case Studies
               </button>

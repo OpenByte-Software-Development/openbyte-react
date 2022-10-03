@@ -70,7 +70,6 @@ module.exports = {
     },
     fontFamily: {
       lato: ["Lato", "sans-serif"],
-      raleway: ["sans-serif", "Raleway"],
     },
   },
   variants: {

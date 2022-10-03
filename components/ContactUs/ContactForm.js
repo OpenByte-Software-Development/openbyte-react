@@ -125,7 +125,7 @@ const ContactForm = () => {
                 <span className="block">
                   I consent that OpenByte can process my personal data for the
                   purpose of making me an offer for their services.
-                  <Link href="/privacy-and-policy">
+                  <Link prefetch={false}  href="/privacy-and-policy">
                     <a className="text-orange"> Read our Privacy Policy</a>
                   </Link>
                   .

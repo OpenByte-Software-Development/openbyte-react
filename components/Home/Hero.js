@@ -24,7 +24,7 @@ const Hero = () => {
                 <Image src={heroBuddy} alt="Openbyte mascot" />
               </div>
               <div className="mt-14">
-                <Link href="/calculator">
+                <Link prefetch={false} href="/calculator">
                   <button className="bg-orange text-white text-base rounded-full lg:py-3.5 py-[18px] px-14 font-extrabold lg:w-auto w-full">
                     Get a cost estimation
                   </button>

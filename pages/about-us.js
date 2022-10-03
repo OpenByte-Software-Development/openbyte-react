@@ -1,20 +1,23 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import {
-  AboutCompany,
-  AboutTeam,
-  Hero,
-  HowWeWork,
-} from "../components/AboutUs/index";
-import SociaNetworks from "../components/SocialNetworks";
-import Layout from "../components/Layout/index";
+const AboutCompany = dynamic(() =>
+  import("../components/AboutUs/AboutCompany")
+);
+const AboutTeam = dynamic(() => import("../components/AboutUs/AboutTeam"));
+const Hero = dynamic(() => import("../components/AboutUs/Hero"));
+const HowWeWork = dynamic(() => import("../components/AboutUs/HowWeWork"));
+const SociaNetworks = dynamic(() => import("../components/SocialNetworks"));
+const Layout = dynamic(() =>
+  import("../components/../components/Layout/index")
+);
 import { PAGE_TITLES } from "../lib/constants";
 
 const AboutUs = () => {
   return (
     <Layout>
       <Head>
-        <title>{PAGE_TITLES.aboutUs}</title> 
+        <title>{PAGE_TITLES.aboutUs}</title>
       </Head>
       <SociaNetworks />
       <Hero />

@@ -15,8 +15,6 @@ const Screen = ({ src, alt }) => {
 const ScreensMobile = ({ screens }) => {
   const allScreens = [].concat.apply([], screens);
 
-  console.log("allScreens", allScreens);
-
   return (
     <div>
       <div className="relative">

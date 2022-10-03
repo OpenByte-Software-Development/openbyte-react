@@ -38,7 +38,7 @@ const Review = ({
         </div>
 
         <div className="pt-8">
-          <Link href={clutchLink}>
+          <Link prefetch={false}  href={clutchLink}>
             <a target="_blank" rel="noreferrer">
               <Image src={clutchReview} alt="clutch review" />
             </a>

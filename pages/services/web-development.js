@@ -1,21 +1,37 @@
-import Layout from "../../components/Layout/index";
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import {
-  ServicesHero,
-  IndustryExpertise,
-  CommunicationChannels,
-  HowWeWork,
-  Benefits,
-  PreviousExperience,
-} from "../../components/Services/index";
-import {
-  WebFeatures,
-  BuildingExperience,
-} from "../../components/Services/WebDevelopment/index";
-import TechStack from "../../components/Services/TechStack";
-import SocialNetworks from "../../components/SocialNetworks";
-import { PriceEstimationCta, ContactFormCta } from "../../components/cta/index";
-import Faq from "../../components/Faq";
+
+const Layout = dynamic(() => import("../../components/Layout/index"));
+const ServicesHero = dynamic(() =>
+  import("../../components/Services/ServicesHero")
+);
+const IndustryExpertise = dynamic(() =>
+  import("../../components/Services/IndustryExpertise")
+);
+const CommunicationChannels = dynamic(() =>
+  import("../../components/Services/CommunicationChannels")
+);
+const HowWeWork = dynamic(() => import("../../components/Services/HowWeWork"));
+const Benefits = dynamic(() => import("../../components/Services/Benefits"));
+const PreviousExperience = dynamic(() =>
+  import("../../components/PreviousExperience")
+);
+const PriceEstimationCta = dynamic(() =>
+  import("../../components/cta/PriceEstimationCta")
+);
+const ContactFormCta = dynamic(() =>
+  import("../../components/cta/ContactFormCta")
+);
+const Faq = dynamic(() => import("../../components/Faq"));
+const TechStack = dynamic(() => import("../../components/Services/TechStack"));
+const WebFeatures = dynamic(() =>
+  import("../../components/Services/WebDevelopment/WebFeatures")
+);
+const BuildingExperience = dynamic(() =>
+  import("../../components/Services/WebDevelopment/BuildingExperience")
+);
+const SocialNetworks = dynamic(() => import("../../components/SocialNetworks"));
+
 import {
   node,
   laravel,

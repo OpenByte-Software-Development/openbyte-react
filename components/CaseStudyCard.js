@@ -39,7 +39,7 @@ const CaseStudy = ({
                 </div>
 
                 <div className="lg:hidden flex items-end">
-                  <Link href={clutchProjectLink}>
+                  <Link prefetch={false}  href={clutchProjectLink}>
                     <a target="_blank" rel="noreferrer">
                       <Image src={clutchReview} alt="clutch review" />
                     </a>
@@ -52,14 +52,14 @@ const CaseStudy = ({
 
             <div className="mt-11 flex justify-between items-end w-full">
               <div className="w-full">
-                <Link href={ctaLink}>
+                <Link prefetch={false}  href={ctaLink}>
                   <button className="bg-transparent text-orange text-base rounded-full border-orange border-3 py-4 px-8 font-extrabold lg:w-auto w-full">
                     Learn more
                   </button>
                 </Link>
               </div>
               <div className="hidden lg:block">
-                <Link href={clutchProjectLink}>
+                <Link prefetch={false}  href={clutchProjectLink}>
                   <a target="_blank" rel="noreferrer">
                     <Image src={clutchReview} alt="clutch review" />
                   </a>

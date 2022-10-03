@@ -1,11 +1,16 @@
 import React from "react";
-import Layout from "../../components/Layout/index";
-import PreviousExperience from "../../components/PreviousExperience";
-import SocialNetworks from "../../components/SocialNetworks";
-import {
-  PreviousClients,
-  CaseStudies,
-} from "../../components/CaseStudies/CaseStudiesPage/index";
+import dynamic from "next/dynamic";
+const Layout = dynamic(() => import("../../components/Layout/index"));
+const PreviousExperience = dynamic(() =>
+  import("../../components/PreviousExperience")
+);
+const SocialNetworks = dynamic(() => import("../../components/SocialNetworks"));
+const PreviousClients = dynamic(() =>
+  import("../../components/CaseStudies/CaseStudiesPage/PreviousClients")
+);
+const CaseStudies = dynamic(() =>
+  import("../../components/CaseStudies/CaseStudiesPage/CaseStudies")
+);
 
 const CaseStudiesHomepage = () => {
   return (

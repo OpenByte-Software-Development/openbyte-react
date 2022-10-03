@@ -25,7 +25,6 @@ const ContactFormWithLinkedInCta = ({
     const response = await api.contact({ ...values, options });
 
     if (response.status === 201) {
-      console.log("response", response);
       resetForm();
       setShowModal(false);
       toast.success("Your request was submited! We will contact you ASAP");

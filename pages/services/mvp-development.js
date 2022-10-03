@@ -1,20 +1,32 @@
-import Layout from "../../components/Layout/index";
 import Head from "next/head";
-import {
-  ServicesHero,
-  CommunicationChannels,
-  Benefits,
-  PreviousExperience,
-} from "../../components/Services/index";
+import dynamic from "next/dynamic";
+
+const Layout = dynamic(() => import("../../components/Layout/index"));
+const ServicesHero = dynamic(() =>
+  import("../../components/Services/ServicesHero")
+);
+const CommunicationChannels = dynamic(() =>
+  import("../../components/Services/CommunicationChannels")
+);
+const Benefits = dynamic(() => import("../../components/Services/Benefits"));
+const PreviousExperience = dynamic(() =>
+  import("../../components/PreviousExperience")
+);
 import {
   HowMvpWorks,
   MvpDevProcess,
   MvpAdvantages,
   ProjectTimeline,
 } from "../../components/Services/MvpDevelopment/index";
-import { PriceEstimationCta, ContactFormCta } from "../../components/cta/index";
-import Faq from "../../components/Faq";
-import TechStack from "../../components/Services/TechStack";
+const PriceEstimationCta = dynamic(() =>
+  import("../../components/cta/PriceEstimationCta")
+);
+const ContactFormCta = dynamic(() =>
+  import("../../components/cta/ContactFormCta")
+);
+const Faq = dynamic(() => import("../../components/Faq"));
+const TechStack = dynamic(() => import("../../components/Services/TechStack"));
+
 import {
   node,
   laravel,

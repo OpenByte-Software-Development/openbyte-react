@@ -22,7 +22,7 @@ const UnderConstruction = () => {
           </div>
 
           <div className="flex justify-center mt-16">
-            <Link href="/">
+            <Link prefetch={false}  href="/">
               <a>
                 <button className="bg-orange text-white text-base rounded-3xl py-3.5 px-8 font-extrabold">
                   Go to Homepage

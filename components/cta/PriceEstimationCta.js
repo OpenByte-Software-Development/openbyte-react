@@ -18,7 +18,7 @@ const PriceEstimationCta = () => {
               <div>
                 <div className="mt-8">
                   <div className="mt-[50px]">
-                    <Link href="/calculator">
+                    <Link prefetch={false}  href="/calculator">
                       <a>
                         <button
                           role="submit"

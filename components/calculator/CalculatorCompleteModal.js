@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { ContactFormWithLinkedInCta } from "../cta/index";
+import ContactFormWithLinkedInCta from "../cta/ContactFormWithLinkedInCta";
 
 const CalculatorCompleteModal = ({ showModal, setShowModal, options }) => {
   return (

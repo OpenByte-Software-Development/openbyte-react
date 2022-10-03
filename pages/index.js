@@ -1,18 +1,21 @@
-import Layout from "../components/Layout";
 import Head from "next/head";
-import {
-  Hero,
-  WhatWeOffer,
-  OurWorkflow,
-  Services,
-  WorkingModels,
-  OurSkills,
-  OurWorks,
-  Testimonials,
-} from "../components/Home/index";
-import Faq from "../components/Faq";
-import { ContactFormCta } from "../components/cta";
-import SocialNetworks from "../components/SocialNetworks";
+import dynamic from "next/dynamic";
+
+const Hero = dynamic(() => import("../components/Home/Hero"));
+const WhatWeOffer = dynamic(() => import("../components/Home/WhatWeOffer"));
+const OurWorkflow = dynamic(() => import("../components/Home/OurWorkflow"));
+const Services = dynamic(() => import("../components/Home/Services"));
+const WorkingModels = dynamic(() => import("../components/Home/WorkingModels"));
+const OurSkills = dynamic(() => import("../components/Home/OurSkills"));
+const OurWorks = dynamic(() => import("../components/Home/OurWorks"));
+const Testimonials = dynamic(() => import("../components/Home/Testimonials"));
+const Faq = dynamic(() => import("../components/Faq"));
+const Layout = dynamic(() => import("../components/Layout/index"));
+const ContactFormCta = dynamic(() =>
+  import("../components/cta/ContactFormCta")
+);
+const SocialNetworks = dynamic(() => import("../components/SocialNetworks"));
+
 import { FAQS } from "../lib/constants";
 import { PAGE_TITLES } from "../lib/constants";
 
@@ -40,7 +43,5 @@ const Home = () => {
     </Layout>
   );
 };
-
-// TODO: fix link for service gray form
 
 export default Home;

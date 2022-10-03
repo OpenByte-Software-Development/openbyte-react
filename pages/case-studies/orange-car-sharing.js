@@ -1,16 +1,26 @@
-import React from "react";
-import Layout from "../../components/Layout/index";
-import { ContactFormCta } from "../../components/cta";
-import SocialNetworks from "../../components/SocialNetworks";
-import {
-  CaseStudyHero,
-  AboutApp,
-  Architecture,
-  Solution,
-  TechStack,
-  CaseStudyReview,
-  Screens
-} from "../../components/CaseStudies";
+import dynamic from "next/dynamic";
+
+const CaseStudyHero = dynamic(() =>
+  import("../../components/CaseStudies/CaseStudyHero")
+);
+const AboutApp = dynamic(() => import("../../components/CaseStudies/AboutApp"));
+const Architecture = dynamic(() =>
+  import("../../components/CaseStudies/Architecture")
+);
+const Solution = dynamic(() => import("../../components/CaseStudies/Solution"));
+const TechStack = dynamic(() =>
+  import("../../components/CaseStudies/TechStack")
+);
+const CaseStudyReview = dynamic(() =>
+  import("../../components/CaseStudies/CaseStudyReview")
+);
+const Screens = dynamic(() => import("../../components/CaseStudies/Screens"));
+const SocialNetworks = dynamic(() => import("../../components/SocialNetworks"));
+const ContactFormCta = dynamic(() =>
+  import("../../components/cta/ContactFormCta")
+);
+const Layout = dynamic(() => import("../../components/Layout/index"));
+
 import {
   redDigitalOcean,
   redUbuntu,
@@ -49,7 +59,6 @@ import screen3_2 from "../../public/case-studies/app-screens/orange-car-sharing/
 import screen3_3 from "../../public/case-studies/app-screens/orange-car-sharing/3-3.png";
 import screen3_4 from "../../public/case-studies/app-screens/orange-car-sharing/3-4.png";
 import screen3_5 from "../../public/case-studies/app-screens/orange-car-sharing/3-5.png";
-
 
 const ORANGE_CAR_SHARING = {
   heroImage: orangeLogo,
@@ -184,7 +193,7 @@ const SCREENS = [
       src: screen1_3,
       alt: "app screen",
     },
-    
+
     {
       src: screen1_4,
       alt: "app screen",

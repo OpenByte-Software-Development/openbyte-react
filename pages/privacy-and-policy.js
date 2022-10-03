@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
-import Layout from "../components/Layout/index";
+import dynamic from "next/dynamic";
+const Layout = dynamic(() => import("../components/Layout/index"));
 import { PAGE_TITLES } from "../lib/constants";
 
 const PointTitle = ({ children }) => {
@@ -158,19 +159,19 @@ const PrivacyAndPolicy = () => {
 
             <ol className="list-decimal ml-4 mt-4">
               <li>
-                <Link href="/privacy-and-policy#content-1">
+                <Link prefetch={false} href="/privacy-and-policy#content-1">
                   <a className="text-orange">WHAT INFORMATION DO WE COLLECT?</a>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-and-policy#content-2">
+                <Link prefetch={false} href="/privacy-and-policy#content-2">
                   <a className="text-orange">
                     HOW DO WE PROCESS YOUR INFORMATION?
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-and-policy#content-3">
+                <Link prefetch={false} href="/privacy-and-policy#content-3">
                   <a className="text-orange">
                     WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR PERSONAL
                     INFORMATION?
@@ -178,75 +179,75 @@ const PrivacyAndPolicy = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-and-policy#content-4">
+                <Link prefetch={false} href="/privacy-and-policy#content-4">
                   <a className="text-orange">
                     WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-and-policy#content-5">
+                <Link prefetch={false} href="/privacy-and-policy#content-5">
                   <a className="text-orange">
                     DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-and-policy#content-6">
+                <Link prefetch={false} href="/privacy-and-policy#content-6">
                   <a className="text-orange">
                     HOW LONG DO WE KEEP YOUR INFORMATION?
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-and-policy#content-7">
+                <Link prefetch={false} href="/privacy-and-policy#content-7">
                   <a className="text-orange">
                     HOW DO WE KEEP YOUR INFORMATION SAFE?
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-and-policy#content-8">
+                <Link prefetch={false} href="/privacy-and-policy#content-8">
                   <a className="text-orange">
                     DO WE COLLECT INFORMATION FROM MINORS?
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-and-policy#content-9">
+                <Link prefetch={false} href="/privacy-and-policy#content-9">
                   <a className="text-orange">WHAT ARE YOUR PRIVACY RIGHTS?</a>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-and-policy#content-10">
+                <Link prefetch={false} href="/privacy-and-policy#content-10">
                   <a className="text-orange">
                     CONTROLS FOR DO-NOT-TRACK FEATURES
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-and-policy#content-11">
+                <Link prefetch={false} href="/privacy-and-policy#content-11">
                   <a className="text-orange">
                     DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-and-policy#content-12">
+                <Link prefetch={false} href="/privacy-and-policy#content-12">
                   <a className="text-orange">
                     DO WE MAKE UPDATES TO THIS NOTICE?
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-and-policy#content-13">
+                <Link prefetch={false} href="/privacy-and-policy#content-13">
                   <a className="text-orange">
                     HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-and-policy#content-14">
+                <Link prefetch={false} href="/privacy-and-policy#content-14">
                   <a className="text-orange">
                     HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT
                     FROM YOU?

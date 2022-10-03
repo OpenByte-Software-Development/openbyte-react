@@ -1,7 +1,11 @@
-import Layout from "../components/Layout/index";
+import React from "react";
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import { ContactUsWrapper } from "../components/ContactUs/index";
-import SocialNetworks from "../components/SocialNetworks";
+
+const Layout = dynamic(() => import("../components/Layout/index"));
+const ContactUsWrapper = dynamic(() => import("../components/ContactUs/ContactUsWrapper"));
+const SocialNetworks = dynamic(() => import("../components/SocialNetworks"));
+
 import { PAGE_TITLES } from "../lib/constants";
 
 const ContactUs = () => {
