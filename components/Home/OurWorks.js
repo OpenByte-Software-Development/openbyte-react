@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperNavigation from "../SwiperNavigation";
 import { CASE_STUDIES } from "../../lib/constants";
 import CaseStudy from "../CaseStudyCard";
+import { v4 as uuid } from "uuid";
 
 const OurWorks = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);
@@ -34,11 +35,12 @@ const OurWorks = () => {
             <Swiper
               slidesPerView={1}
               spaceBetween={100}
+              autoHeight={true}
               onSwiper={(swiper) => setSwiperInstance(swiper)}
               loop={true}
             >
-              {CASE_STUDIES.map((project, index) => (
-                <SwiperSlide key={index}>
+              {CASE_STUDIES.map((project) => (
+                <SwiperSlide key={uuid()}>
                   <CaseStudy {...project} />
                 </SwiperSlide>
               ))}
@@ -50,7 +52,7 @@ const OurWorks = () => {
           </div>
 
           <div className="mt-14">
-            <Link prefetch={false}  href="/case-studies">
+            <Link prefetch={false} href="/case-studies">
               <button className="font-extrabold text-orange bg-white rounded-full py-4 px-11 block mx-auto">
                 See All Case Studies
               </button>

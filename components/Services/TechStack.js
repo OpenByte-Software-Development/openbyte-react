@@ -33,7 +33,7 @@ const TechStack = ({ techStack, title, description }) => {
                   <p className="font-lato leading-9 text-darkGray lg:text-[22px] text-base mt-4 tracking-[0.02em]">
                     {body}
                   </p>
-                  <div className="flex justify-center lg:gap-14 gap-12 mt-4">
+                  <div className="flex justify-center flex-wrap lg:gap-14 gap-12 mt-4">
                     {stackIcons.map((technology, index) => {
                       return <TechIcon {...technology} key={index} />;
                     })}

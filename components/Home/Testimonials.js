@@ -29,7 +29,7 @@ const Testimonials = () => {
                 <Swiper
                   slidesPerView={1}
                   spaceBetween={50}
-                  navigation={true}
+                  autoHeight={true}
                   loop={true}
                   onSwiper={(swiper) => setSwiperInstance(swiper)}
                 >

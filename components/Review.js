@@ -15,7 +15,7 @@ const Review = ({
   <div className="pl-2 pb-2 flex h-full">
     <div className={`border-2 rounded-3xl relative p-8 ${className}`}>
       <div className="flex gap-4 items-center">
-        <div className="bg-avatar-background bg-no-repeat bg-center p-2 flex justify-center items-center">
+        <div className="bg-avatar-background bg-no-repeat bg-center p-2 flex justify-center items-center bg-[length:100%_100%]">
           <Image src={avatar} alt={`${name}'s avatar`} />
         </div>
 
