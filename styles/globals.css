@@ -52,18 +52,13 @@ body {
 
 .tooltip .tooltiptext {
   font-family: "Lato";
-  visibility: hidden;
-  width: max-content;
-  background-color: #767676;
   color: #fff;
   text-align: center;
-  padding: 9px 16px;
-  border-radius: 11px;
-  margin: 0 auto;
-
+  width: 250px;
+  min-width: 250px;
+  visibility: hidden;
   position: absolute;
-  top: -45px;
-  left: -100px;
+  top: -130px;
   z-index: 1;
 }
 

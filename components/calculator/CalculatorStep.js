@@ -23,10 +23,12 @@ const FeatureCard = ({
     >
       <div className="lg:block grid grid-rows-1 grid-cols-5">
         <div className="flex justify-end order-2 lg:-order-none col-span-1 items-center">
-          <div className="lg:flex items-center">
-            <div className="tooltip flex items-center">
-              <span className="tooltiptext">{tooltip}</span>
-              <Image src={cardTooltipIcon} alt={tooltip} />
+          <div className="lg:flex items-center tooltip">
+            <Image src={cardTooltipIcon} alt={tooltip} />
+            <div className="tooltiptext flex flex-col justify-end items-center min-h-[120px] lg:-left-[115px] -left-[200px]">
+              <div className="max-h-min bg-darkGray rounded-xl py-[9px] px-5">
+                <span className="">{tooltip}</span>
+              </div>
             </div>
           </div>
         </div>
