@@ -1,9 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+
 // Images
 import heroBuddy from "../../public/hero-buddy.png";
+import clutchLogo from "../../public/clutch-1.png";
+import stars from "../../public/five-stars.png";
 
 const Hero = () => {
   return (
@@ -30,18 +32,40 @@ const Hero = () => {
                   </button>
                 </Link>
               </div>
-              <div className="mt-14 flex justify-center items-center lg:block">
-                <Script src="https://widget.clutch.co/static/js/widget.js" />
-                <div
-                  className="clutch-widget hero-clutch-widget w-auto mx-auto focus"
-                  data-url="https://widget.clutch.co"
-                  data-widget-type="2"
-                  data-height="50"
-                  data-nofollow="true"
-                  data-expandifr="true"
-                  data-scale="100"
-                  data-clutchcompany-id="573596"
-                ></div>
+              <div>
+                <a
+                  href="https://clutch.co/profile/openbyte"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <div className="relative max-w-max">
+                    <div className="mt-14 flex items-stretch gap-12">
+                      <div className="flex">
+                        <Image
+                          src={clutchLogo}
+                          alt="clutch logo"
+                          height={clutchLogo.height}
+                          width={clutchLogo.width}
+                        />
+                      </div>
+
+                      <div className="flex flex-col justify-between min-h-full">
+                        <div>
+                          <Image
+                            src={stars}
+                            alt="OpenByte five stars"
+                            height={stars.height}
+                            width={stars.width}
+                          />
+                        </div>
+                        <span className="uppercase block font-lato text-sm">
+                          Reviews: 4
+                        </span>
+                      </div>
+                    </div>
+                    <div className="absolute min-w-full min-h-full top-0 left-0 z-50"></div>
+                  </div>
+                </a>
               </div>
             </div>
             <div className="hidden lg:block">
