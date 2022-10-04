@@ -59,7 +59,7 @@ const Hero = () => {
                           />
                         </div>
                         <span className="uppercase block font-lato text-sm">
-                          Reviews: 4
+                          Reviews: 5
                         </span>
                       </div>
                     </div>
