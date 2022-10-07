@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 as uuid } from "uuid";
 import {
   slack,
   figma,
@@ -52,10 +53,10 @@ const CommunicationChannels = () => {
         <div
           className={`grid grid-rows-1 lg:grid-cols-6 grid-cols-2 gap-10 mt-9`}
         >
-          {COMMUNICATION_CHANNELS.map(({ src, name, description }, index) => {
+          {COMMUNICATION_CHANNELS.map(({ src, name, description }) => {
             return (
-              <div key={index} className="">
-                <TechIcon name={name} src={src} />
+              <div key={uuid()}>
+                <TechIcon name={name} src={src} containerClassName="mx-auto" />
                 <p className="mt-4 font-lato lg:text-base text-sm text-darkGray leading-7 text-center">
                   {description}
                 </p>

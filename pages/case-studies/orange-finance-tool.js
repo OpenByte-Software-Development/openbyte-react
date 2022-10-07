@@ -15,7 +15,6 @@ const CaseStudyReview = dynamic(() =>
   import("../../components/CaseStudies/CaseStudyReview")
 );
 const Screens = dynamic(() => import("../../components/CaseStudies/Screens"));
-const SocialNetworks = dynamic(() => import("../../components/SocialNetworks"));
 const ContactFormCta = dynamic(() =>
   import("../../components/cta/ContactFormCta")
 );
@@ -233,7 +232,6 @@ const SCREENS = [
 const OranceFinance = () => {
   return (
     <Layout footer="light">
-      <SocialNetworks />
       <CaseStudyHero
         {...ORANGE_FINANCE_TOOL}
         logoClassName="lg:max-w-full max-w-[110px]"

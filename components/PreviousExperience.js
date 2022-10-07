@@ -22,7 +22,7 @@ const PreviousExperience = ({ title = "Our previous experience" }) => {
               spaceBetween={40}
               navigation={true}
               loop={true}
-              height="100%"
+              autoHeight={true}
               onSwiper={(swiper) => setSwiperInstance(swiper)}
               breakpoints={{
                 320: {

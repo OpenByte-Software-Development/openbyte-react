@@ -14,7 +14,6 @@ const Layout = dynamic(() => import("../components/Layout/index"));
 const ContactFormCta = dynamic(() =>
   import("../components/cta/ContactFormCta")
 );
-const SocialNetworks = dynamic(() => import("../components/SocialNetworks"));
 
 import { FAQS } from "../lib/constants";
 import { PAGE_TITLES } from "../lib/constants";
@@ -25,7 +24,6 @@ const Home = () => {
       <Head>
         <title>{PAGE_TITLES.homepage}</title>
       </Head>
-      <SocialNetworks />
       <Hero />
       <WhatWeOffer />
       <OurWorkflow />

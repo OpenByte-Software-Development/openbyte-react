@@ -30,7 +30,6 @@ const WebFeatures = dynamic(() =>
 const BuildingExperience = dynamic(() =>
   import("../../components/Services/WebDevelopment/BuildingExperience")
 );
-const SocialNetworks = dynamic(() => import("../../components/SocialNetworks"));
 
 import {
   node,
@@ -189,7 +188,6 @@ const WebDevelopment = () => {
       <Head>
         <title>{PAGE_TITLES.services.webDev}</title>
       </Head>
-      <SocialNetworks />
       <ServicesHero {...HERO_PROPS} />
       <IndustryExpertise {...INDUSTRY_EXPERTISE} />
       <section className="relative">

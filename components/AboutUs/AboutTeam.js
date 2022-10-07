@@ -98,7 +98,7 @@ const AboutTeam = () => {
         </div>
 
         <div
-          className={`lg:grid lg:grid-rows-2 lg:grid-cols-4 lg:gap-[78px] gap-4 scroll-m-40 pb-36 pt-20 flex flex-wrap justify-center`}
+          className={`lg:grid lg:grid-rows-2 lg:grid-cols-4 lg:gap-[78px] gap-4 scroll-m-40 lg:pb-36 pb-10 pt-20 flex flex-wrap justify-center`}
           id="team"
         >
           {TEAM.map((member) => {
@@ -120,7 +120,7 @@ const AboutTeam = () => {
               </span>
 
               <a href="mailto: hi@openbyte.dev">
-                <button className="bg-orange lg:mt-3 text-white text-base rounded-full py-[11px] px-6 font-extrabold w-auto whitespace-nowrap">
+                <button className="bg-orange lg:mt-3 text-white text-sm lg:text-base rounded-full py-[11px] px-6 font-extrabold whitespace-pre">
                   Become Member
                 </button>
               </a>

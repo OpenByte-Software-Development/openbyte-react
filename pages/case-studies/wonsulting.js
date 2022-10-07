@@ -15,7 +15,6 @@ const CaseStudyReview = dynamic(() =>
   import("../../components/CaseStudies/CaseStudyReview")
 );
 const Screens = dynamic(() => import("../../components/CaseStudies/Screens"));
-const SocialNetworks = dynamic(() => import("../../components/SocialNetworks"));
 const ContactFormCta = dynamic(() =>
   import("../../components/cta/ContactFormCta")
 );
@@ -233,7 +232,6 @@ const SCREENS = [
 const Wonsulting = () => {
   return (
     <Layout footer="light">
-      <SocialNetworks />
       <CaseStudyHero
         {...WONSULTING}
         logoClassName="lg:max-w-full max-w-[120px]"

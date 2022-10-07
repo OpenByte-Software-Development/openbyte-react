@@ -7,7 +7,6 @@ const AboutCompany = dynamic(() =>
 const AboutTeam = dynamic(() => import("../components/AboutUs/AboutTeam"));
 const Hero = dynamic(() => import("../components/AboutUs/Hero"));
 const HowWeWork = dynamic(() => import("../components/AboutUs/HowWeWork"));
-const SociaNetworks = dynamic(() => import("../components/SocialNetworks"));
 const Layout = dynamic(() =>
   import("../components/../components/Layout/index")
 );
@@ -19,7 +18,6 @@ const AboutUs = () => {
       <Head>
         <title>{PAGE_TITLES.aboutUs}</title>
       </Head>
-      <SociaNetworks />
       <Hero />
       <AboutCompany />
       <AboutTeam />

@@ -61,7 +61,7 @@ const Footer = ({ variant = "dark" }) => {
                 </Link>
               </div>
 
-              <div className="grid lg:grid-rows-1 lg:grid-cols-2 grid-rows-2 grid-cols-1 w-44 lg:mt-8 gap-8">
+              <div className="grid lg:grid-rows-1 lg:grid-cols-2 grid-rows-2 grid-cols-1 w-44 lg:mt-8 mt-6 gap-8">
                 <div className="flex gap-8">
                   <a
                     href="https://www.instagram.com/open_byte/"

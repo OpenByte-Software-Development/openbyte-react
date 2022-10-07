@@ -3,8 +3,9 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 
 const Layout = dynamic(() => import("../components/Layout/index"));
-const ContactUsWrapper = dynamic(() => import("../components/ContactUs/ContactUsWrapper"));
-const SocialNetworks = dynamic(() => import("../components/SocialNetworks"));
+const ContactUsWrapper = dynamic(() =>
+  import("../components/ContactUs/ContactUsWrapper")
+);
 
 import { PAGE_TITLES } from "../lib/constants";
 
@@ -14,7 +15,6 @@ const ContactUs = () => {
       <Head>
         <title>{PAGE_TITLES.contact}</title>
       </Head>
-      <SocialNetworks />
       <ContactUsWrapper />
     </Layout>
   );

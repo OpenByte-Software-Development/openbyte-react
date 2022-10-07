@@ -4,7 +4,6 @@ const Layout = dynamic(() => import("../../components/Layout/index"));
 const PreviousExperience = dynamic(() =>
   import("../../components/PreviousExperience")
 );
-const SocialNetworks = dynamic(() => import("../../components/SocialNetworks"));
 const PreviousClients = dynamic(() =>
   import("../../components/CaseStudies/CaseStudiesPage/PreviousClients")
 );
@@ -15,7 +14,6 @@ const CaseStudies = dynamic(() =>
 const CaseStudiesHomepage = () => {
   return (
     <Layout>
-      <SocialNetworks />
       <div className="container pt-16">
         <PreviousClients />
         <CaseStudies />

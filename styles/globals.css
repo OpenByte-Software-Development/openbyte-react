@@ -65,3 +65,11 @@ body {
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+.orange-background {
+  background: #f94e1e !important;
+}
+
+.toast-icon path {
+  fill: #f94e1e;
+}

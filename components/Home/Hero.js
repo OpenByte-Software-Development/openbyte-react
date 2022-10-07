@@ -38,8 +38,8 @@ const Hero = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <div className="relative max-w-max">
-                    <div className="mt-14 flex items-stretch gap-12">
+                  <div className="relative lg:max-w-max">
+                    <div className="mt-14 flex items-stretch justify-between lg:justify-start gap-12">
                       <div className="flex">
                         <Image
                           src={clutchLogo}
