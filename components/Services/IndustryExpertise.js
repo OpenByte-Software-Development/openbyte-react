@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Tag } from "../../components/OpenbyteUI/index";
 
 // Images
 import arrowRight from "../../public/icons/arrow-right-orange.svg";
@@ -30,7 +29,7 @@ const IndustryExpertise = ({ tags, title }) => {
   return (
     <section className="bg-light-black lg:py-[110px] py-16 text-white">
       <div className="container mx-auto">
-        <h2 className="font-bold lg:text-[40px] text-[32px] leading-[50px]">
+        <h2 className="font-bold lg:text-4xl text-3xl leading-[50px]">
           {title}
         </h2>
         <div className="flex mt-8 lg:gap-4 flex-wrap justify-between gap-y-4 lg:justify-start">
@@ -38,7 +37,7 @@ const IndustryExpertise = ({ tags, title }) => {
             return (
               <div
                 key={index}
-                className={`border-3 border-babyBlue rounded-full px-6 py-[9px] font-extrabold text-sm ${
+                className={`border-3 border-babyBlue rounded-full px-6 py-[11px] font-extrabold text-sm ${
                   active ? tagActiveStyles : "text-babyBlue"
                 }`}
               >
@@ -50,11 +49,11 @@ const IndustryExpertise = ({ tags, title }) => {
 
         <div className="border-2 border-darkGray p-8 pb-[38px] rounded-3xl flex justify-between mt-12">
           <div className="text-white max-w-[766px]">
-            <h3 className="text-[32px] font-bold leading-10">Ride-Sharing</h3>
+            <h3 className="text-3xl font-bold leading-10">Ride-Sharing</h3>
             <div className="block lg:hidden my-4">
               <ProjectMetadata />
             </div>
-            <p className="lg:text-[22px] text-base lg:leading-[32px] leading-[28px] mt-[21px] font-lato">
+            <p className="lg:text-xl text-base lg:leading-[32px] leading-[28px] mt-[21px] font-lato">
               The Ride-Sharing app helps to share your car with others during
               your trip, as a driver, you can add your car and set up your trip,
               also as a customer you can search for a destination and choose

@@ -52,7 +52,7 @@ const MobileAppAdvantages = () => {
       </svg>
       <div className="bg-light-black pb-22">
         <div className="container text-white lg:pt-[71px] py-14">
-          <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-center">
+          <h2 className="lg:text-4xl text-3xl font-bold leading-[50px] text-center">
             5 Business Advantages to have a mobile app
           </h2>
           <div className="lg:grid grid-rows-2 grid-cols-3 gap-10 mt-11">
@@ -69,7 +69,7 @@ const MobileAppAdvantages = () => {
                   <div className="col-span-9">
                     <div className="flex justify-between flex-col h-full">
                       <div className="">
-                        <h3 className="text-[24px] font-bold leading-[30px]">
+                        <h3 className="text-2xl font-bold leading-[30px]">
                           {title}
                         </h3>
                         <p className="text-[18px] text-lightGray leading-9  mt-4">

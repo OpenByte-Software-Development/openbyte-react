@@ -5,7 +5,7 @@ const Architecture = ({ src, alt, mobileSrc }) => {
   return (
     <section className="container lg:py-24 pt-11 pb-3">
       <div>
-        <h2 className="font-bold lg:text-[40px] text-2xl lg:leading-[50px] text-black text-center">
+        <h2 className="font-bold lg:text-4xl text-2xl lg:leading-[50px] text-black text-center">
           Architecture
         </h2>
       </div>

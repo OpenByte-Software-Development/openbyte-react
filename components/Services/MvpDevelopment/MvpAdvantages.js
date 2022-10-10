@@ -38,7 +38,7 @@ const MvpAdvantages = () => {
   return (
     <section className="bg-light-black lg:py-[89px] py-14">
       <div className="container text-white">
-        <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-center">
+        <h2 className="lg:text-4xl text-3xl font-bold leading-[50px] text-center">
           Advantages to build an MVP
         </h2>
 
@@ -56,7 +56,7 @@ const MvpAdvantages = () => {
                 <div className="lg:col-span-5 col-span-7">
                   <div className="flex justify-between flex-col h-full">
                     <div className="">
-                      <h3 className="lg:text-[24px] text-[22px] font-bold leading-[30px]">
+                      <h3 className="lg:text-2xl text-xl font-bold leading-[30px]">
                         {title}
                       </h3>
                       <p className="lg:text-[18px] text-base font-lato text-lightGray lg:leading-9 leading-7 mt-4">

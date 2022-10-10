@@ -26,8 +26,10 @@ const Home = () => {
       </Head>
       <Hero />
       <WhatWeOffer />
-      <OurWorkflow />
-      <Services />
+      <div className="lg:bg-dots bg-no-repeat bg-[right_top_400px]">
+        <OurWorkflow />
+        <Services />
+      </div>
       <WorkingModels />
       <OurWorks />
       <Testimonials />

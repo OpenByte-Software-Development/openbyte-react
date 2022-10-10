@@ -10,10 +10,10 @@ const TechStack = ({ techStack, title, description }) => {
     <section>
       <div className="bg-beige pt-28 pb-[50px]">
         <div className="container ">
-          <h2 className="text-[40px] font-bold leading-[50px] text-center text-light-black">
+          <h2 className="text-4xl font-bold leading-[50px] text-center text-light-black">
             {title}
           </h2>
-          <p className="text-[22px] font-lato leading-8 text-center text-darkGray max-w-[800px] mx-auto mt-6">
+          <p className="text-xl font-lato leading-8 text-center text-darkGray max-w-[800px] mx-auto mt-6">
             {description}
           </p>
 
@@ -27,10 +27,10 @@ const TechStack = ({ techStack, title, description }) => {
 
               return (
                 <div key={field} className="text-center mt-6">
-                  <h3 className="text-black lg:text-2xl text-[22px] font-bold leading-[30px]">
+                  <h3 className="text-black lg:text-2xl text-xl font-bold leading-[30px]">
                     {field}
                   </h3>
-                  <p className="font-lato leading-9 text-darkGray lg:text-[22px] text-base mt-4 tracking-[0.02em]">
+                  <p className="font-lato leading-9 text-darkGray lg:text-xl text-base mt-4 tracking-[0.02em]">
                     {body}
                   </p>
                   <div className="flex justify-center flex-wrap lg:gap-14 gap-12 mt-4">

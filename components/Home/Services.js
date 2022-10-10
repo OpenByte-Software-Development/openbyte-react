@@ -11,7 +11,7 @@ const Services = () => {
   return (
     <section className="mx-auto lg:py-28 py-14 bg-light-black">
       <div className="container mx-auto">
-        <h2 className="lg:text-[56px] text-[32px] text-center lg:text-left font-bold text-white">
+        <h2 className="lg:text-6xl text-3xl text-center lg:text-left font-bold text-white">
           Services
         </h2>
 
@@ -21,11 +21,11 @@ const Services = () => {
               <Image src={services1} alt="Web Development Services" />
             </div>
 
-            <div className="mt-6">
-              <h3 className="lg:text-[32px] text-[22px] text-white font-bold leading-10">
+            <div className="mt-10">
+              <h3 className="lg:text-3xl text-xl text-white font-bold">
                 Web Development Services
               </h3>
-              <p className="text-[18px] text-lightGray leading-9 mt-4">
+              <p className="text-lg text-lightGray mt-4">
                 We have a wide experience in building awesome products in many
                 industries using the latest tech stack technologies in order to
                 deliver fast and stable applications
@@ -38,11 +38,11 @@ const Services = () => {
               <Image src={services2} alt="Mobile Application Decelopment" />
             </div>
 
-            <div className="mt-6">
-              <h3 className="lg:text-[32px] text-[22px] text-white font-bold leading-10">
+            <div className="mt-10">
+              <h3 className="lg:text-3xl text-xl text-white font-bold">
                 Mobile Application Development
               </h3>
-              <p className="text-[18px] text-lightGray text leading-9 mt-4">
+              <p className="text-lg text-lightGray text mt-4">
                 We build high-quality IOS apps and Android mobile applications.
                 Our apps are designed well, intuitive and scalable by following
                 best principles.
@@ -55,11 +55,11 @@ const Services = () => {
               <Image src={services3} alt="MVP development" />
             </div>
 
-            <div className="mt-6">
-              <h3 className="lg:text-[32px] text-[22px] text-white font-bold leading-10">
+            <div className="mt-10">
+              <h3 className="lg:text-3xl text-xl text-white font-bold">
                 MVP Development
               </h3>
-              <p className="text-[18px] text-lightGray leading-9 mt-4">
+              <p className="text-lg text-lightGray mt-4">
                 Transforming your idea into a validated profitable product would
                 take time and energy, especially if you’re new to the market. We
                 can help you to avoid many holes by building the product

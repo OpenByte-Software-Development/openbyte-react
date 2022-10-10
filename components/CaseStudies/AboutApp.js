@@ -7,7 +7,7 @@ const AboutCard = ({ title, description, order }) => {
       <div className="px-6 py-5 text-center">
         <div className="relative">
           <BackgroundNumber variant={order} />
-          <h4 className="lg:text-[40px] text-2xl text-black font-bold leading-[50px]">
+          <h4 className="lg:text-4xl text-2xl text-black font-bold leading-[50px]">
             {title}
           </h4>
         </div>
@@ -27,7 +27,7 @@ const AboutApp = ({ title, description, cards }) => {
       <div className="relative text-center">
         <div className="relative">
           <BackgroundNumber variant="1" />
-          <h2 className="font-bold lg:text-[40px] text-2xl leading-[50px] text-black">
+          <h2 className="font-bold lg:text-4xl text-2xl leading-[50px] text-black">
             {title}
           </h2>
         </div>

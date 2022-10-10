@@ -46,13 +46,13 @@ const WEB_FEATURES = [
 
 const WebFeatures = () => {
   return (
-    <section className="lg:mt-28 my-14">
+    <section className="lg:mt-28 my-28">
       <div className="container mx-auto">
-        <h2 className="max-w-[766px] lg:text-[40px] text-[32px] text-light-black font-bold text-center mx-auto">
+        <h2 className="max-w-[766px] lg:text-4xl text-3xl text-light-black font-bold text-center mx-auto">
           Web applications for any need, device, and platform
         </h2>
 
-        <div className="lg:grid grid-rows-2 grid-cols-2 gap-x-16 gap-y-14 mt-11">
+        <div className="lg:grid grid-rows-1 grid-cols-2 gap-x-16 gap-y-14 mt-11">
           {WEB_FEATURES.map(({ title, src, description, bullets }) => {
             return (
               <div
@@ -64,7 +64,7 @@ const WebFeatures = () => {
                 </div>
 
                 <div className="lg:col-span-10 col-span-9">
-                  <h3 className="text-[32px] text-light-black font-bold leading-10">
+                  <h3 className="text-3xl text-light-black font-bold leading-10">
                     {title}
                   </h3>
                   <p className="text-[18px] text-gray leading-9  mt-4">

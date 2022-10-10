@@ -8,19 +8,19 @@ import workflow3 from "../../public/workflow-3.svg";
 
 const OurWorkflow = () => {
   return (
-    <section className="container mx-auto pt-10 pb-28">
-      <h2 className="lg:text-[56px] text-[32px] text-center lg:text-left font-bold">
+    <section className="container mx-auto pb-28 pt-[60px]">
+      <h2 className="lg:text-6xl text-3xl text-center lg:text-left font-bold">
         Our workflow
       </h2>
 
-      <div className="grid lg:grid-rows-1 lg:grid-cols-3 grid-rows-3 grid-cols-1 mt-10 text-center gap-16 lg:bg-workflow-section bg-no-repeat bg-right-top">
+      <div className="grid lg:grid-rows-1 lg:grid-cols-3 grid-rows-3 grid-cols-1 mt-10 text-center gap-16 lg:bg-workflow-section bg-no-repeat bg-[right_top_-15px]">
         <div>
           <div className="max-w-[64px] lg:max-w-none mx-auto">
             <Image src={workflow1} alt="outsourcing icon" />
           </div>
 
           <div className="mt-6">
-            <h3 className="text-[32px] text-light-black font-bold leading-10">
+            <h3 className="text-3xl text-light-black font-bold leading-10">
               Tell us your business requirements
             </h3>
             <p className="text-[18px] text-gray leading-9 mt-4 font-lato">
@@ -37,7 +37,7 @@ const OurWorkflow = () => {
           </div>
 
           <div className="mt-6">
-            <h3 className="text-[32px] text-light-black font-bold leading-10">
+            <h3 className="text-3xl text-light-black font-bold leading-10">
               Get in short period an estimation
             </h3>
             <p className="text-[18px] text-gray text leading-9 mt-4 font-lato">
@@ -53,7 +53,7 @@ const OurWorkflow = () => {
           </div>
 
           <div className="mt-6">
-            <h3 className="text-[32px] text-light-black font-bold leading-10">
+            <h3 className="text-3xl text-light-black font-bold leading-10">
               Get the right team
             </h3>
             <p className="text-[18px] text-gray leading-9 mt-4 font-lato">

@@ -62,7 +62,7 @@ const CalculatorStep = ({ title, description, options, cardClickHandler }) => {
     <Tab.Panel className="lg:py-[52px] py-8">
       <div>
         <div className="text-center text-light-black">
-          <h3 className="lg:text-[32px] text-[22px] lg:leading-[40px] leading-[30px] font-bold">
+          <h3 className="lg:text-3xl text-xl lg:leading-[40px] leading-[30px] font-bold">
             {title}
           </h3>
           <p className="font-lato">{description}</p>

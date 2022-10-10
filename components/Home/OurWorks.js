@@ -10,7 +10,7 @@ const OurWorks = () => {
   const [swiperInstance, setSwiperInstance] = useState(null);
 
   return (
-    <section className="mt-[72px] relative">
+    <section className="mt-[65px] relative">
       <div className="bg-light-black absolute bottom-0 left-0 min-h-[30%] min-w-full -z-10 block lg:hidden"></div>
       <svg
         viewBox="0 0 1920 350"
@@ -24,7 +24,7 @@ const OurWorks = () => {
         />
       </svg>
       <div className="container mx-auto">
-        <h2 className="lg:text-[56px] text-[32px] font-bold text-light-black leading-[70px] text-center lg:text-left">
+        <h2 className="lg:text-6xl text-3xl font-bold text-light-black text-center lg:text-left">
           Our works
         </h2>
 

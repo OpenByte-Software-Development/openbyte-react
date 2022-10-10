@@ -7,7 +7,7 @@ const Solution = ({ solutions }) => {
       <div className="mx-auto bg-beige lg:pt-28 pt-14 bg-solution bg-no-repeat lg:bg-[position:right_100px_top_20px,_bottom_left] bg-[position:right_60px_bottom_50px,_bottom_left] bg-[length:52px_52px,_140px] lg:bg-[length:auto_auto] pb-28">
         <div className="relative">
           <BackgroundNumber variant="4" />
-          <h2 className="font-bold lg:text-[40px] text-2xl lg:leading-[50px] text-black text-center">
+          <h2 className="font-bold lg:text-4xl text-2xl lg:leading-[50px] text-black text-center">
             Solution
           </h2>
         </div>

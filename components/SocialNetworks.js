@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 
 //Images
@@ -10,13 +9,13 @@ import gmailLogo from "../public/icons/gmail-black.svg";
 
 const SocialNetworks = () => {
   return (
-    <div className="absolute left-0 top-[300px] border-3 border-light-black rounded-tr-3xl rounded-br-3xl hidden lg:block bg-beige">
+    <div className="absolute left-0 top-[300px] border-3 z-50 border-light-black rounded-tr-3xl rounded-br-3xl hidden lg:block bg-beige overflow-hidden">
       <div className="p-6 flex flex-col gap-6">
         <a
           href="https://www.instagram.com/open_byte/"
           target="_blank"
           rel="noreferrer"
-          className="min-w-[22px]"
+          className="min-w-[20px] flex justify-center"
         >
           <Image src={instagramLogo} alt="instagram logo" />
         </a>
@@ -25,7 +24,7 @@ const SocialNetworks = () => {
           href="https://www.linkedin.com/company/open-byte-software-development/"
           target="_blank"
           rel="noreferrer"
-          className="min-w-[22px]"
+          className="min-w-[20px] flex justify-center"
         >
           <Image src={linkedinLogo} alt="linkedin logo" />
         </a>
@@ -34,7 +33,7 @@ const SocialNetworks = () => {
           href="https://www.facebook.com/openbyte.dev"
           target="_blank"
           rel="noreferrer"
-          className="min-w-[22px]"
+          className="min-w-[20px] flex justify-center"
         >
           <Image src={facebookLogo} alt="facebook logo" />
         </a>
@@ -43,7 +42,7 @@ const SocialNetworks = () => {
           href="mailto: hi@openbyte.dev"
           target="_blank"
           rel="noreferrer"
-          className="min-w-[22px]"
+          className="min-w-[20px] flex justify-center"
         >
           <Image src={gmailLogo} alt="gmail logo" />
         </a>

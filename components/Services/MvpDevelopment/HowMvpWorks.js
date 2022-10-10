@@ -8,10 +8,10 @@ const HowMvpWorks = () => {
   return (
     <section className="bg-light-black lg:py-28 py-14">
       <div className="container text-center">
-        <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-center text-white">
+        <h2 className="lg:text-4xl text-3xl font-bold leading-[50px] text-center text-white">
           Advantages to build an MVP
         </h2>
-        <p className="max-w-[766px] mx-auto lg:mt-6 mt-4 lg:text-[22px] text-base font-lato text-white">
+        <p className="max-w-[766px] mx-auto lg:mt-6 mt-4 lg:text-xl text-base font-lato text-white">
           {`
             MVP is considered a "minimum viable product with the intent to collect
             as much as possible validated learnings from first customers".

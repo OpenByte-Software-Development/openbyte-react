@@ -22,7 +22,7 @@ const MobileNavItem = ({ title, href, basePath }) => (
   </li>
 );
 
-const MobileNavItemWithSubmenu = ({ title, subMenu, showMenu, basePath }) => {
+const MobileNavItemWithSubmenu = ({ title, subMenu, basePath }) => {
   return (
     <Disclosure as="li" className="w-full">
       {({ open }) => (

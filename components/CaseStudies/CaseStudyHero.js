@@ -12,7 +12,7 @@ const CaseStudyHero = ({ heroImage, title, tags, logoClassName }) => {
           >
             <Image src={heroImage} alt={title} />
           </div>
-          <h3 className="lg:text-[56px] text-[32px] text-black lg:leading-[70px] font-bold text-center lg:mt-11 mt-6">
+          <h3 className="lg:text-6xl text-3xl text-black font-bold text-center lg:mt-11 mt-6">
             {title}
           </h3> 
         </div>

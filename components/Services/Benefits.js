@@ -6,7 +6,7 @@ const Benefits = () => {
     <section>
       <div className="bg-light-black lg:pt-24 lg:pb-12 py-16">
         <div className="container text-white">
-          <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-center">
+          <h2 className="lg:text-4xl text-3xl font-bold leading-[50px] text-center">
             Our benefits
           </h2>
           <div className="mt-12 text-white">

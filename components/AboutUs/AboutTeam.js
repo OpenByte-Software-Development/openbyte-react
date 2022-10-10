@@ -76,7 +76,7 @@ const AboutTeam = () => {
   return (
     <section>
       <div className="container mx-auto">
-        <h2 className="lg:text-[40px] text-[24px] font-bold text-black text-center">
+        <h2 className="lg:text-4xl text-2xl font-bold text-black text-center">
           About team
         </h2>
         <div className="text-center mt-8 text-lg font-lato max-w-[766px] mx-auto text-gray leading-7">

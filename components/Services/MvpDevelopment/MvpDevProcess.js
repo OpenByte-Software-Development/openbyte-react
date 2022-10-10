@@ -46,7 +46,7 @@ const MvpDevProcess = () => {
   return (
     <section className="lg:mb-28 lg:mt-20 my-14">
       <div className="container  text-center">
-        <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-light-black">
+        <h2 className="lg:text-4xl text-3xl font-bold leading-[50px] text-light-black">
           MVP development process
         </h2>
 
@@ -59,7 +59,7 @@ const MvpDevProcess = () => {
                 </div>
 
                 <div className="mt-6">
-                  <h3 className="text-[24px] text-light-black font-bold">
+                  <h3 className="text-2xl text-light-black font-bold">
                     {title}
                   </h3>
                   <p className="text-base text-gray font-lato text leading-7 mt-4">

@@ -7,7 +7,7 @@ const ContactUsWrapper = () => {
         <div className="container mx-auto">
           <div className="lg:py-28 py-14 max-w-[746px] mx-auto">
             <div className="text-center">
-              <h2 className="lg:text-[56px] text-[32px] font-bold leading-[70px]">
+              <h2 className="lg:text-6xl text-3xl font-bold">
                 Let’s talk
               </h2>
               <p className="lg:text-lg text-base text-darkGray">

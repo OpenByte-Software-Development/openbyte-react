@@ -49,10 +49,10 @@ const HowWeWork = () => {
   return (
     <section className="">
       <div className="container">
-        <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-center text-light-black">
+        <h2 className="lg:text-4xl text-3xl font-bold leading-[50px] text-center text-light-black">
           How are we work?
         </h2>
-        <p className="lg:text-[22px] text-base font-lato leading-8 text-center text-darkGray mx-auto mt-6">
+        <p className="lg:text-xl text-base font-lato leading-8 text-center text-darkGray mx-auto mt-6">
           We follow the best practices that allow us to choose from Agile,
           Waterfall, and others.
         </p>
@@ -68,7 +68,7 @@ const HowWeWork = () => {
                 </div>
 
                 <div className="lg:mt-6 mt-4 text-center">
-                  <h3 className="lg:text-[24px] text-[22px] text-light-black font-bold leading-[30px]">
+                  <h3 className="lg:text-2xl text-xl text-light-black font-bold leading-[30px]">
                     {title}
                   </h3>
                   <p className="font-lato lg:text-[18px] font-base text-gray text lg:leading-9 leading-7 lg:mt-4 mt-2">

@@ -76,7 +76,7 @@ const OverviewStep = ({ steps, price, days }) => {
   return (
     <Tab.Panel className="pt-14 pb-16">
       <div className="text-center text-light-black">
-        <h3 className="text-[32px] leading-[40px] font-bold">
+        <h3 className="text-3xl leading-[40px] font-bold">
           Calculation results
         </h3>
 

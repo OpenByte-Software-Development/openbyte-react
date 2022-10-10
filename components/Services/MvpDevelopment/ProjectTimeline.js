@@ -14,7 +14,7 @@ const ProjectTimeline = () => {
   return (
     <section className="lg:mb-28 overflow-visible">
       <div className="text-center overflow-visible">
-        <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-light-black">
+        <h2 className="lg:text-4xl text-3xl font-bold leading-[50px] text-light-black">
           How are we gonna build your product?
         </h2>
 
@@ -29,7 +29,7 @@ const ProjectTimeline = () => {
               <Image src={projectTimeline1} alt="Discovery" />
             </div>
 
-            <span className="text-[24px] text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
+            <span className="text-2xl text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
               Discovery
             </span>
           </div>
@@ -39,7 +39,7 @@ const ProjectTimeline = () => {
               <Image src={projectTimeline2} alt="Minimum Viable Product" />
             </div>
 
-            <span className="text-[24px] text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
+            <span className="text-2xl text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
               Minimum Viable Product
             </span>
           </div>
@@ -49,7 +49,7 @@ const ProjectTimeline = () => {
               <Image src={projectTimeline3} alt="Product Backlog" />
             </div>
 
-            <span className="text-[24px] text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
+            <span className="text-2xl text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
               Product Backlog
             </span>
           </div>
@@ -59,7 +59,7 @@ const ProjectTimeline = () => {
               <Image src={projectTimeline4} alt="Sprint Backlog" />
             </div>
 
-            <span className="text-[24px] text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
+            <span className="text-2xl text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
               Sprint Backlog
             </span>
           </div>
@@ -74,7 +74,7 @@ const ProjectTimeline = () => {
               </div>
             </div>
 
-            <span className="text-[24px] text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
+            <span className="text-2xl text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
               Sprint Stories
             </span>
           </div>
@@ -84,7 +84,7 @@ const ProjectTimeline = () => {
               <Image src={projectTimeline6} alt="Delivered Product" />
             </div>
 
-            <span className="text-[24px] text-black font-bold leading-[30px] mt-[14px]block lg:hidden">
+            <span className="text-2xl text-black font-bold leading-[30px] mt-[14px]block lg:hidden">
               Delivered Product
             </span>
           </div>
@@ -93,38 +93,38 @@ const ProjectTimeline = () => {
         <div className="hidden lg:block bg-project-timeline bg-no-repeat bg-[top_5px_center] pt-4 -mt-4">
           <div className="container lg:grid grid-rows-1 grid-cols-6 gap-8">
             <div className="">
-              <span className="text-[24px] text-black font-bold leading-8 mt-4 block">
+              <span className="text-2xl text-black font-bold leading-8 mt-4 block">
                 Discovery
               </span>
             </div>
 
             <div>
-              <span className="text-[24px] text-black font-bold leading-8 mt-4 block">
+              <span className="text-2xl text-black font-bold leading-8 mt-4 block">
                 Minimum Viable
                 <br /> Product
               </span>
             </div>
 
             <div>
-              <span className="text-[24px] text-black font-bold leading-8 mt-4 block">
+              <span className="text-2xl text-black font-bold leading-8 mt-4 block">
                 Product Backlog
               </span>
             </div>
 
             <div>
-              <span className="text-[24px] text-black font-bold leading-8 mt-4 block">
+              <span className="text-2xl text-black font-bold leading-8 mt-4 block">
                 Sprint <br /> Backlog
               </span>
             </div>
 
             <div>
-              <span className="text-[24px] text-black font-bold leading-8 mt-4 block">
+              <span className="text-2xl text-black font-bold leading-8 mt-4 block">
                 Sprint Stories
               </span>
             </div>
 
             <div>
-              <span className="text-[24px] text-black font-bold leading-8 mt-4 block">
+              <span className="text-2xl text-black font-bold leading-8 mt-4 block">
                 Delivered Product
               </span>
             </div>

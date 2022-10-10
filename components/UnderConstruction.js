@@ -10,7 +10,7 @@ const UnderConstruction = () => {
     <div className="lg:pb-52 pb-10">
       <div className="bg-beige">
         <div className="pt-28 container">
-          <h2 className="lg:text-[52px] text-[32px] font-bold text-center text-black">
+          <h2 className="lg:text-[52px] text-3xl font-bold text-center text-black">
             This page is under construction
           </h2>
 

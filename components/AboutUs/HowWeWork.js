@@ -7,7 +7,7 @@ const HowWeWork = () => {
       <div className="bg-beige">
         <div className="container mx-auto bg-how-we-work-buddy bg-[center_bottom_0px] bg-no-repeat pb-[320px]">
           <div className="text-center text-white">
-            <h2 className="lg:text-[40px] text-[24px] font-bold text-black">
+            <h2 className="lg:text-4xl text-2xl font-bold text-black">
               How we work
             </h2>
 

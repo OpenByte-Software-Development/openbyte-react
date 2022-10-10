@@ -47,7 +47,7 @@ const CommunicationChannels = () => {
   return (
     <section className="lg:py-28 py-10">
       <div className="container">
-        <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-center text-light-black">
+        <h2 className="lg:text-4xl text-3xl font-bold leading-[50px] text-center text-light-black">
           Communication channels we using
         </h2>
         <div

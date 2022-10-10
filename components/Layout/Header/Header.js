@@ -38,10 +38,10 @@ const Header = () => {
   });
 
   return (
-    <header className="lg:py-7 border-b-3 border-orange w-screen fixed t-0 bg-white z-50">
+    <header className="lg:py-7 border-b border-orange w-screen fixed bg-white z-50">
       <div className="container lg:flex mx-auto items-center hidden">
         <div className="flex item s-center h-8 cursor-pointer">
-          <Link prefetch={false}  href="/">
+          <Link prefetch={false} href="/">
             <a>
               <Image
                 src={logo}
@@ -56,14 +56,14 @@ const Header = () => {
         <div className="w-full flex justify-end">
           <nav className="flex justify-end items-center">
             <div className="ml-10 relative">
-              <Link prefetch={false}  href="/">
+              <Link prefetch={false} href="/">
                 <a>
                   <span
                     className={`${
                       basePath === "/"
                         ? activeNavItemStyle
                         : inactiveNavItemStyle
-                    } text-base font-bold cursor-pointer`}
+                    } text-sm font-bold cursor-pointer`}
                   >
                     Home
                   </span>
@@ -80,9 +80,9 @@ const Header = () => {
                         basePath === "/services"
                           ? activeNavItemStyle
                           : inactiveNavItemStyle
-                      } text-base font-bold flex items-center`}
+                      } flex items-center`}
                     >
-                      <span className="mr-2 text-base font-bold hover:text-gray-900 focus:outline-none">
+                      <span className="mr-2 text-sm font-bold hover:text-gray-900 focus:outline-none">
                         Services
                       </span>
                       <div className="flex items-center p-[2px]">
@@ -106,32 +106,35 @@ const Header = () => {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="border-t-3 border-orange bg-white absolute z-10 p-8 top-9 w-80">
-                      <div className="w-full flex flex-col gap-4">
-                        <Link prefetch={false}  href="/services/web-development">
+                    <Popover.Panel className="border-t-3 border-orange bg-white absolute z-10 p-8 top-9 whitespace-nowrap max-w-fit">
+                      <div className="w-full flex flex-col gap-4 text-sm font-bold">
+                        <Link prefetch={false} href="/services/web-development">
                           <a
-                            className={`max-w-fit text-base font-bold ${inactiveNavItemStyle}`}
+                            className={`max-w-fit w-auto ${inactiveNavItemStyle}`}
                           >
                             Web Development Services
                           </a>
                         </Link>
-                        <Link prefetch={false}  href="/services/mobile-applications">
+                        <Link
+                          prefetch={false}
+                          href="/services/mobile-applications"
+                        >
                           <a
-                            className={`max-w-fit w-auto text-base font-bold ${inactiveNavItemStyle}`}
+                            className={`max-w-fit w-auto ${inactiveNavItemStyle}`}
                           >
                             Mobile Application Development
                           </a>
                         </Link>
-                        <Link prefetch={false}  href="/services/mvp-development">
+                        <Link prefetch={false} href="/services/mvp-development">
                           <a
-                            className={`max-w-fit w-auto text-base font-bold ${inactiveNavItemStyle}`}
+                            className={`max-w-fit w-auto ${inactiveNavItemStyle}`}
                           >
                             MVP App Development
                           </a>
                         </Link>
-                        <Link prefetch={false}  href="/about-us#team">
+                        <Link prefetch={false} href="/about-us#team">
                           <a
-                            className={`max-w-fit w-auto text-base font-bold ${inactiveNavItemStyle}`}
+                            className={`max-w-fit w-auto ${inactiveNavItemStyle}`}
                           >
                             Dedicated Developers
                           </a>
@@ -144,13 +147,13 @@ const Header = () => {
             </Popover>
 
             <div className="ml-10 relative">
-              <Link prefetch={false}  href="/about-us">
+              <Link prefetch={false} href="/about-us">
                 <a
                   className={`${
                     basePath === "/about-us"
                       ? activeNavItemStyle
                       : inactiveNavItemStyle
-                  } text-base font-bold`}
+                  } text-sm font-bold`}
                 >
                   About Us
                 </a>
@@ -158,13 +161,13 @@ const Header = () => {
             </div>
 
             <div className="ml-10 relative">
-              <Link prefetch={false}  href="/case-studies">
+              <Link prefetch={false} href="/case-studies">
                 <a
                   className={`${
                     basePath === "/case-studies"
                       ? activeNavItemStyle
                       : inactiveNavItemStyle
-                  } text-base font-bold`}
+                  } text-sm font-bold`}
                 >
                   Case Studies
                 </a>
@@ -172,13 +175,13 @@ const Header = () => {
             </div>
 
             <div className="ml-10 relative">
-              <Link prefetch={false}  href="/contact">
+              <Link prefetch={false} href="/contact">
                 <a
                   className={`${
                     basePath === "/contact"
                       ? activeNavItemStyle
                       : inactiveNavItemStyle
-                  } text-base font-bold`}
+                  } text-sm font-bold`}
                 >
                   Contact
                 </a>
@@ -187,8 +190,8 @@ const Header = () => {
           </nav>
 
           <div className="ml-20">
-            <Link prefetch={false}  href="/contact">
-              <button className="bg-orange text-white text-base rounded-3xl py-3.5 px-8 font-extrabold">
+            <Link prefetch={false} href="/contact">
+              <button className="bg-orange text-white text-base rounded-full py-[14px] px-8 font-extrabold">
                 Get a Quote
               </button>
             </Link>

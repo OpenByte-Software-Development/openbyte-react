@@ -54,7 +54,7 @@ const Footer = ({ variant = "dark" }) => {
           <div className="grid grid-rows-1 grid-cols-2 lg:grid-cols-4">
             <div className="flex flex-col justify-between lg:justify-start">
               <div className="max-w-[100px] lg:w-auto">
-                <Link prefetch={false}  href="/" className="cursor-pointer">
+                <Link prefetch={false} href="/" className="cursor-pointer">
                   <a>
                     <Image src={logo} alt="Openbyte logo" />
                   </a>
@@ -101,13 +101,6 @@ const Footer = ({ variant = "dark" }) => {
                   </a>
                 </div>
               </div>
-              <div className="font-bold text-gray text-base mt-6">
-                <Link prefetch={false}  href="/privacy-and-policy">
-                  <a target="_blank" rel="noreferrer">
-                    PRIVACY POLICY
-                  </a>
-                </Link>
-              </div>
             </div>
 
             <div className="hidden lg:block">
@@ -115,22 +108,22 @@ const Footer = ({ variant = "dark" }) => {
                 <ul>
                   <li className=" text-gray">SERVICES</li>
                   <li className="mt-6">
-                    <Link prefetch={false}  href="/services/web-development">
+                    <Link prefetch={false} href="/services/web-development">
                       <a>Web Development Services</a>
                     </Link>
                   </li>
                   <li className="mt-6">
-                    <Link prefetch={false}  href="/services/mobile-applications">
+                    <Link prefetch={false} href="/services/mobile-applications">
                       <a>Mobile Application Development</a>
                     </Link>
                   </li>
                   <li className="mt-6">
-                    <Link prefetch={false}  href="/services/mvp-development">
+                    <Link prefetch={false} href="/services/mvp-development">
                       <a>MVP App Development</a>
                     </Link>
                   </li>
                   <li className="mt-6">
-                    <Link prefetch={false}  href="/about-us#team">
+                    <Link prefetch={false} href="/about-us#team">
                       <a>Dedicated Developers</a>
                     </Link>
                   </li>
@@ -143,18 +136,23 @@ const Footer = ({ variant = "dark" }) => {
                 <ul>
                   <li className="font-bold text-gray text-base">LINKS</li>
                   <li className="mt-6">
-                    <Link prefetch={false}  href="/about-us">
+                    <Link prefetch={false} href="/about-us">
                       <a>About Us</a>
                     </Link>
                   </li>
                   <li className="mt-6">
-                    <Link prefetch={false}  href="/case-studies">
+                    <Link prefetch={false} href="/case-studies">
                       <a>Case Studies</a>
                     </Link>
                   </li>
                   <li className="mt-6">
-                    <Link prefetch={false}  href="/calculator">
+                    <Link prefetch={false} href="/calculator">
                       <a>Estimate App cost</a>
+                    </Link>
+                  </li>
+                  <li className="mt-6">
+                    <Link prefetch={false} href="/privacy-and-policy">
+                      <a>Privacy Policy</a>
                     </Link>
                   </li>
                 </ul>

@@ -5,7 +5,7 @@ const AboutCompany = () => {
     <section className="bg-light-black skew-y-[-4deg] lg:py-24 lg:my-28 py-20 my-16">
       <div className="container mx-auto skew-y-[4deg]">
         <div className="text-center text-white">
-          <h2 className="lg:text-[40px] text-[24px] font-bold">
+          <h2 className="lg:text-4xl text-2xl font-bold">
             About company
           </h2>
 

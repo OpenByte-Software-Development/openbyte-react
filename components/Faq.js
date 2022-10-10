@@ -23,13 +23,15 @@ const FaqItem = ({ question, answer, bullets }) => {
                 as="div"
               >
                 <div className="flex justify-between items-center">
-                  <span className="text-2xl font-bold leading-7">
+                  <span className="text-2xl font-bold max-w-[280px] lg:max-w-none">
                     {question}
                   </span>
                   <Image
                     src={arrowDown}
+                    height={arrowDown.height}
+                    width={arrowDown.width}
                     alt="open disclosure button"
-                    className={`duration-75 ${
+                    className={`duration-75 w-[5px] h-[8px] ${
                       open ? "rotate-180 origin-center duration-75" : ""
                     }`}
                   />

@@ -9,12 +9,12 @@ import stars from "../../public/five-stars.png";
 
 const Hero = () => {
   return (
-    <section className="bg-hero-section bg-no-repeat bg-[right_2rem_top_2rem]">
-      <div className="bg-beige">
+    <section className="bg-hero-section bg-no-repeat bg-[right_2rem_top_2rem] relative">
+      <div className="bg-beige pb-[72px]">
         <div className="container lg:mx-auto py-14 lg:p-0">
-          <div className="lg:grid lg:grid-rows-1 lg:grid-cols-2 lg:place-items-center lg:justify-items-start">
+          <div className="lg:grid lg:grid-rows-1 lg:grid-cols-2 lg:place-items-center lg:justify-items-start"> 
             <div>
-              <h1 className="lg:text-left text-center font-bold lg:text-6xl text-[40px] text-light-black">
+              <h1 className="lg:text-left text-center font-bold lg:text-8xl text-4xl text-light-black">
                 We build software.
               </h1>
               <p className="text-gray text-lg lg:max-w-md mt-4 text-center lg:text-left font-lato">
@@ -27,7 +27,7 @@ const Hero = () => {
               </div>
               <div className="mt-14">
                 <Link prefetch={false} href="/calculator">
-                  <button className="bg-orange text-white text-base rounded-full lg:py-3.5 py-[18px] px-14 font-extrabold lg:w-auto w-full">
+                  <button className="bg-orange text-white text-base rounded-full py-[18px] px-14 font-extrabold lg:w-auto w-full">
                     Get a cost estimation
                   </button>
                 </Link>
@@ -75,12 +75,14 @@ const Hero = () => {
         </div>
       </div>
 
-      <svg className="block" viewBox="0 0 1920 154">
-        <path
-          d="M2005 -744.5L2019 -54.6457C1997.02 -39.9072 1975.05 -25.1686 1945.75 -10.43C1843.19 40.1021 1704.01 80.1066 1520.88 109.584C1337.75 139.061 1147.29 153.799 949.512 153.799C663.827 153.799 414.768 126.428 202.336 69.5791C63.1557 33.7856 -32.0727 -8.32452 -98 -52.5401L-112 -744.5H2005Z"
-          fill="#FFFAF7"
-        />
-      </svg>
+      <div className="absolute bottom-0 left-0">
+        <svg viewBox="0 0 1920 154" height="100%" width="100vw">
+          <path
+            d="M0 0V770.064H1920V2.48674C1820.52 46.8925 1690 82.5368 1522.88 109.42C1339.75 138.878 1149.29 153.608 951.512 153.608C665.827 153.608 416.768 126.253 204.336 69.4399C121.779 48.2215 54.6861 24.7822 0 0Z"
+            fill="white"
+          />
+        </svg>
+      </div>
     </section>
   );
 };

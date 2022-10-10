@@ -25,10 +25,10 @@ const CaseStudy = ({
       <div className="lg:my-8 lg:ml-12 lg:mr-0 my-6 mx-9">
         <div className="grid lg:grid-rows-1 lg:grid-cols-2 grid-rows-1 grid-cols-1 lg:gap-20">
           <div className="order-2 lg:order-1">
-            <h3 className="text-black text-[56px] font-bold leading-[70px] hidden lg:block">
+            <h3 className="text-black text-6xl font-bold hidden lg:block">
               {title}
             </h3>
-            <h4 className="text-black text-[32px] font-bold leading-10 hidden lg:block">
+            <h4 className="text-black text-3xl font-bold leading-10 hidden lg:block">
               {description}
             </h4>
 
@@ -79,8 +79,8 @@ const CaseStudy = ({
 
             <div className="w-full h-full absolute top-0 left-0 rounded-[25px] flex justify-end flex-col bg-dark-gradient px-4 pb-3 lg:hidden">
               <div className="text-white font-bold">
-                <h3 className="text-[32px]">{title}</h3>
-                <h4 className="text-[22px]">{description}</h4>
+                <h3 className="text-3xl">{title}</h3>
+                <h4 className="text-xl">{description}</h4>
               </div>
             </div>
           </div>

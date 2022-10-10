@@ -11,7 +11,7 @@ const WorkingModels = () => {
   return (
     <section className="mx-auto lg:py-20 py-14 bg-beige">
       <div className="container mx-auto">
-        <h2 className="lg:text-[56px] text-[32px] text-center lg:text-left font-bold text-light-black">
+        <h2 className="lg:text-6xl text-3xl text-center lg:text-left font-bold text-light-black">
           Working models
         </h2>
 
@@ -25,10 +25,10 @@ const WorkingModels = () => {
             </div>
 
             <div className="mt-6">
-              <h3 className="lg:text-[32px] text-[22px] text-light-black font-bold leading-10">
+              <h3 className="lg:text-3xl text-xl text-light-black font-bold">
                 Continuous Development & Agile
               </h3>
-              <p className="text-[18px] text-gray leading-9 mt-4 font-lato">
+              <p className="text-lg text-gray mt-4 font-lato">
                 We will work to provide an estimation on time and money with
                 maximum details for each milestone.
               </p>
@@ -41,10 +41,10 @@ const WorkingModels = () => {
             </div>
 
             <div className="mt-6">
-              <h3 className="lg:text-[32px] text-[22px] text-light-black font-bold leading-10">
+              <h3 className="lg:text-3xl text-xl text-light-black font-bold">
                 Fixed price & <br /> Waterfall
               </h3>
-              <p className="text-[18px] text-gray text leading-9 mt-4 font-lato">
+              <p className="text-lg text-gray text mt-4 font-lato">
                 We will work to provide an estimation on time and money with
                 maximum details for each milestone.
               </p>
@@ -57,10 +57,10 @@ const WorkingModels = () => {
             </div>
 
             <div className="mt-6">
-              <h3 className="lg:text-[32px] text-[22px] text-light-black font-bold leading-10">
+              <h3 className="lg:text-3xl text-xl text-light-black font-bold">
                 Support & Monthly Package
               </h3>
-              <p className="text-[18px] text-gray leading-9 mt-4 font-lato">
+              <p className="text-lg text-gray mt-4 font-lato">
                 We will work to provide an estimation on time and money with
                 maximum details for each milestone.
               </p>

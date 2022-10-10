@@ -11,7 +11,7 @@ const TechStack = ({ techStack }) => {
         />
       </svg>
       <div className="bg-light-black pt-20 pb-24">
-        <h2 className="lg:text-[40px] text-[24px] font-bold lg:leading-[50px]">
+        <h2 className="lg:text-4xl text-2xl font-bold lg:leading-[50px]">
           Tech Stack
         </h2>
 
@@ -21,7 +21,7 @@ const TechStack = ({ techStack }) => {
 
             return (
               <div key={field} className="mt-6">
-                <h3 className="lg:text-2xl text-[22px] font-bold lg:leading-[30px] text-center">
+                <h3 className="lg:text-2xl text-xl font-bold lg:leading-[30px] text-center">
                   {field}
                 </h3>
                 <div className="flex justify-center lg:gap-14 gap-10 mt-4 flex-wrap">

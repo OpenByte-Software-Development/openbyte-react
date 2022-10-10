@@ -38,7 +38,7 @@ const ContactFormWithLinkedInCta = ({
       <div className="bg-cta-background-mobile bg-right-bottom bg-no-repeat z-20 lg:bg-none">
         <div className="container lg:mx-auto lg:bg-orange bg-none lg:rounded-[30px]">
           <div className="lg:bg-cta-background bg-[right_48px_bottom_0] lg:py-[80px] py-8 lg:px-[96px] bg-no-repeat">
-            <h2 className="text-white font-bold lg:leading-[70px] leading-[50px] lg:text-[56px] text-[40px] max-w-[330px] lg:max-w-[600px]">
+            <h2 className="text-white font-bold lg:text-6xl marker:text-4xl max-w-[330px] lg:max-w-[600px]">
               {title}
             </h2>
 
@@ -53,12 +53,14 @@ const ContactFormWithLinkedInCta = ({
                       <Field
                         name="name"
                         id="name"
+                        required
                         placeholder="Your Name"
                         className="rounded-[10px] px-4 py-3 text-darkGray"
                       />
                       <Field
                         name="email"
                         id="email"
+                        required
                         placeholder="Your Email"
                         className="rounded-[10px] px-4 py-3 text-darkGray"
                       />

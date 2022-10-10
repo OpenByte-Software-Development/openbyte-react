@@ -11,7 +11,7 @@ const PreviousExperience = ({ title = "Our previous experience" }) => {
   return (
     <section className="lg:pb-32 lg:pt-20 pt-11 pb-[72px]">
       <div className="container">
-        <h2 className="lg:text-[40px] text-[32px] font-bold leading-[50px] text-center text-light-black">
+        <h2 className="lg:text-4xl text-3xl font-bold leading-[50px] text-center text-light-black">
           {title}
         </h2>
 

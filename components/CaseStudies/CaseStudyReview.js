@@ -16,7 +16,7 @@ const CaseStudyReview = ({
       <div className="container">
         <div className="lg:grid grid-rows-1 grid-cols-2 text-white lg:text-left text-center">
           <div className="max-w-[363px]">
-            <h2 className="lg:text-[64px] text-[24px] lg:leading-[75px] font-bold">
+            <h2 className="lg:text-8xl text-2xl lg:leading-[75px] font-bold">
               That’s what our partner said:
             </h2>
           </div>

@@ -11,10 +11,10 @@ const Testimonials = () => {
   return (
     <section className="bg-light-black">
       <div className="container mx-auto lg:py-32 py-14">
-        <div className="pb-14 lg:bg-hearth bg-[left_bottom_-15px] bg-no-repeat">
+        <div className="pb-14 lg:bg-hearth bg-[left_top_250px] bg-no-repeat">
           <div className="lg:grid grid-rows-1 grid-cols-9 lg:gap-[132px] lg:items-start">
             <div className="lg:col-span-4 lg:text-left text-center">
-              <h2 className="lg:text-[56px] text-[32px] font-bold text-white lg:leading-[70px] leading-[40px]">
+              <h2 className="lg:text-6xl text-3xl font-bold text-white">
                 Our customers love our work.
               </h2>
               <p className="mt-4 text-lightGray font-lato leading-7 text-lg">
@@ -29,7 +29,6 @@ const Testimonials = () => {
                 <Swiper
                   slidesPerView={1}
                   spaceBetween={50}
-                  autoHeight={true}
                   loop={true}
                   onSwiper={(swiper) => setSwiperInstance(swiper)}
                 >
