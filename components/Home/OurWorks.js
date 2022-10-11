@@ -30,17 +30,16 @@ const OurWorks = () => {
 
         <div className="mt-14">
           <div className="relative">
-            <div className="bg-beige absolute -bottom-[15px] -left-[15px] rounded-3xl min-w-[100%] min-h-[100%]"></div>
+            <div className="bg-beige absolute -bottom-[15px] -left-[15px] rounded-3xl min-w-[100%] min-h-full"></div>
 
             <Swiper
               slidesPerView={1}
               spaceBetween={100}
-              autoHeight={true}
               onSwiper={(swiper) => setSwiperInstance(swiper)}
               loop={true}
             >
               {CASE_STUDIES.map((project) => (
-                <SwiperSlide key={uuid()}>
+                <SwiperSlide key={uuid()} className="h-full">
                   <CaseStudy {...project} />
                 </SwiperSlide>
               ))}

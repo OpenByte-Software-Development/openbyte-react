@@ -10,7 +10,7 @@ const ContactUsWrapper = () => {
               <h2 className="lg:text-6xl text-3xl font-bold">
                 Let’s talk
               </h2>
-              <p className="lg:text-lg text-base text-darkGray">
+              <p className="lg:text-lg text-lg text-darkGray mt-[9px]">
                 We’re here to help you choose the best model that fits you and
                 your project. We can help you choose the best tech stack for
                 your project at a good price and reduce unnecessary costs.

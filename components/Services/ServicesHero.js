@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const ServicesHero = ({ title, description, ...imageProps }) => {
   return (
-    <section className="bg-beige pb-[80px] pt-[106px] lg:bg-dots lg:bg-no-repeat lg:bg-[right_bottom_-143px]">
+    <section className="bg-beige pb-[80px] pt-[106px]">
       <div className="container mx-auto">
         <div className="flex items-center lg:flex-row flex-col-reverse justify-between">
           <div className="max-w-[655px] lg:text-left text-center">
@@ -14,7 +14,7 @@ const ServicesHero = ({ title, description, ...imageProps }) => {
               {description}
             </p>
 
-            <Link prefetch={false}  href="/contact">
+            <Link prefetch={false} href="/contact">
               <a>
                 <button className="py-[14px] px-8 bg-orange text-white text-base rounded-full font-extrabold lg:w-auto mt-11 w-full">
                   {"Let's talk"}

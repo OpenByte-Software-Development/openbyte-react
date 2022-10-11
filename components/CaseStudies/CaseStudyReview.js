@@ -21,18 +21,18 @@ const CaseStudyReview = ({
             </h2>
           </div>
           <div className="relative">
-            <div className="flex justify-between opacity-50 absolute w-full lg:-top-[40px] -top-[10px]">
+            <div className="flex justify-between opacity-50 absolute w-full lg:-top-[35px] -top-[10px]">
               <div className="flex lg:max-w-full max-w-[29px]">
-                <Image src={quoteSign} alt="quote sign" className="" />
+                <Image src={quoteSign} alt="quote sign"/>
               </div>
               <div className="flex lg:max-w-full max-w-[29px]">
                 <Image src={quoteSign} alt="quote sign" />
               </div>
             </div>
 
-            <div className="lg:mx-[80px] mx-[30px] mt-9">
-              <h3 className="lg:text-2xl text-[20px] font-bold">{title}</h3>
-              <p className="mt-4 font-lato lg:text-lg text-lightGray">
+            <div className="lg:mx-[80px] mx-[30px]">
+              <h3 className="lg:text-2xl text-2xl font-bold">{title}</h3>
+              <p className="mt-4 font-lato text-lg text-lightGray">
                 {description}
               </p>
 

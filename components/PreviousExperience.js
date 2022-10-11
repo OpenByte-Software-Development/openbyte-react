@@ -20,9 +20,7 @@ const PreviousExperience = ({ title = "Our previous experience" }) => {
             <Swiper
               slidesPerView={3}
               spaceBetween={40}
-              navigation={true}
               loop={true}
-              autoHeight={true}
               onSwiper={(swiper) => setSwiperInstance(swiper)}
               breakpoints={{
                 320: {
@@ -35,7 +33,7 @@ const PreviousExperience = ({ title = "Our previous experience" }) => {
             >
               {CLIENTS_REVIEWS.map((review, index) => {
                 return (
-                  <SwiperSlide key={index} className="h-auto">
+                  <SwiperSlide key={index}>
                     <Review {...review} className="border-light-black" />
                   </SwiperSlide>
                 );

@@ -27,9 +27,9 @@ const ProjectMetadata = () => (
 
 const IndustryExpertise = ({ tags, title }) => {
   return (
-    <section className="bg-light-black lg:py-[110px] py-16 text-white">
+    <section className="bg-light-black lg:pb-[120px] pt-[110px] py-16 text-white">
       <div className="container mx-auto">
-        <h2 className="font-bold lg:text-4xl text-3xl leading-[50px]">
+        <h2 className="font-bold lg:text-4xl text-3xl">
           {title}
         </h2>
         <div className="flex mt-8 lg:gap-4 flex-wrap justify-between gap-y-4 lg:justify-start">
@@ -61,7 +61,7 @@ const IndustryExpertise = ({ tags, title }) => {
             </p>
 
             <div className="mt-[21px]">
-              <Link prefetch={false}  href="/case-studies/orange-car-sharing">
+              <Link prefetch={false} href="/case-studies/orange-car-sharing">
                 <button className=" text-orange text-sm py-5 font-extrabold ">
                   <div className="flex items-center">
                     <span className="mr-2 block">View Case Study</span>

@@ -67,7 +67,7 @@ const WebFeatures = () => {
                   <h3 className="text-3xl text-light-black font-bold leading-10">
                     {title}
                   </h3>
-                  <p className="text-[18px] text-gray leading-9  mt-4">
+                  <p className="text-lg text-gray leading-9  mt-4">
                     {description}
                   </p>
                   {Array.isArray(bullets) && <BulletPoints bullets={bullets} />}

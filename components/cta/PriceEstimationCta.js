@@ -10,7 +10,7 @@ const PriceEstimationCta = () => {
       <div className="z-20">
         <div className="lg:container lg:mx-auto lg:bg-orange bg-none lg:rounded-[30px]">
           <div className="lg:bg-cta-price-estimation-background bg-cta-price-estimation-background-mobile bg-right-bottom bg-no-repeat min-h-[362px] lg:block flex items-center lg:min-h-auto">
-            <div className="p-8 lg:py-[73px] lg:px-[96px]">
+            <div className="p-8 lg:p-[73px]">
               <h2 className="text-white font-bold lg:text-6xl text-4xl lg:max-w-[600px] max-w-[60%]">
                 How much will your app cost?
               </h2>

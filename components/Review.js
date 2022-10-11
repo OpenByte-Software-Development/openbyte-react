@@ -14,7 +14,7 @@ const Review = ({
 }) => (
   <div className="pl-2 pb-2 flex h-full">
     <div className={`border-2 rounded-3xl relative p-8 ${className}`}>
-      <div className="min-h-full">
+      <div className="h-full flex flex-col">
         <div className="flex gap-4 items-center">
           <div className="bg-avatar-background bg-no-repeat bg-center p-2 flex justify-center items-center bg-[length:100%_100%]">
             <Image src={avatar} alt={`${name}'s avatar`} />
@@ -33,20 +33,17 @@ const Review = ({
           </div>
         </div>
 
-        <div className="min-h-full flex justify-center flex-col gap-5 mt-[20px]">
-
+        <div className="mt-[20px] flex justify-between flex-col h-full">
           <p className="block font-lato text-light-black text-lg">{review}</p>
 
-          <div className="mt-8">
+          <div className="mt-8 h-fit">
             <Link prefetch={false} href={clutchLink}>
               <a target="_blank" rel="noreferrer">
                 <Image src={clutchReview} alt="clutch review" />
               </a>
             </Link>
           </div>
-
         </div>
-
       </div>
 
       <div className="bg-yellow absolute -bottom-2 -left-2 rounded-3xl min-w-[100%] min-h-[100%] -z-10"></div>

@@ -14,6 +14,7 @@ const Layout = dynamic(() => import("../components/Layout/index"));
 const ContactFormCta = dynamic(() =>
   import("../components/cta/ContactFormCta")
 );
+const Dots = dynamic(() => import("../components/Dots"));
 
 import { FAQS } from "../lib/constants";
 import { PAGE_TITLES } from "../lib/constants";
@@ -26,9 +27,10 @@ const Home = () => {
       </Head>
       <Hero />
       <WhatWeOffer />
-      <div className="lg:bg-dots bg-no-repeat bg-[right_top_400px]">
+      <div className="relative">
         <OurWorkflow />
         <Services />
+        <Dots className="top-[390px]"/>
       </div>
       <WorkingModels />
       <OurWorks />

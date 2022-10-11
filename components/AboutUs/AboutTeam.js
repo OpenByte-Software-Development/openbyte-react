@@ -62,8 +62,12 @@ const TeamMember = ({ photo, name, position, skills }) => {
       </div>
 
       <div className="text-center font-bold lg:mt-6 p-4 lg:p-0">
-        <span className="block text-lightGray text-xs">{position}</span>
-        <span className="block text-black text-[15px]">{name}</span>
+        <span className="block text-lightGray text-s">
+          {position}
+        </span>
+        <span className="block text-black text-[15px] leading-[16px] font-bold">
+          {name}
+        </span>
         <span className="block text-orange mt-3">{skills.join(" | ")}</span>
       </div>
 
@@ -115,7 +119,7 @@ const AboutTeam = () => {
             </div>
 
             <div className="text-center font-bold lg:mt-6 p-4 lg:p-0 lg:block flex justify-center items-center">
-              <span className="text-black text-[12px] hidden lg:block">
+              <span className="text-black text-s hidden lg:block">
                 JOIN OUR TEAM
               </span>
 

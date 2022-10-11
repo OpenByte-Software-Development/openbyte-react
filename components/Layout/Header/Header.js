@@ -74,7 +74,7 @@ const Header = () => {
             <Popover className="ml-10 relative">
               {({ open }) => (
                 <>
-                  <Popover.Button>
+                  <Popover.Button className="">
                     <div
                       className={`${
                         basePath === "/services"

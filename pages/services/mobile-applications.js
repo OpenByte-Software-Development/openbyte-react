@@ -30,6 +30,7 @@ const ContactFormCta = dynamic(() =>
 );
 const Faq = dynamic(() => import("../../components/Faq"));
 const TechStack = dynamic(() => import("../../components/Services/TechStack"));
+const Dots = dynamic(() => import("../../components/Dots"));
 
 import {
   node,
@@ -177,8 +178,11 @@ const MobileApplications = () => {
       <Head>
         <title>{PAGE_TITLES.services.mobileDev}</title>
       </Head>
-      <ServicesHero {...HERO_PROPS} />
-      <IndustryExpertise {...INDUSTRY_EXPERTISE} />
+      <div className="relative">
+        <ServicesHero {...HERO_PROPS} />
+        <IndustryExpertise {...INDUSTRY_EXPERTISE} />
+        <Dots className="top-[305px]" />
+      </div>
       <section className="relative">
         <PriceEstimationCta />
         <div className="bg-light-black absolute top-0 left-0 min-h-[50%] min-w-full -z-10"></div>

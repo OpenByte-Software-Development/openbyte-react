@@ -72,7 +72,7 @@ const MobileAppAdvantages = () => {
                         <h3 className="text-2xl font-bold leading-[30px]">
                           {title}
                         </h3>
-                        <p className="text-[18px] text-lightGray leading-9  mt-4">
+                        <p className="text-lg text-lightGray leading-9  mt-4">
                           {description}
                         </p>
                       </div>

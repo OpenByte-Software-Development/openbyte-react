@@ -26,6 +26,7 @@ const ContactFormCta = dynamic(() =>
 );
 const Faq = dynamic(() => import("../../components/Faq"));
 const TechStack = dynamic(() => import("../../components/Services/TechStack"));
+const Dots = dynamic(() => import("../../components/Dots"));
 
 import {
   node,
@@ -163,15 +164,20 @@ const MvpDevelopment = () => {
       <Head>
         <title>{PAGE_TITLES.services.mvpDev}</title>
       </Head>
-      <ServicesHero {...HERO_PROPS} />
-      <MvpAdvantages title="Our Industry expertise" tags={["Technology"]} />
+      <div className="relative">
+        <ServicesHero {...HERO_PROPS} />
+        <MvpAdvantages title="Our Industry expertise" tags={["Technology"]} />
+        <Dots className="top-[290px]" />
+      </div>
       <section className="relative">
         <PriceEstimationCta />
         <div className="bg-light-black absolute top-0 left-0 min-h-[50%] min-w-full -z-10"></div>
       </section>
-      <MvpDevProcess />
-      <HowMvpWorks />
-
+      <div className="relative">
+        <MvpDevProcess />
+        <HowMvpWorks />
+        <Dots position="left" className="bottom-[415px]" />
+      </div>
       <TechStack
         title="What tech-stack we’re using to build your MVP?"
         description="We rely on the most advanced and trustworthy solutions that completely address your business needs."

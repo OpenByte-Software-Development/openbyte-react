@@ -49,12 +49,14 @@ const ContactFormCta = ({ title = DEFAULT_TITLE }) => {
                       <Field
                         name="name"
                         id="name"
+                        required
                         placeholder="Your Name"
                         className="rounded-[10px] px-4 py-3 text-darkGray"
                       />
                       <Field
                         name="email"
                         id="email"
+                        required
                         placeholder="Your Email"
                         className="rounded-[10px] px-4 py-3 text-darkGray"
                       />

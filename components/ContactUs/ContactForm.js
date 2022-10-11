@@ -47,7 +47,7 @@ const ContactForm = () => {
               <div>
                 <label
                   htmlFor="name"
-                  className="text-black font-bold text-[10px]"
+                  className="text-black font-bold text-xs"
                 >
                   NAME<span className="text-orange text-lg">*</span>
                 </label>
@@ -63,7 +63,7 @@ const ContactForm = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="text-black font-bold text-[10px]"
+                  className="text-black font-bold text-xs"
                 >
                   EMAIL<span className="text-orange text-lg">*</span>
                 </label>
@@ -80,7 +80,7 @@ const ContactForm = () => {
               <div>
                 <label
                   htmlFor="linkedin"
-                  className="text-black font-bold text-[10px] leading-[28px]"
+                  className="text-black font-bold text-xs"
                 >
                   PERSONAL LINKEDIN UL
                   <span className="text-orange text-lg"></span>

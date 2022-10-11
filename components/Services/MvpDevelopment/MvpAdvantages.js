@@ -59,7 +59,7 @@ const MvpAdvantages = () => {
                       <h3 className="lg:text-2xl text-xl font-bold leading-[30px]">
                         {title}
                       </h3>
-                      <p className="lg:text-[18px] text-base font-lato text-lightGray lg:leading-9 leading-7 mt-4">
+                      <p className="lg:text-lg text-base font-lato text-lightGray lg:leading-9 leading-7 mt-4">
                         {description}
                       </p>
                     </div>

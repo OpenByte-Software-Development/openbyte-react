@@ -26,7 +26,7 @@ const STATS = [
 
 const Stat = ({ number, title, description }) => {
   return (
-    <div className="lg:mb-0 mb-4 border-3 border-light-black lg:px-16 lg:py-11 px-14 py-6 rounded-3xl bg-beige hover:bg-light-black hover:text-white cursor-pointer">
+    <div className="lg:mb-0 mb-4 border-3 border-light-black lg:px-16 lg:py-11 px-14 py-6 rounded-3xl bg-beige hover:bg-light-black hover:text-white duration-300">
       <div className="text-orange font-bold">
         <span className="lg:text-8xl text-6xl block">{number}</span>
         <span className="lg:text-3xl text-xl block">{title}</span>
@@ -39,7 +39,7 @@ const Stat = ({ number, title, description }) => {
 
 const Hero = () => {
   return (
-    <section className="lg:mt-[95px] pt-24 bg-about-us lg:bg-right-top bg-[top_-10px_right_-50px] bg-no-repeat lg:bg-auto bg-[length:196px_196px]">
+    <section className="lg:mt-[95px] pt-24 bg-about-us bg-[top_right_-15px] bg-no-repeat bg-[length:156px_156px] lg:bg-[length:25%_auto]">
       <div className="container mx-auto">
         <h1 className="lg:text-6xl text-3xl font-bold text-center">
           A perfect team for solving complex problems in a professional manner

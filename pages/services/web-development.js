@@ -30,6 +30,7 @@ const WebFeatures = dynamic(() =>
 const BuildingExperience = dynamic(() =>
   import("../../components/Services/WebDevelopment/BuildingExperience")
 );
+const Dots = dynamic(() => import("../../components/Dots"));
 
 import {
   node,
@@ -188,19 +189,25 @@ const WebDevelopment = () => {
       <Head>
         <title>{PAGE_TITLES.services.webDev}</title>
       </Head>
-      <ServicesHero {...HERO_PROPS} />
-      <IndustryExpertise {...INDUSTRY_EXPERTISE} />
+      <div className="relative">
+        <ServicesHero {...HERO_PROPS} />
+        <IndustryExpertise {...INDUSTRY_EXPERTISE} />
+        <Dots />
+      </div>
       <section className="relative">
         <PriceEstimationCta />
         <div className="bg-light-black absolute top-0 left-0 min-h-[50%] min-w-full -z-10"></div>
       </section>
       <WebFeatures />
       <BuildingExperience />
-      <TechStack
-        title="What tech-stack we’re using?"
-        description="We create responsive web applications using the latest tech-stack to help you focus on your business."
-        techStack={TECH_STACK}
-      />
+      <div className="relative">
+        <TechStack
+          title="What tech-stack we’re using?"
+          description="We create responsive web applications using the latest tech-stack to help you focus on your business."
+          techStack={TECH_STACK}
+        />
+        <Dots className="top-[170px]"/>
+      </div>
       <CommunicationChannels />
       <HowWeWork />
       <Benefits />

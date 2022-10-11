@@ -71,7 +71,7 @@ const HowWeWork = () => {
                   <h3 className="lg:text-2xl text-xl text-light-black font-bold leading-[30px]">
                     {title}
                   </h3>
-                  <p className="font-lato lg:text-[18px] font-base text-gray text lg:leading-9 leading-7 lg:mt-4 mt-2">
+                  <p className="font-lato lg:text-lg font-base text-gray text lg:leading-9 leading-7 lg:mt-4 mt-2">
                     {description}
                   </p>
                 </div>

@@ -10,7 +10,7 @@ import stars from "../../public/five-stars.png";
 const Hero = () => {
   return (
     <section className="bg-hero-section bg-no-repeat bg-[right_2rem_top_2rem] relative">
-      <div className="bg-beige pb-[72px]">
+      <div className="bg-beige pb-[42px]">
         <div className="container lg:mx-auto py-14 lg:p-0">
           <div className="lg:grid lg:grid-rows-1 lg:grid-cols-2 lg:place-items-center lg:justify-items-start"> 
             <div>

@@ -67,9 +67,13 @@ body {
 }
 
 .orange-background {
-  background: #f94e1e !important;
+  background: #9fca78 !important;
 }
 
 .toast-icon path {
-  fill: #f94e1e;
+  fill: #9fca78;
+}
+
+*:focus-visible {
+  outline: none !important;
 }
