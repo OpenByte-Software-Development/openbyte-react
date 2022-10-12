@@ -17,7 +17,7 @@ const formInitialValues = {
 };
 
 const ContactForm = () => {
-  const formSubmitHandle = async (values, {resetForm}) => {
+  const formSubmitHandle = async (values, { resetForm }) => {
     const response = await api.contact(values);
 
     if (response.status === 201) {
@@ -45,10 +45,7 @@ const ContactForm = () => {
           <div>
             <div className="grid lg:grid-rows-1 lg:grid-cols-3 grid-rows-3 grid-cols-1 lg:gap-8 gap-6">
               <div>
-                <label
-                  htmlFor="name"
-                  className="text-black font-bold text-xs"
-                >
+                <label htmlFor="name" className="text-black font-bold text-xs">
                   NAME<span className="text-orange text-lg">*</span>
                 </label>
                 <Field
@@ -61,10 +58,7 @@ const ContactForm = () => {
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="text-black font-bold text-xs"
-                >
+                <label htmlFor="email" className="text-black font-bold text-xs">
                   EMAIL<span className="text-orange text-lg">*</span>
                 </label>
                 <Field
@@ -125,7 +119,7 @@ const ContactForm = () => {
                 <span className="block">
                   I consent that OpenByte can process my personal data for the
                   purpose of making me an offer for their services.
-                  <Link prefetch={false}  href="/privacy-and-policy">
+                  <Link prefetch={false} href="/privacy-and-policy">
                     <a className="text-orange"> Read our Privacy Policy</a>
                   </Link>
                   .

@@ -26,7 +26,7 @@ const CalculatorFooterMobile = ({
             !isNextStepAvailable && disabledButtonStyle
           }`}
           onClick={nextStep}
-          disabled={!isNextStepAvailable}
+          disabled={!!!isNextStepAvailable || true}
         >
           Next step
         </button>

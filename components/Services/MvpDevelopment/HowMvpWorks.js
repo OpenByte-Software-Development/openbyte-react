@@ -19,7 +19,12 @@ const HowMvpWorks = () => {
         </p>
 
         <div className="lg:mt-[73px] mt-8">
-          <Image src={howMvpWorks} alt="MVP evolution" />
+          <Image
+            src={howMvpWorks}
+            alt="MVP evolution"
+            height={howMvpWorks.height}
+            width={howMvpWorks.width}
+          />
         </div>
       </div>
     </section>

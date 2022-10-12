@@ -64,7 +64,12 @@ const HowWeWork = () => {
             return (
               <div key={index} className="lg:mt-0 mt-8">
                 <div className="lg:max-w-[152px] mx-auto text-center">
-                  <Image src={src} alt={`${title} icon`} />
+                  <Image
+                    src={src}
+                    alt={`${title} icon`}
+                    height={src.height}
+                    width={src.width}
+                  />
                 </div>
 
                 <div className="lg:mt-6 mt-4 text-center">

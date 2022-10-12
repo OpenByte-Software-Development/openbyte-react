@@ -79,7 +79,12 @@ const ContactFormWithLinkedInCta = ({
                       >
                         <div className="flex items-center gap-[10px]">
                           <span>{buttonText}</span>
-                          <Image src={arrowRight} alt="arrow icon" />
+                          <Image
+                            src={arrowRight}
+                            alt="arrow icon"
+                            height={arrowRight.height}
+                            width={arrowRight.width}
+                          />
                         </div>
                       </button>
                     </div>

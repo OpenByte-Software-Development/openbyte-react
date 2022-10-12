@@ -6,7 +6,7 @@ const Layout = ({ children, footer = "dark", ...props }) => {
   return (
     <div className="relative overflow-hidden">
       <Header {...props} />
-      <main className="lg:mt-[100px] mt-[73px]">{children}</main>
+      <main className="lg:mt-[98px] mt-[73px]">{children}</main>
       <Footer variant={footer} />
     </div>
   );

@@ -16,7 +16,12 @@ const OurWorkflow = () => {
       <div className="grid lg:grid-rows-1 lg:grid-cols-3 grid-rows-3 grid-cols-1 mt-10 text-center gap-16 lg:bg-workflow-section bg-no-repeat bg-[right_top_-15px]">
         <div>
           <div className="max-w-[64px] lg:max-w-none mx-auto">
-            <Image src={workflow1} alt="outsourcing icon" />
+            <Image
+              src={workflow1}
+              alt="outsourcing icon"
+              height={workflow1.height}
+              width={workflow1.width}
+            />
           </div>
 
           <div className="mt-6">
@@ -33,7 +38,12 @@ const OurWorkflow = () => {
 
         <div>
           <div className="max-w-[64px] lg:max-w-none mx-auto">
-            <Image src={workflow2} alt="Agile teams icon" />
+            <Image
+              src={workflow2}
+              alt="Agile teams icon"
+              height={workflow2.height}
+              width={workflow2.width}
+            />
           </div>
 
           <div className="mt-6">
@@ -49,7 +59,12 @@ const OurWorkflow = () => {
 
         <div>
           <div className="max-w-[64px] lg:max-w-none mx-auto">
-            <Image src={workflow3} alt="Agile teams icon" />
+            <Image
+              src={workflow3}
+              alt="Agile teams icon"
+              height={workflow3.height}
+              width={workflow3.width}
+            />
           </div>
 
           <div className="mt-6">

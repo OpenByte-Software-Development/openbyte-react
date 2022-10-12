@@ -18,7 +18,12 @@ const TechStack = ({ techStack, title, description }) => {
           </p>
 
           <div className="text-center mt-12">
-            <Image src={buddy} alt="tech buddy" />
+            <Image
+              src={buddy}
+              alt="tech buddy"
+              height={buddy.height}
+              width={buddy.width}
+            />
           </div>
 
           <div className="grid lg:grid-rows-2 lg:grid-cols-2 lg:gap-x-[144px] lg:gap-y-16 lg:mt-16 mt-12">

@@ -17,7 +17,12 @@ const Review = ({
       <div className="h-full flex flex-col">
         <div className="flex gap-4 items-center">
           <div className="bg-avatar-background bg-no-repeat bg-center p-2 flex justify-center items-center bg-[length:100%_100%]">
-            <Image src={avatar} alt={`${name}'s avatar`} />
+            <Image
+              src={avatar}
+              height={avatar.height}
+              width={avatar.width}
+              alt={`${name}'s avatar`}
+            />
           </div>
 
           <div>
@@ -39,7 +44,12 @@ const Review = ({
           <div className="mt-8 h-fit">
             <Link prefetch={false} href={clutchLink}>
               <a target="_blank" rel="noreferrer">
-                <Image src={clutchReview} alt="clutch review" />
+                <Image
+                  src={clutchReview}
+                  height={clutchReview.height}
+                  width={clutchReview.width}
+                  alt="clutch review"
+                />
               </a>
             </Link>
           </div>

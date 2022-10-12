@@ -69,7 +69,12 @@ const ContactFormCta = ({ title = DEFAULT_TITLE }) => {
                       >
                         <div className="flex items-center gap-[10px]">
                           <span>Contact Us</span>
-                          <Image src={arrowRight} alt="arrow icon" />
+                          <Image
+                            src={arrowRight}
+                            alt="arrow icon"
+                            height={arrowRight.height}
+                            width={arrowRight.width}
+                          />
                         </div>
                       </button>
                     </div>

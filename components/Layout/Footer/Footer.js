@@ -56,7 +56,12 @@ const Footer = ({ variant = "dark" }) => {
               <div className="max-w-[100px] lg:w-auto">
                 <Link prefetch={false} href="/" className="cursor-pointer">
                   <a>
-                    <Image src={logo} alt="Openbyte logo" />
+                    <Image
+                      src={logo}
+                      alt="Openbyte logo"
+                      height={logo.height}
+                      width={logo.width}
+                    />
                   </a>
                 </Link>
               </div>
@@ -69,7 +74,12 @@ const Footer = ({ variant = "dark" }) => {
                     rel="noreferrer"
                     className="min-w-[22px]"
                   >
-                    <Image src={socialIcons.instagram} alt="instagram logo" />
+                    <Image
+                      src={socialIcons.instagram}
+                      alt="instagram logo"
+                      height={socialIcons.instagram.height}
+                      width={socialIcons.instagram.width}
+                    />
                   </a>
 
                   <a
@@ -78,7 +88,12 @@ const Footer = ({ variant = "dark" }) => {
                     rel="noreferrer"
                     className="min-w-[22px]"
                   >
-                    <Image src={socialIcons.linkedin} alt="linkedin logo" />
+                    <Image
+                      src={socialIcons.linkedin}
+                      alt="linkedin logo"
+                      height={socialIcons.linkedin.height}
+                      width={socialIcons.linkedin.width}
+                    />
                   </a>
                 </div>
                 <div className="flex gap-8">
@@ -88,7 +103,12 @@ const Footer = ({ variant = "dark" }) => {
                     rel="noreferrer"
                     className="min-w-[22px]"
                   >
-                    <Image src={socialIcons.facebook} alt="facebook logo" />
+                    <Image
+                      src={socialIcons.facebook}
+                      alt="facebook logo"
+                      height={socialIcons.facebook.height}
+                      width={socialIcons.facebook.width}
+                    />
                   </a>
 
                   <a
@@ -97,7 +117,12 @@ const Footer = ({ variant = "dark" }) => {
                     rel="noreferrer"
                     className="min-w-[22px]"
                   >
-                    <Image src={socialIcons.github} alt="github logo" />
+                    <Image
+                      src={socialIcons.github}
+                      alt="github logo"
+                      height={socialIcons.github.height}
+                      width={socialIcons.github.width}
+                    />
                   </a>
                 </div>
               </div>
@@ -189,7 +214,12 @@ const Footer = ({ variant = "dark" }) => {
                     </a>
                   </div>
                   <div className="ml-6 flex items-center">
-                    <Image src={email} alt="email icon" />
+                    <Image
+                      src={email}
+                      alt="email icon"
+                      height={email.height}
+                      width={email.width}
+                    />
                   </div>
                 </div>
               </div>

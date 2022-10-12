@@ -15,7 +15,7 @@ const MobileNavItem = ({ title, href, basePath }) => (
         basePath === href ? activeNavItemStyle : inactiveNavItemStyle
       } max-w-fit text-center text-xl font-bold text-black cursor-pointer`}
     >
-      <Link prefetch={false}  href={href}>
+      <Link prefetch={false} href={href}>
         <span>{title}</span>
       </Link>
     </span>
@@ -55,7 +55,7 @@ const MobileNavItemWithSubmenu = ({ title, subMenu, basePath }) => {
                     key={subMenuTitle}
                     className="py-4 text-center text-xl font-bold text-black cursor-pointer"
                   >
-                    <Link prefetch={false}  href={href}>
+                    <Link prefetch={false} href={href}>
                       <span>{subMenuTitle}</span>
                     </Link>
                   </li>
@@ -98,7 +98,9 @@ const MobileMenu = ({ show, basePath }) => {
             <li
               className={`mb-6 text-center text-xl font-bold text-black cursor-pointer ${inactiveNavItemStyle}`}
             >
-              <Link prefetch={false}  href="/calculator">Estimate App Cost</Link>
+              <Link prefetch={false} href="/calculator">
+                Estimate App Cost
+              </Link>
             </li>
           </ul>
         </nav>

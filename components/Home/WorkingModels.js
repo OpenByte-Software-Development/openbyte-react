@@ -21,6 +21,8 @@ const WorkingModels = () => {
               <Image
                 src={workingModels1}
                 alt="Continuous Development & Agile"
+                height={workingModels1.height}
+                width={workingModels1.width}
               />
             </div>
 
@@ -37,7 +39,12 @@ const WorkingModels = () => {
 
           <div>
             <div className="max-w-[152px] lg:max-w-none mx-auto">
-              <Image src={workingModels2} alt="Fixed price & Waterfall" />
+              <Image
+                src={workingModels2}
+                alt="Fixed price & Waterfall"
+                height={workingModels2.height}
+                width={workingModels2.width}
+              />
             </div>
 
             <div className="mt-6">
@@ -53,7 +60,12 @@ const WorkingModels = () => {
 
           <div>
             <div className="max-w-[152px] lg:max-w-none mx-auto">
-              <Image src={workingModels3} alt="Support & Monthly Package" />
+              <Image
+                src={workingModels3}
+                alt="Support & Monthly Package"
+                height={workingModels3.height}
+                width={workingModels3.width}
+              />
             </div>
 
             <div className="mt-6">

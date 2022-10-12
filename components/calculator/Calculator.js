@@ -49,30 +49,32 @@ const CALCULATOR_ACTIONS = {
   RESET_CALCULATOR: "reset_calculator",
 };
 
-const OverviewCard = ({ title, options }) => (
-  <div className="bg-beige">
-    <div className="bg-light-black p-4 text-white capitalize font-lato text-lg">
-      {title}:
-    </div>
+const OverviewCard = ({ stepName, options, state }) => {
+  return (
+    <div className="bg-beige">
+      <div className="bg-light-black p-4 text-white capitalize font-lato text-lg">
+        {stepName}:
+      </div>
 
-    <div className="mt-[10px] py-5 px-4">
-      <ul className="uppercase flex gap-6 flex-col">
-        {options
-          .filter((option) => option.isSelected)
-          .map((option) => (
-            <li
-              key={uuid()}
-              className="flex flex-col gap-10 font-lato font-bold text-xs"
-            >
-              {option.title}
-            </li>
-          ))}
-      </ul>
+      <div className="mt-[10px] py-5 px-4">
+        <ul className="uppercase flex gap-6 flex-col">
+          {options
+            .filter((option, index) => state.options[index])
+            .map((option) => (
+              <li
+                key={uuid()}
+                className="flex flex-col gap-10 font-lato font-bold text-xs"
+              >
+                {option.title}
+              </li>
+            ))}
+        </ul>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
-const OverviewStep = ({ steps, price, days }) => {
+const OverviewStep = ({ steps, state, price, days }) => {
   return (
     <Tab.Panel className="pt-14 pb-16">
       <div className="text-center text-light-black">
@@ -109,7 +111,8 @@ const OverviewStep = ({ steps, price, days }) => {
           .filter((step) => step !== "additional")
           .map((step) => (
             <OverviewCard
-              title={step}
+              stepName={step}
+              state={state[step]}
               options={steps[step].options}
               key={uuid()}
             />
@@ -119,266 +122,276 @@ const OverviewStep = ({ steps, price, days }) => {
   );
 };
 
-const CALCULATOR_STEPS = {
-  countedHours: 0,
-  stepIndex: 0,
-  maxTab: 0,
-  steps: {
-    type: {
-      title: "What type of app you are going to build?",
-      description: "Choose an appropriate type of app you want to build.",
-      required: true,
-      options: [
-        {
-          title: "Web Application",
-          tooltip:
-            "Web application have responsive design and if you need a mobile version we can convert the web application to PWA.",
-          icon: calculator1_1,
-          hours: 0,
-          isSelected: false,
-        },
-        {
-          title: "Desktop software",
-          tooltip:
-            "We build the desktop application using Electron.js which is a framework that allows us to build the app for macOS and Windows in parallel.",
-          icon: calculator1_2,
-          hours: 0,
-          isSelected: false,
-        },
-        {
-          title: "Android, IOS",
-          tooltip:
-            "For Android and IOS, we use React Native which allows us to share the same code base and decrease the time of development.",
-          icon: calculator1_3,
-          hours: 0,
-          isSelected: false,
-        },
-      ],
-    },
-    authentication: {
-      isCompleted: false,
-      title: "How your users will authenticate?",
-      description: "You can select multiple authentication channels.",
-      required: true,
-      options: [
-        {
-          title: "Via Email",
-          tooltip:
-            "Your users will use a basic email/password form in order to be authenticated.",
-          icon: calculator2_1,
-          hours: 8,
-          isSelected: false,
-        },
-        {
-          title: "Social",
-          tooltip:
-            "Login through popular social networks like Facebook, Google or LinkedIn.",
-          icon: calculator2_2,
-          hours: 16,
-          isSelected: false,
-        },
-        {
-          title: "SSO",
-          tooltip: "Authenticate your users through single sign-on.",
-          icon: calculator2_3,
-          hours: 16,
-          isSelected: false,
-        },
-        {
-          title: "Two-factor authentication",
-          tooltip: "Enable two-factor authentication method by sms code.",
-          icon: calculator2_4,
-          hours: 16,
-          isSelected: false,
-        },
-      ],
-    },
-    profile: {
-      isCompleted: false,
-      title: "Profile Management",
-      description:
-        "Select if are you need any additional features related to profile management.",
-      required: false,
-      options: [
-        {
-          title: "Profile",
-          tooltip:
-            "Allows users to update profile, recovery passowrd by email.",
-          icon: calculator3_1,
-          hours: 24,
-          isSelected: false,
-        },
-        {
-          title: "Audit logs",
-          tooltip: "Register all user actions.",
-          icon: calculator3_2,
-          hours: 16,
-          isSelected: false,
-        },
-        {
-          title: "Roles, Permissions",
-          tooltip:
-            "With roles and permissions you can create permission-based content/pages.",
-          icon: calculator3_3,
-          hours: 32,
-          isSelected: false,
-        },
-        {
-          title: "Invite By Email",
-          tooltip: "Allows to invite other users by email.",
-          icon: calculator3_4,
-          hours: 24,
-          isSelected: false,
-        },
-      ],
-    },
-    messages: {
-      isCompleted: false,
-      title: "How your users will communicate?",
-      description: "Not all features are related to users communication.",
-      required: false,
-      options: [
-        {
-          title: "notifications",
-          tooltip: "Notify your users through system notifications.",
-          icon: calculator4_1,
-          hours: 24,
-          isSelected: false,
-        },
-        {
-          title: "messages",
-          tooltip: "Build internal chat.",
-          icon: calculator4_2,
-          hours: 48,
-          isSelected: false,
-        },
-        {
-          title: "transactional messages ",
-          tooltip: "Trigger event-based transactional emails.",
-          icon: calculator4_3,
-          hours: 32,
-          isSelected: false,
-        },
-      ],
-    },
-    payment: {
-      isCompleted: false,
-      title: "How your users will be charged?",
-      description: "If you are startup you can choose subscription type.",
-      required: false,
-      options: [
-        {
-          title: "card payment",
-          tooltip: "Trigger event-based transactional emails.",
-          icon: calculator5_1,
-          hours: 24,
-          isSelected: false,
-        },
-        {
-          title: "subscriptions",
-          tooltip:
-            "A good option for SaaS applications, in case you want to charge your users on a monthly basis.",
-          icon: calculator5_2,
-          hours: 32,
-          isSelected: false,
-        },
-      ],
-    },
-    reports: {
-      isCompleted: false,
-      title: "Do you need database-related charts?",
-      description:
-        "You can choose this option if your application require charts from collected data.",
-      required: false,
-      options: [
-        {
-          title: "analytics",
-          tooltip: "Build internal chart analytics.",
-          icon: calculator6_1,
-          hours: 40,
-          isSelected: false,
-        },
-      ],
-    },
-    reports: {
-      isCompleted: false,
-      title: "Do you need any additional features?",
-      description: "Please select if any additional options are needed.",
-      options: [
-        {
-          title: "Crash reporting",
-          tooltip: "Tracking errors in real-time.",
-          icon: calculator7_1,
-          hours: 16,
-          isSelected: false,
-        },
-        {
-          title: "Tracking Analytics",
-          tooltip:
-            "Integrate tracking analytics tools in order to collect user data.",
-          icon: calculator7_2,
-          hours: 16,
-          isSelected: false,
-        },
-        {
-          title: "Export data",
-          tooltip: "Allows to export data in csv, xls, pdf formats.",
-          icon: calculator7_3,
-          hours: 16,
-          isSelected: false,
-        },
-        {
-          title: "Booking system",
-          tooltip: "Simple booking system.",
-          icon: calculator7_4,
-          hours: 48,
-          isSelected: false,
-        },
-        {
-          title: "Real-time map",
-          tooltip: "Integrate real-time map.",
-          icon: calculator7_5,
-          hours: 56,
-          isSelected: false,
-        },
-      ],
-    },
-    additional: {
-      isCompleted: false,
-      required: false,
-      title: " ",
-      description: " ",
-      options: [],
-    },
+const STEPS = {
+  type: {
+    title: "What type of app you are going to build?",
+    description: "Choose an appropriate type of app you want to build.",
+    required: true,
+    options: [
+      {
+        title: "Web Application",
+        tooltip:
+          "Web application have responsive design and if you need a mobile version we can convert the web application to PWA.",
+        icon: calculator1_1,
+        hours: 0,
+      },
+      {
+        title: "Desktop software",
+        tooltip:
+          "We build the desktop application using Electron.js which is a framework that allows us to build the app for macOS and Windows in parallel.",
+        icon: calculator1_2,
+        hours: 0,
+      },
+      {
+        title: "Android, IOS",
+        tooltip:
+          "For Android and IOS, we use React Native which allows us to share the same code base and decrease the time of development.",
+        icon: calculator1_3,
+        hours: 0,
+      },
+    ],
+  },
+  authentication: {
+    title: "How your users will authenticate?",
+    description: "You can select multiple authentication channels.",
+    required: true,
+    options: [
+      {
+        title: "Via Email",
+        tooltip:
+          "Your users will use a basic email/password form in order to be authenticated.",
+        icon: calculator2_1,
+        hours: 8,
+      },
+      {
+        title: "Social",
+        tooltip:
+          "Login through popular social networks like Facebook, Google or LinkedIn.",
+        icon: calculator2_2,
+        hours: 16,
+      },
+      {
+        title: "SSO",
+        tooltip: "Authenticate your users through single sign-on.",
+        icon: calculator2_3,
+        hours: 16,
+      },
+      {
+        title: "Two-factor authentication",
+        tooltip: "Enable two-factor authentication method by sms code.",
+        icon: calculator2_4,
+        hours: 16,
+      },
+    ],
+  },
+  profile: {
+    title: "Profile Management",
+    description:
+      "Select if are you need any additional features related to profile management.",
+    required: false,
+    options: [
+      {
+        title: "Profile",
+        tooltip: "Allows users to update profile, recovery passowrd by email.",
+        icon: calculator3_1,
+        hours: 24,
+      },
+      {
+        title: "Audit logs",
+        tooltip: "Register all user actions.",
+        icon: calculator3_2,
+        hours: 16,
+      },
+      {
+        title: "Roles, Permissions",
+        tooltip:
+          "With roles and permissions you can create permission-based content/pages.",
+        icon: calculator3_3,
+        hours: 32,
+      },
+      {
+        title: "Invite By Email",
+        tooltip: "Allows to invite other users by email.",
+        icon: calculator3_4,
+        hours: 24,
+      },
+    ],
+  },
+  messages: {
+    title: "How your users will communicate?",
+    description: "Not all features are related to users communication.",
+    required: false,
+    options: [
+      {
+        title: "notifications",
+        tooltip: "Notify your users through system notifications.",
+        icon: calculator4_1,
+        hours: 24,
+      },
+      {
+        title: "messages",
+        tooltip: "Build internal chat.",
+        icon: calculator4_2,
+        hours: 48,
+      },
+      {
+        title: "transactional messages ",
+        tooltip: "Trigger event-based transactional emails.",
+        icon: calculator4_3,
+        hours: 32,
+      },
+    ],
+  },
+  payment: {
+    title: "How your users will be charged?",
+    description: "If you are startup you can choose subscription type.",
+    required: false,
+    options: [
+      {
+        title: "card payment",
+        tooltip: "Trigger event-based transactional emails.",
+        icon: calculator5_1,
+        hours: 24,
+      },
+      {
+        title: "subscriptions",
+        tooltip:
+          "A good option for SaaS applications, in case you want to charge your users on a monthly basis.",
+        icon: calculator5_2,
+        hours: 32,
+      },
+    ],
+  },
+  reports: {
+    title: "Do you need database-related charts?",
+    description:
+      "You can choose this option if your application require charts from collected data.",
+    required: false,
+    options: [
+      {
+        title: "analytics",
+        tooltip: "Build internal chart analytics.",
+        icon: calculator6_1,
+        hours: 40,
+      },
+    ],
+  },
+  reports: {
+    title: "Do you need any additional features?",
+    description: "Please select if any additional options are needed.",
+    options: [
+      {
+        title: "Crash reporting",
+        tooltip: "Tracking errors in real-time.",
+        icon: calculator7_1,
+        hours: 16,
+      },
+      {
+        title: "Tracking Analytics",
+        tooltip:
+          "Integrate tracking analytics tools in order to collect user data.",
+        icon: calculator7_2,
+        hours: 16,
+      },
+      {
+        title: "Export data",
+        tooltip: "Allows to export data in csv, xls, pdf formats.",
+        icon: calculator7_3,
+        hours: 16,
+      },
+      {
+        title: "Booking system",
+        tooltip: "Simple booking system.",
+        icon: calculator7_4,
+        hours: 48,
+      },
+      {
+        title: "Real-time map",
+        tooltip: "Integrate real-time map.",
+        icon: calculator7_5,
+        hours: 56,
+      },
+    ],
+  },
+  additional: {
+    required: false,
+    title: " ",
+    description: " ",
+    options: [],
   },
 };
 
+const calculatorStepOptions = Object.keys(STEPS);
+
+const CALCULATOR = {
+  countedHours: 0,
+  stepIndex: 0,
+  maxTab: 0,
+  type: {
+    options: [false, false, false],
+    isCompleted: false,
+    required: true,
+  },
+  authentication: {
+    options: [false, false, false, false],
+    isCompleted: false,
+    required: true,
+  },
+  profile: {
+    options: [false, false, false, false],
+    isCompleted: false,
+    required: false,
+  },
+  messages: {
+    isCompleted: false,
+    options: [false, false, false],
+    required: false,
+  },
+  payment: {
+    options: [false, false],
+    isCompleted: false,
+    required: false,
+  },
+  reports: {
+    options: [false],
+    isCompleted: false,
+    required: false,
+  },
+  reports: {
+    options: [false, false, false, false, false],
+    isCompleted: false,
+    required: false,
+  },
+  additional: {
+    isCompleted: false,
+    options: [],
+    required: false,
+  },
+};
+
+function init(initialState) {
+  return Object.assign({}, initialState);
+}
+
 const calculatorReducer = (state, action) => {
   const calculatorState = { ...state };
-  const calculatorStepOptions = Object.keys(calculatorState.steps);
   const stepIndex = calculatorState.stepIndex;
 
   switch (action.type) {
     case CALCULATOR_ACTIONS.CARD_CLICK: {
       const { index } = action;
       const step = calculatorStepOptions[stepIndex];
-      const selectedOption = calculatorState.steps[step].options[index];
+      const selectedOption = calculatorState[step].options[index];
 
-      if (selectedOption.isSelected) {
+      if (selectedOption) {
+        calculatorState[step].options[index] = false;
         calculatorState.countedHours =
-          calculatorState.countedHours - selectedOption.hours;
+          calculatorState.countedHours - STEPS[step].options[index].hours;
       } else {
+        calculatorState[step].options[index] = true;
         calculatorState.countedHours =
-          calculatorState.countedHours + selectedOption.hours;
+          calculatorState.countedHours + STEPS[step].options[index].hours;
       }
-
-      const updatedStep = {
-        ...selectedOption,
-        isSelected: !selectedOption.isSelected,
-      };
-
-      // set card as selected
-      calculatorState.steps[step].options.splice(index, 1, updatedStep);
 
       return calculatorState;
     }
@@ -386,7 +399,7 @@ const calculatorReducer = (state, action) => {
       const step = calculatorStepOptions[stepIndex];
 
       if (stepIndex <= calculatorStepOptions.length - 1) {
-        calculatorState.steps[step].isCompleted = true;
+        calculatorState[step].isCompleted = true;
       }
 
       return calculatorState;
@@ -418,7 +431,15 @@ const calculatorReducer = (state, action) => {
       return calculatorState;
     }
     case CALCULATOR_ACTIONS.RESET_CALCULATOR: {
-      return CALCULATOR_STEPS;
+      const payload = action.payload;
+      const newState = init({
+        ...payload,
+        steps: {
+          ...payload.steps,
+        },
+      });
+
+      return newState;
     }
     default:
       return calculatorState;
@@ -427,24 +448,23 @@ const calculatorReducer = (state, action) => {
 
 const getIsNextStepAvailable = (currentStep) => {
   const { options, required } = currentStep;
-
   if (!required) return true;
-
-  return options.some((option) => option.isSelected);
+  return options.some((option) => option);
 };
 
 const Calculator = () => {
   const [showModal, setShowModal] = useState(false);
   const [calculator, dispatch] = useReducer(
     calculatorReducer,
-    CALCULATOR_STEPS
+    CALCULATOR,
+    init
   );
 
   const cardClickHandler = (index) => {
     dispatch({ type: CALCULATOR_ACTIONS.CARD_CLICK, index });
   };
   const nextStep = () => {
-    if (calculator.stepIndex + 1 === Object.keys(calculator.steps).length) {
+    if (calculator.stepIndex + 1 === Object.keys(STEPS).length) {
       setShowModal(true);
     }
     dispatch({ type: CALCULATOR_ACTIONS.COMPLETE_STEP });
@@ -456,33 +476,34 @@ const Calculator = () => {
   const selectTab = (index) => {
     dispatch({ type: CALCULATOR_ACTIONS.SELECT_TAB, index });
   };
-
-  const resetCalculator = () => {
+  const resetCalculator = () =>
     dispatch({
       type: CALCULATOR_ACTIONS.RESET_CALCULATOR,
+      payload: CALCULATOR,
     });
-  };
 
   return (
     <section className="container pt-[88px] pb-28">
       <Tab.Group selectedIndex={calculator.stepIndex} onChange={selectTab}>
-        <CalculatorHeader calculator={calculator} />
+        <CalculatorHeader calculator={calculator} stepsData={STEPS} />
 
         <Tab.Panels>
-          {Object.keys(calculator.steps).map((step) => {
+          {Object.keys(STEPS).map((step) => {
             return step === "additional" ? (
               <OverviewStep
                 key={uuid()}
                 days={Math.floor(calculator.countedHours / 8)}
                 price={Math.floor(calculator.countedHours * hourlyRate)}
-                steps={calculator.steps}
+                steps={STEPS}
+                state={calculator}
                 cardClickHandler={cardClickHandler}
               />
             ) : (
               <CalculatorStep
-                {...calculator.steps[step]}
-                key={uuid()}
+                step={STEPS[step]}
+                state={calculator[step]}
                 cardClickHandler={cardClickHandler}
+                key={uuid()}
               />
             );
           })}
@@ -494,17 +515,12 @@ const Calculator = () => {
             resetCalculator={resetCalculator}
             days={Math.floor(calculator.countedHours / 8)}
             price={Math.floor(calculator.countedHours * hourlyRate)}
-            isFinalStep={
-              calculator.stepIndex === Object.keys(calculator.steps).length - 1
-            }
+            isFinalStep={calculator.stepIndex === Object.keys(STEPS).length - 1}
             isNextStepAvailable={getIsNextStepAvailable(
-              calculator.steps[
-                Object.keys(calculator.steps)[calculator.stepIndex]
-              ]
+              calculator[Object.keys(STEPS)[calculator.stepIndex]]
             )}
           />
         </div>
-
         <div className="lg:hidden">
           <CalculatorFooterMobile
             nextStep={nextStep}
@@ -512,17 +528,14 @@ const Calculator = () => {
             resetCalculator={resetCalculator}
             days={Math.floor(calculator.countedHours / 8)}
             price={Math.floor(calculator.countedHours * hourlyRate)}
-            isFinalStep={
-              calculator.stepIndex === Object.keys(calculator.steps).length - 1
-            }
+            isFinalStep={calculator.stepIndex === Object.keys(STEPS).length - 1}
             isNextStepAvailable={getIsNextStepAvailable(
-              calculator.steps[
-                Object.keys(calculator.steps)[calculator.stepIndex]
-              ]
+              calculator[Object.keys(STEPS)[calculator.stepIndex]]
             )}
           />
         </div>
       </Tab.Group>
+
       <CalculatorCompleteModal
         showModal={showModal}
         setShowModal={setShowModal}

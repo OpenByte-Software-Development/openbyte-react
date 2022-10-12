@@ -11,10 +11,15 @@ const Architecture = ({ src, alt, mobileSrc }) => {
       </div>
       <div className="mt-8 flex justify-center items-center">
         <div className="lg:hidden">
-          <Image src={mobileSrc} alt={alt} />
+          <Image
+            src={mobileSrc}
+            height={mobileSrc.height}
+            width={mobileSrc.width}
+            alt={alt}
+          />
         </div>
         <div className="hidden lg:block">
-          <Image src={src} alt={alt} />
+          <Image src={src} alt={alt} height={src.height} width={src.width} />
         </div>
       </div>
     </section>

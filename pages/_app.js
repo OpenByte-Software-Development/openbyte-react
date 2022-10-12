@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 const CookiesConsent = dynamic(() => import("../components/CookiesConsent"));
 const SocialNetworks = dynamic(() => import("../components/SocialNetworks"));
+const Layout = dynamic(() => import("../components/Layout/index"));
 const TawkMessengerReact = dynamic(() =>
   import("@tawk.to/tawk-messenger-react")
 );

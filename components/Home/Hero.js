@@ -12,7 +12,7 @@ const Hero = () => {
     <section className="bg-hero-section bg-no-repeat bg-[right_2rem_top_2rem] relative">
       <div className="bg-beige pb-[42px]">
         <div className="container lg:mx-auto py-14 lg:p-0">
-          <div className="lg:grid lg:grid-rows-1 lg:grid-cols-2 lg:place-items-center lg:justify-items-start"> 
+          <div className="lg:grid lg:grid-rows-1 lg:grid-cols-2 lg:place-items-center lg:justify-items-start">
             <div>
               <h1 className="lg:text-left text-center font-bold lg:text-8xl text-4xl text-light-black">
                 We build software.
@@ -23,7 +23,12 @@ const Hero = () => {
               </p>
 
               <div className="lg:hidden flex justify-center">
-                <Image src={heroBuddy} alt="Openbyte mascot" />
+                <Image
+                  src={heroBuddy}
+                  alt="Openbyte mascot"
+                  height={heroBuddy.height}
+                  width={heroBuddy.width}
+                />
               </div>
               <div className="mt-14">
                 <Link prefetch={false} href="/calculator">
@@ -69,7 +74,12 @@ const Hero = () => {
               </div>
             </div>
             <div className="hidden lg:block">
-              <Image src={heroBuddy} alt="Openbyte mascot" />
+              <Image
+                src={heroBuddy}
+                alt="Openbyte mascot"
+                height={heroBuddy.height}
+                width={heroBuddy.width}
+              />
             </div>
           </div>
         </div>

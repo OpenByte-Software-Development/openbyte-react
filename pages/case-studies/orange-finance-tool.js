@@ -20,7 +20,6 @@ const ContactFormCta = dynamic(() =>
 );
 const Layout = dynamic(() => import("../../components/Layout/index"));
 
-
 import {
   redLaravel,
   redLaravelNova,

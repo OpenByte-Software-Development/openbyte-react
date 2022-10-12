@@ -31,7 +31,9 @@ const AboutApp = ({ title, description, cards }) => {
             {title}
           </h2>
         </div>
-        <p className="font-lato lg:mt-4 mt-1 text-darkGray text-lg">{description}</p>
+        <p className="font-lato lg:mt-4 mt-1 text-darkGray text-lg">
+          {description}
+        </p>
       </div>
       <div className="lg:grid grid-rows-1 grid-cols-2 lg:gap-16 mt-20 flex flex-col gap-14">
         {cards.map((card) => (

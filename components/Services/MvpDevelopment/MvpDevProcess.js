@@ -55,7 +55,12 @@ const MvpDevProcess = () => {
             return (
               <div key={index} className="max-w-[362px]">
                 <div className="max-w-[64px] lg:max-w-none mx-auto">
-                  <Image src={src} alt={title} />
+                  <Image
+                    src={src}
+                    alt={title}
+                    height={src.height}
+                    width={src.width}
+                  />
                 </div>
 
                 <div className="mt-6">

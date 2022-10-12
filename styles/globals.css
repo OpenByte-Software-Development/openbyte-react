@@ -17,10 +17,6 @@ body {
     padding-left: 24px;
     padding-right: 24px;
   }
-
-  .hero-clutch-widget iframe {
-    max-width: 200px;
-  }
 }
 
 .hero-clutch-widget iframe:focus-visible {

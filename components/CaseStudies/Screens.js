@@ -23,7 +23,12 @@ const Screens = ({ screensRows }) => {
                         key={index}
                         className="border-3 rounded-[24px] flex overflow-hidden"
                       >
-                        <Image src={src} alt={alt} />
+                        <Image
+                          src={src}
+                          alt={alt}
+                          height={src.height}
+                          width={src.width}
+                        />
                       </div>
                     );
                   })}

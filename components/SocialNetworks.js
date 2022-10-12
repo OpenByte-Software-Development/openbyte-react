@@ -17,7 +17,12 @@ const SocialNetworks = () => {
           rel="noreferrer"
           className="min-w-[20px] flex justify-center"
         >
-          <Image src={instagramLogo} alt="instagram logo" />
+          <Image
+            src={instagramLogo}
+            height={instagramLogo.height}
+            width={instagramLogo.width}
+            alt="instagram logo"
+          />
         </a>
 
         <a
@@ -26,7 +31,12 @@ const SocialNetworks = () => {
           rel="noreferrer"
           className="min-w-[20px] flex justify-center"
         >
-          <Image src={linkedinLogo} alt="linkedin logo" />
+          <Image
+            src={linkedinLogo}
+            height={linkedinLogo.height}
+            width={linkedinLogo.width}
+            alt="linkedin logo"
+          />
         </a>
 
         <a
@@ -35,7 +45,12 @@ const SocialNetworks = () => {
           rel="noreferrer"
           className="min-w-[20px] flex justify-center"
         >
-          <Image src={facebookLogo} alt="facebook logo" />
+          <Image
+            src={facebookLogo}
+            height={facebookLogo.height}
+            width={facebookLogo.width}
+            alt="facebook logo"
+          />
         </a>
 
         <a
@@ -44,7 +59,12 @@ const SocialNetworks = () => {
           rel="noreferrer"
           className="min-w-[20px] flex justify-center"
         >
-          <Image src={gmailLogo} alt="gmail logo" />
+          <Image
+            src={gmailLogo}
+            height={gmailLogo.height}
+            width={gmailLogo.width}
+            alt="gmail logo"
+          />
         </a>
       </div>
     </div>

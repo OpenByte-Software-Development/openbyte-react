@@ -18,7 +18,12 @@ const WhatWeOffer = () => {
       <div className="block lg:grid lg:grid-rows-1 lg:grid-cols-3 lg:place-items-stretch lg:gap-10 mt-10">
         <div className="grid grid-rows-1 grid-cols-12 gap-4">
           <div className="col-span-3">
-            <Image src={whatWeOffer1} alt="outsourcing icon" />
+            <Image
+              src={whatWeOffer1}
+              alt="outsourcing icon"
+              height={whatWeOffer1.height}
+              width={whatWeOffer1.width}
+            />
           </div>
 
           <div className="col-span-9">
@@ -34,7 +39,12 @@ const WhatWeOffer = () => {
 
         <div className="grid grid-rows-1 grid-cols-12 gap-4 mt-8 lg:mt-0">
           <div className="col-span-3">
-            <Image src={whatWeOffer2} alt="Agile teams icon" />
+            <Image
+              src={whatWeOffer2}
+              alt="Agile teams icon"
+              height={whatWeOffer2.height}
+              width={whatWeOffer2.width}
+            />
           </div>
 
           <div className="col-span-9">
@@ -51,14 +61,19 @@ const WhatWeOffer = () => {
               </div>
 
               <div className="mt-4">
-                <Link prefetch={false}  href="/about-us#team">
+                <Link prefetch={false} href="/about-us#team">
                   <button className="lg:bg-orange lg:text-white text-orange lg:rounded-full lg:p-5 font-extrabold lg:w-full">
                     <div className="flex items-center lg:block">
                       <span className="mr-2 lg:mr-0">
                         Choose from developers
                       </span>
                       <span className="lg:hidden flex items-center">
-                        <Image src={arrowRight} alt="arrow" />
+                        <Image
+                          src={arrowRight}
+                          alt="arrow"
+                          height={arrowRight.height}
+                          width={arrowRight.width}
+                        />
                       </span>
                     </div>
                   </button>
@@ -70,7 +85,12 @@ const WhatWeOffer = () => {
 
         <div className="grid grid-rows-1 grid-cols-12 gap-4 mt-8 lg:mt-0">
           <div className="col-span-3">
-            <Image src={whatWeOffer3} alt="Agile teams icon" />
+            <Image
+              src={whatWeOffer3}
+              alt="Agile teams icon"
+              height={whatWeOffer3.height}
+              width={whatWeOffer3.width}
+            />
           </div>
 
           <div className="col-span-9">
@@ -86,12 +106,17 @@ const WhatWeOffer = () => {
               </div>
 
               <div className="mt-4">
-                <Link prefetch={false}  href="/calculator">
+                <Link prefetch={false} href="/calculator">
                   <button className="lg:bg-orange lg:text-white text-orange lg:rounded-full lg:p-5 font-extrabold lg:w-full">
                     <div className="flex items-center lg:block">
                       <span className="mr-2 lg:mr-0">Estimate App Cost</span>
                       <span className="lg:hidden flex items-center">
-                        <Image src={arrowRight} alt="arrow" />
+                        <Image
+                          src={arrowRight}
+                          alt="arrow"
+                          height={arrowRight.height}
+                          width={arrowRight.width}
+                        />
                       </span>
                     </div>
                   </button>

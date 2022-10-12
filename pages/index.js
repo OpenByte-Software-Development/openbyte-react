@@ -30,7 +30,7 @@ const Home = () => {
       <div className="relative">
         <OurWorkflow />
         <Services />
-        <Dots className="top-[390px]"/>
+        <Dots className="top-[390px]" />
       </div>
       <WorkingModels />
       <OurWorks />

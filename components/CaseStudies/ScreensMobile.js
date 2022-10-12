@@ -7,7 +7,7 @@ import "swiper/css";
 const Screen = ({ src, alt }) => {
   return (
     <div className="border-3 rounded-[24px] max-w-fit flex overflow-hidden">
-      <Image src={src} alt={alt} />
+      <Image src={src} alt={alt} height={src.height} width={src.width} />
     </div>
   );
 };
@@ -18,11 +18,7 @@ const ScreensMobile = ({ screens }) => {
   return (
     <div>
       <div className="relative">
-        <Swiper
-          freeMode={true}
-          slidesPerView="auto"
-          modules={[FreeMode]}
-        >
+        <Swiper freeMode={true} slidesPerView="auto" modules={[FreeMode]}>
           {allScreens.map((screen, index) => (
             <SwiperSlide key={index} className="ml-6 max-w-fit">
               <Screen {...screen} />

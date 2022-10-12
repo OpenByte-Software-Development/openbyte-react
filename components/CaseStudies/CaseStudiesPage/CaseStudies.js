@@ -14,7 +14,7 @@ const CaseStudies = ({}) => {
   };
 
   return (
-    <section className="py-16"> 
+    <section className="py-16">
       <div className="flex flex-col lg:gap-20 gap-8">
         {CASE_STUDIES.slice(0, visibleCaseStudies).map((caseStudy) => (
           <CaseStudyCard {...caseStudy} className="bg-beige" key={uuid()} />

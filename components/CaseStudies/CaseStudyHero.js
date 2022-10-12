@@ -10,11 +10,16 @@ const CaseStudyHero = ({ heroImage, title, tags, logoClassName }) => {
           <div
             className={`flex justify-center items-center mx-auto ${logoClassName}`}
           >
-            <Image src={heroImage} alt={title} />
+            <Image
+              src={heroImage}
+              alt={title}
+              height={heroImage.height}
+              width={heroImage.width}
+            />
           </div>
           <h3 className="lg:text-6xl text-3xl text-black font-bold text-center lg:mt-11 mt-6">
             {title}
-          </h3> 
+          </h3>
         </div>
 
         <div className="lg:mt-11 mt-6">

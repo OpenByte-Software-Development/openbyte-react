@@ -50,7 +50,12 @@ const MvpAdvantages = () => {
                 key={title}
               >
                 <div className="lg:col-span-1 col-span-2">
-                  <Image src={src} alt={title} />
+                  <Image
+                    src={src}
+                    alt={title}
+                    height={src.height}
+                    width={src.width}
+                  />
                 </div>
 
                 <div className="lg:col-span-5 col-span-7">

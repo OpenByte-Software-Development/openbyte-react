@@ -46,8 +46,8 @@ const StepIcon = ({
           <Image
             src={isCompleted ? stepCompletedIcon : emptyCheck}
             alt="step icon"
-            height="45"
-            width="45"
+            height={stepCompletedIcon.height}
+            width={stepCompletedIcon.width}
             layout="fixed"
           />
           <span className="lg:block mt-3 uppercase text-xs font-lato font-bold hidden">
@@ -66,8 +66,8 @@ const StepIcon = ({
   );
 };
 
-const CalculatorHeader = ({ calculator }) => {
-  const steps = Object.keys(calculator.steps);
+const CalculatorHeader = ({ calculator, stepsData }) => {
+  const steps = Object.keys(stepsData);
   return (
     <Tab.List className="grid grid-rows-1 grid-cols-7">
       {steps.map((step, index) => (
@@ -75,7 +75,7 @@ const CalculatorHeader = ({ calculator }) => {
           key={uuid()}
           stepName={step}
           disabled={index <= calculator.maxTab}
-          isCompleted={calculator.steps[step].isCompleted}
+          isCompleted={calculator[step].isCompleted}
           stepIndex={index}
           currentStep={calculator.stepIndex}
         />

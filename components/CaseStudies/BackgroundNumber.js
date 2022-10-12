@@ -18,7 +18,12 @@ const BackgroundNumber = ({ variant = "1" }) => {
   const src = NUMBERS_VARIATIONS[variant];
   return (
     <div className="absolute mr-auto ml-auto right-0 left-0 lg:-top-16 -top-10 w-fit lg:max-w-full max-w-[113px]">
-      <Image src={src} alt={`number ${variant}`} />
+      <Image
+        src={src}
+        alt={`number ${variant}`}
+        height={src.height}
+        width={src.width}
+      />
     </div>
   );
 };

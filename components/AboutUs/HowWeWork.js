@@ -41,7 +41,7 @@ const HowWeWork = () => {
           </div>
 
           <div className="mt-8 text-center">
-            <Link prefetch={false}  href="mailto: hi@openbyte.dev">
+            <Link prefetch={false} href="mailto: hi@openbyte.dev">
               <a>
                 <button className="bg-orange mt-3 text-white text-base rounded-full py-[18px] lg:px-6 px-10 font-extrabold min-w-[250px] w-auto">
                   Become Member

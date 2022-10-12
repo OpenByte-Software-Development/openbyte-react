@@ -63,7 +63,12 @@ const MobileAppAdvantages = () => {
                   key={title}
                 >
                   <div className="col-span-3">
-                    <Image src={src} alt={title} />
+                    <Image
+                      src={src}
+                      alt={title}
+                      height={src.height}
+                      width={src.width}
+                    />
                   </div>
 
                   <div className="col-span-9">

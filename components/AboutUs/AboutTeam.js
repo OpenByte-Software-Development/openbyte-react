@@ -56,15 +56,15 @@ const TeamMember = ({ photo, name, position, skills }) => {
       <div className="w-[100%] lg:rounded-lg lg:border-none border-b-2 border-black grid lg:min-h-[245px] overflow-hidden">
         <Image
           src={photo}
+          height={photo.height}
+          width={photo.width}
           alt={`${name}'s avatar`}
           className="object-cover object-center w-[100%] lg:min-h-[245px]"
         />
       </div>
 
       <div className="text-center font-bold lg:mt-6 p-4 lg:p-0">
-        <span className="block text-lightGray text-s">
-          {position}
-        </span>
+        <span className="block text-lightGray text-s">{position}</span>
         <span className="block text-black text-[15px] leading-[16px] font-bold">
           {name}
         </span>
@@ -113,6 +113,8 @@ const AboutTeam = () => {
             <div className="w-[100%] lg:rounded-lg lg:border-none border-b-2 border-black grid lg:min-h-[245px] overflow-hidden">
               <Image
                 src={teamBuddy}
+                height={teamBuddy.height}
+                width={teamBuddy.width}
                 alt="become member"
                 className="object-cover object-center w-[100%] lg:min-h-[245px]"
               />

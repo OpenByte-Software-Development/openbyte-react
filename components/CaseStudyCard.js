@@ -45,7 +45,12 @@ const CaseStudy = ({
                 <div className="lg:hidden flex items-end">
                   <Link prefetch={false} href={clutchProjectLink}>
                     <a target="_blank" rel="noreferrer">
-                      <Image src={clutchReview} alt="clutch review" />
+                      <Image
+                        src={clutchReview}
+                        height={clutchReview.height}
+                        width={clutchReview.width}
+                        alt="clutch review"
+                      />
                     </a>
                   </Link>
                 </div>
@@ -58,15 +63,22 @@ const CaseStudy = ({
               <div className="mt-11 flex justify-between items-end w-full">
                 <div className="w-full">
                   <Link prefetch={false} href={ctaLink}>
-                    <button className="bg-transparent text-orange text-base rounded-full border-orange border-3 py-4 px-8 font-extrabold lg:w-auto w-full">
-                      Learn more
-                    </button>
+                    <a>
+                      <button className="bg-transparent text-orange text-base rounded-full border-orange border-3 py-4 px-8 font-extrabold lg:w-auto w-full">
+                        Learn more
+                      </button>
+                    </a>
                   </Link>
                 </div>
                 <div className="hidden lg:block">
                   <Link prefetch={false} href={clutchProjectLink}>
                     <a target="_blank" rel="noreferrer">
-                      <Image src={clutchReview} alt="clutch review" />
+                      <Image
+                        src={clutchReview}
+                        height={clutchReview.height}
+                        width={clutchReview.width}
+                        alt="clutch review"
+                      />
                     </a>
                   </Link>
                 </div>
@@ -81,7 +93,12 @@ const CaseStudy = ({
                 "border-3 lg:border-r-[0px] border-black lg:rounded-l-[27px] rounded-[25px] lg:rounded-none"
               } grid overflow-hidden w-full h-[224px] lg:h-auto`}
             >
-              <Image src={preview} alt={imageAlt} />
+              <Image
+                src={preview}
+                height={preview.height}
+                width={preview.width}
+                alt={imageAlt}
+              />
             </div>
 
             <div className="w-full h-full absolute top-0 left-0 rounded-[25px] flex justify-end flex-col bg-dark-gradient px-4 pb-3 lg:hidden">

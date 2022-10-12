@@ -15,13 +15,23 @@ const ApplicationTypes = () => {
 
         <div className="mt-9 lg:flex gap-10 justify-center lg:text-center">
           <div className="max-w-[368px] lg:block flex flex-row items-center gap-8">
-            <Image src={iosApp} alt="iOS app mockup" />
+            <Image
+              src={iosApp}
+              alt="iOS app mockup"
+              height={iosApp.height}
+              width={iosApp.width}
+            />
             <h3 className="lg:text-3xl text-xl font-bold leading-[40px]">
               Fully functional applications for IOS
             </h3>
           </div>
           <div className="max-w-[368px] lg:block flex flex-row items-center lg:mt-0 mt-10 gap-8">
-            <Image src={androidApp} alt="android app mockup" />
+            <Image
+              src={androidApp}
+              alt="android app mockup"
+              height={androidApp.height}
+              width={androidApp.width}
+            />
             <h3 className="lg:text-3xl text-xl font-bold leading-[40px]">
               Complex applications for Android
             </h3>

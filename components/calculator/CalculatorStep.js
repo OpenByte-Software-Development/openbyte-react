@@ -5,13 +5,8 @@ import { v4 as uuid } from "uuid";
 
 import cardTooltipIcon from "../../public/calculator/card-tooltip.svg";
 
-const FeatureCard = ({
-  tooltip,
-  title,
-  icon,
-  isSelected,
-  cardClickHandler,
-}) => {
+const FeatureCard = ({ feature, isSelected, cardClickHandler }) => {
+  const { tooltip, title, icon } = feature;
   return (
     <div
       onClick={cardClickHandler}
@@ -25,7 +20,12 @@ const FeatureCard = ({
         <div className="flex justify-end order-2 lg:-order-none col-span-1 items-center">
           <div className="lg:flex items-center tooltip">
             <div className="flex items-center">
-              <Image src={cardTooltipIcon} alt={tooltip} />
+              <Image
+                src={cardTooltipIcon}
+                alt={tooltip}
+                height={cardTooltipIcon.height}
+                width={cardTooltipIcon.width}
+              />
             </div>
             <div className="tooltiptext flex flex-col justify-end items-center min-h-[120px] lg:-left-[115px] -left-[200px]">
               <div className="max-h-min bg-darkGray rounded-xl py-[9px] px-5">
@@ -37,7 +37,12 @@ const FeatureCard = ({
 
         <div className="lg:mt-2 mx-auto flex lg:flex-col items-center justify-start order-1 col-span-3 w-full lg:-order-none">
           <div className="lg:w-[100px] lg:h-[100px] w-[56px] h-[56px] flex lg:justify-center justify-start items-center lg:mx-auto">
-            <Image src={icon} alt={title} />
+            <Image
+              src={icon}
+              alt={title}
+              height={icon.height}
+              width={icon.width}
+            />
           </div>
 
           <span className="block text-center uppercase font-lato text-xs font-bold text-light-black ml-2">
@@ -57,7 +62,9 @@ const FeatureCard = ({
   );
 };
 
-const CalculatorStep = ({ title, description, options, cardClickHandler }) => {
+const CalculatorStep = ({ step, state, cardClickHandler }) => {
+  const { title, description, options } = step;
+
   return (
     <Tab.Panel className="lg:py-[52px] py-8">
       <div>
@@ -70,8 +77,9 @@ const CalculatorStep = ({ title, description, options, cardClickHandler }) => {
         <div className="flex justify-center gap-6 mt-8 lg:flex-row flex-col">
           {options.map((option, index) => (
             <FeatureCard
-              {...option}
               key={uuid()}
+              feature={option}
+              isSelected={state.options[index]}
               cardClickHandler={() => cardClickHandler(index)}
             />
           ))}

@@ -60,7 +60,12 @@ const WebFeatures = () => {
                 key={title}
               >
                 <div className="lg:col-span-2 col-span-3">
-                  <Image src={src} alt={`${title} icon`} />
+                  <Image
+                    src={src}
+                    height={src.height}
+                    width={src.width}
+                    alt={`${title} icon`}
+                  />
                 </div>
 
                 <div className="lg:col-span-10 col-span-9">

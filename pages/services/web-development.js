@@ -206,7 +206,7 @@ const WebDevelopment = () => {
           description="We create responsive web applications using the latest tech-stack to help you focus on your business."
           techStack={TECH_STACK}
         />
-        <Dots className="top-[170px]"/>
+        <Dots className="top-[170px]" />
       </div>
       <CommunicationChannels />
       <HowWeWork />

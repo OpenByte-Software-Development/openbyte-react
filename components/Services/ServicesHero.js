@@ -23,7 +23,12 @@ const ServicesHero = ({ title, description, ...imageProps }) => {
             </Link>
           </div>
           <div className="lg:mr-[48px] max-w-[145px] lg:max-w-none lg:w-auto mb-9 lg:mb-0">
-            <Image src={imageProps.src} alt={imageProps.alt} />
+            <Image
+              src={imageProps.src}
+              alt={imageProps.alt}
+              height={imageProps.src.height}
+              width={imageProps.src.width}
+            />
           </div>
         </div>
       </div>

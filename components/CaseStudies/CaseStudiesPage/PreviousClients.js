@@ -12,7 +12,7 @@ const previosClientsLogos = CASE_STUDIES.filter(
 const CaseStudyLogo = ({ src, alt }) => {
   return (
     <div className="flex">
-      <Image src={src} alt={alt} />
+      <Image src={src} alt={alt} height={src.height} width={src.width} />
     </div>
   );
 };

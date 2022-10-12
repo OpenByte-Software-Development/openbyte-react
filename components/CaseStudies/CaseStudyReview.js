@@ -23,10 +23,20 @@ const CaseStudyReview = ({
           <div className="relative">
             <div className="flex justify-between opacity-50 absolute w-full lg:-top-[35px] -top-[10px]">
               <div className="flex lg:max-w-full max-w-[29px]">
-                <Image src={quoteSign} alt="quote sign"/>
+                <Image
+                  src={quoteSign}
+                  alt="quote sign"
+                  height={quoteSign.height}
+                  width={quoteSign.width}
+                />
               </div>
               <div className="flex lg:max-w-full max-w-[29px]">
-                <Image src={quoteSign} alt="quote sign" />
+                <Image
+                  src={quoteSign}
+                  alt="quote sign"
+                  height={quoteSign.height}
+                  width={quoteSign.width}
+                />
               </div>
             </div>
 
@@ -41,6 +51,8 @@ const CaseStudyReview = ({
                   <Image
                     src={clientAvatar}
                     alt={`${clientName}'s avatar`}
+                    height={clientAvatar.height}
+                    width={clientAvatar.width}
                     className="rounded-full"
                   />
                 </div>

@@ -26,7 +26,12 @@ const ProjectTimeline = () => {
         <div className="grid grid-rows-1 lg:grid-cols-6 grid-cols-1 lg:gap-8 gap-12 mt-4 place-items-end justify-items-center container pt-6 pb-14 lg:pb-0 bg-project-timeline-mobile bg-no-repeat bg-[center_top_183px] lg:bg-none">
           <div className="">
             <div className="flex justify-center">
-              <Image src={projectTimeline1} alt="Discovery" />
+              <Image
+                src={projectTimeline1}
+                height={projectTimeline1.height}
+                width={projectTimeline1.width}
+                alt="Discovery"
+              />
             </div>
 
             <span className="text-2xl text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
@@ -36,7 +41,12 @@ const ProjectTimeline = () => {
 
           <div>
             <div className="flex justify-center">
-              <Image src={projectTimeline2} alt="Minimum Viable Product" />
+              <Image
+                src={projectTimeline2}
+                height={projectTimeline2.height}
+                width={projectTimeline2.width}
+                alt="Minimum Viable Product"
+              />
             </div>
 
             <span className="text-2xl text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
@@ -46,7 +56,12 @@ const ProjectTimeline = () => {
 
           <div>
             <div className="flex justify-center">
-              <Image src={projectTimeline3} alt="Product Backlog" />
+              <Image
+                src={projectTimeline3}
+                height={projectTimeline3.height}
+                width={projectTimeline3.width}
+                alt="Product Backlog"
+              />
             </div>
 
             <span className="text-2xl text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
@@ -56,7 +71,12 @@ const ProjectTimeline = () => {
 
           <div>
             <div className="flex justify-center">
-              <Image src={projectTimeline4} alt="Sprint Backlog" />
+              <Image
+                src={projectTimeline4}
+                height={projectTimeline4.height}
+                width={projectTimeline4.width}
+                alt="Sprint Backlog"
+              />
             </div>
 
             <span className="text-2xl text-black font-bold leading-[30px] mt-[14px] block lg:hidden">
@@ -67,10 +87,20 @@ const ProjectTimeline = () => {
           <div>
             <div className="flex lg:flex-col lg:items-end items-center">
               <div className="max-w-[143px] w-auto">
-                <Image src={projectTimeline51} alt="Daily cycle" />
+                <Image
+                  src={projectTimeline51}
+                  height={projectTimeline51.height}
+                  width={projectTimeline51.width}
+                  alt="Daily cycle"
+                />
               </div>
               <div>
-                <Image src={projectTimeline5} alt="Weekly cycle" />
+                <Image
+                  src={projectTimeline5}
+                  height={projectTimeline5.height}
+                  width={projectTimeline5.width}
+                  alt="Weekly cycle"
+                />
               </div>
             </div>
 
@@ -81,7 +111,12 @@ const ProjectTimeline = () => {
 
           <div>
             <div className="flex justify-center">
-              <Image src={projectTimeline6} alt="Delivered Product" />
+              <Image
+                src={projectTimeline6}
+                height={projectTimeline6.height}
+                width={projectTimeline6.width}
+                alt="Delivered Product"
+              />
             </div>
 
             <span className="text-2xl text-black font-bold leading-[30px] mt-[14px]block lg:hidden">

@@ -18,7 +18,12 @@ const Services = () => {
         <div className="grid lg:grid-rows-1 lg:grid-cols-3 grid-rows-3 grid-cols-1 mt-10 text-center lg:gap-10">
           <div className="">
             <div className="max-w-[152px] mx-auto lg:max-w-none">
-              <Image src={services1} alt="Web Development Services" />
+              <Image
+                src={services1}
+                alt="Web Development Services"
+                height={services1.height}
+                width={services1.width}
+              />
             </div>
 
             <div className="mt-10">
@@ -35,7 +40,12 @@ const Services = () => {
 
           <div className="">
             <div className="max-w-[152px] mx-auto lg:max-w-none">
-              <Image src={services2} alt="Mobile Application Decelopment" />
+              <Image
+                src={services2}
+                alt="Mobile Application Decelopment"
+                height={services2.height}
+                width={services2.width}
+              />
             </div>
 
             <div className="mt-10">
@@ -52,7 +62,12 @@ const Services = () => {
 
           <div className="">
             <div className="max-w-[152px] mx-auto lg:max-w-none">
-              <Image src={services3} alt="MVP development" />
+              <Image
+                src={services3}
+                alt="MVP development"
+                height={services3.height}
+                width={services3.width}
+              />
             </div>
 
             <div className="mt-10">

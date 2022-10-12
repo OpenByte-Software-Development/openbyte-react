@@ -16,7 +16,12 @@ const NotFound = () => {
             </h2>
 
             <div className="mx-auto w-auto flex justify-center mt-14">
-              <Image src={buddy404} alt="Oops... something went wrong" />
+              <Image
+                src={buddy404}
+                height={buddy404.height}
+                width={buddy404.width}
+                alt="Oops... something went wrong"
+              />
             </div>
           </div>
 

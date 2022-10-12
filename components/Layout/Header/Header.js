@@ -47,7 +47,8 @@ const Header = () => {
                 src={logo}
                 alt="Openbyte logo"
                 className="h-8"
-                height="32"
+                height={logo.height}
+                width={logo.width}
               />
             </a>
           </Link>
@@ -89,6 +90,8 @@ const Header = () => {
                         <Image
                           src={arrowIcon}
                           alt="arrow icon"
+                          height={arrowIcon.height}
+                          width={arrowIcon.width}
                           className={`duration-75 ${
                             open ? "rotate-180 origin-center duration-75" : ""
                           }`}
@@ -209,10 +212,18 @@ const Header = () => {
             <Image
               src={showMobileMenu ? xSign : hamburger}
               alt="hamburger icon"
+              height={hamburger.height}
+              width={hamburger.width}
             />
           </div>
           <div className="flex item s-center h-8 cursor-pointer">
-            <Image src={logo} alt="Openbyte logo" className="h-8" height="32" />
+            <Image
+              src={logo}
+              alt="Openbyte logo"
+              className="h-8"
+              height={logo.height}
+              width={logo.width}
+            />
           </div>
         </div>
         <MobileMenu show={showMobileMenu} basePath={basePath} />
