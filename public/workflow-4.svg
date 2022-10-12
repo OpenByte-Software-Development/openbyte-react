@@ -1,6 +1,6 @@
 <svg width="108" height="108" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect y="8" width="100" height="100" rx="24" fill="#FFD27C"/>
 <rect x="9" y="1" width="98" height="98" rx="23" stroke="#323232" stroke-width="2"/>
-<text fill="white" xml:space="preserve" style="white-space: pre" font-family="Raleway" font-size="64" font-weight="bold" letter-spacing="0.01em"><tspan x="31.25" y="80.092">4</tspan></text>
-<text stroke="#323232" stroke-width="2" xml:space="preserve" style="white-space: pre" font-family="Raleway" font-size="64" font-weight="bold" letter-spacing="0.01em"><tspan x="39.25" y="72.092">4</tspan></text>
+<path d="M52.05 80V69.696H32.914V62.016L54.738 34.56H60.626V61.952H66.258V69.696H60.626V80H52.05ZM41.554 61.952H53.01V47.488L41.554 61.952Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M58.0501 73.9996V63.6956H38.9141V53.3175L61.773 24.5596H70.6261V51.9516H76.2581V63.6956H70.6261V73.9996H58.0501ZM68.6261 61.6956H74.2581V53.9516H68.6261V26.5596H62.7381L40.9141 54.0156V61.6956H60.0501V71.9996H68.6261V61.6956ZM61.0101 53.9516H49.5541L61.0101 39.4876V53.9516ZM59.0101 45.2339L53.6895 51.9516H59.0101V45.2339Z" fill="#323232"/>
 </svg>
