@@ -111,7 +111,7 @@ const Header = () => {
                   >
                     <Popover.Panel className="border-t-3 border-orange bg-white absolute z-10 p-8 top-9 whitespace-nowrap max-w-fit">
                       <div className="w-full flex flex-col gap-4 text-sm font-bold">
-                        <Link prefetch={false} href="/services/web-development">
+                        <Link prefetch={false} href="/services/web-development-services">
                           <a
                             className={`max-w-fit w-auto ${inactiveNavItemStyle}`}
                           >
@@ -120,7 +120,7 @@ const Header = () => {
                         </Link>
                         <Link
                           prefetch={false}
-                          href="/services/mobile-applications"
+                          href="/services/mobile-application-development"
                         >
                           <a
                             className={`max-w-fit w-auto ${inactiveNavItemStyle}`}
@@ -128,7 +128,7 @@ const Header = () => {
                             Mobile Application Development
                           </a>
                         </Link>
-                        <Link prefetch={false} href="/services/mvp-development">
+                        <Link prefetch={false} href="/services/mvp-app-development">
                           <a
                             className={`max-w-fit w-auto ${inactiveNavItemStyle}`}
                           >
@@ -178,7 +178,7 @@ const Header = () => {
             </div>
 
             <div className="ml-10 relative">
-              <Link prefetch={false} href="/contact">
+              <Link prefetch={false} href="/contact-us">
                 <a
                   className={`${
                     basePath === "/contact"
@@ -193,7 +193,7 @@ const Header = () => {
           </nav>
 
           <div className="ml-20">
-            <Link prefetch={false} href="/contact">
+            <Link prefetch={false} href="/contact-us">
               <button className="bg-orange text-white text-base rounded-full py-[14px] px-8 font-extrabold">
                 Get a Quote
               </button>

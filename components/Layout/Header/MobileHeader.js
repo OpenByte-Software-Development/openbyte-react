@@ -98,7 +98,7 @@ const MobileMenu = ({ show, basePath }) => {
             <li
               className={`mb-6 text-center text-xl font-bold text-black cursor-pointer ${inactiveNavItemStyle}`}
             >
-              <Link prefetch={false} href="/calculator">
+              <Link prefetch={false} href="/app-cost-calculator">
                 Estimate App Cost
               </Link>
             </li>

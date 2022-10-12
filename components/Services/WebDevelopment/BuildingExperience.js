@@ -17,7 +17,7 @@ const BUILDING_EXPERIENCE_COLUMNS = [
 
 const BuildingExperience = () => {
   return (
-    <section className="bg-light-black bg-building-experience-background bg-no-repeat lg:bg-[top_48px_right_70px] bg-[top_10px_right_5px] bg-[length:45px_45px] lg:bg-[length:auto_auto] lg:py-28 py-14">
+    <section className="bg-light-black bg-building-experience-background bg-no-repeat lg:bg-[top_48px_right_70px] bg-[top_10px_right_5px] bg-[length:45px_45px] lg:bg-[length:auto_auto] lg:pb-[112px] lg:pt-[109px] py-14">
       <div className="container text-white">
         <h2 className="lg:text-4xl text-3xl font-bold text-center">
           We have experience in building

@@ -106,7 +106,7 @@ const WhatWeOffer = () => {
               </div>
 
               <div className="mt-4">
-                <Link prefetch={false} href="/calculator">
+                <Link prefetch={false} href="/app-cost-calculator">
                   <button className="lg:bg-orange lg:text-white text-orange lg:rounded-full lg:p-5 font-extrabold lg:w-full">
                     <div className="flex items-center lg:block">
                       <span className="mr-2 lg:mr-0">Estimate App Cost</span>

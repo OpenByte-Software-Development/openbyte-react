@@ -1,5 +1,7 @@
 import React from "react";
+import Head from "next/head";
 import dynamic from "next/dynamic";
+import { PAGE_TITLES } from "../../lib/constants";
 const Layout = dynamic(() => import("../../components/Layout/index"));
 const PreviousExperience = dynamic(() =>
   import("../../components/PreviousExperience")
@@ -14,6 +16,9 @@ const CaseStudies = dynamic(() =>
 const CaseStudiesHomepage = () => {
   return (
     <Layout>
+      <Head>
+        <title>{PAGE_TITLES.caseStudies}</title>
+      </Head>
       <div className="container pt-16">
         <PreviousClients />
         <CaseStudies />

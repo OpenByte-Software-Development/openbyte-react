@@ -53,78 +53,72 @@ const Footer = ({ variant = "dark" }) => {
         <div className="container mx-auto lg:py-16 py-8">
           <div className="grid grid-rows-1 grid-cols-2 lg:grid-cols-4">
             <div className="flex flex-col justify-between lg:justify-start">
-              <div className="max-w-[100px] lg:w-auto">
+              <div className="max-w-[100px] lg:max-w-none">
                 <Link prefetch={false} href="/" className="cursor-pointer">
                   <a>
                     <Image
                       src={logo}
                       alt="Openbyte logo"
-                      height={logo.height}
-                      width={logo.width}
+                      height={32}
+                      width={160}
                     />
                   </a>
                 </Link>
               </div>
 
-              <div className="grid lg:grid-rows-1 lg:grid-cols-2 grid-rows-2 grid-cols-1 w-44 lg:mt-8 mt-6 gap-8">
-                <div className="flex gap-8">
-                  <a
-                    href="https://www.instagram.com/open_byte/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="min-w-[22px]"
-                  >
-                    <Image
-                      src={socialIcons.instagram}
-                      alt="instagram logo"
-                      height={socialIcons.instagram.height}
-                      width={socialIcons.instagram.width}
-                    />
-                  </a>
-
-                  <a
-                    href="https://www.linkedin.com/company/open-byte-software-development/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="min-w-[22px]"
-                  >
-                    <Image
-                      src={socialIcons.linkedin}
-                      alt="linkedin logo"
-                      height={socialIcons.linkedin.height}
-                      width={socialIcons.linkedin.width}
-                    />
-                  </a>
-                </div>
-                <div className="flex gap-8">
-                  <a
-                    href="https://www.facebook.com/openbyte.dev"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="min-w-[22px]"
-                  >
-                    <Image
-                      src={socialIcons.facebook}
-                      alt="facebook logo"
-                      height={socialIcons.facebook.height}
-                      width={socialIcons.facebook.width}
-                    />
-                  </a>
-
-                  <a
-                    href="https://github.com/OpenByte-Software-Development"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="min-w-[22px]"
-                  >
-                    <Image
-                      src={socialIcons.github}
-                      alt="github logo"
-                      height={socialIcons.github.height}
-                      width={socialIcons.github.width}
-                    />
-                  </a>
-                </div>
+              <div className="grid lg:grid-rows-1 lg:grid-cols-4 grid-rows-2 grid-cols-2 lg:mt-8 mt-6 gap-[32px] lg:w-[170px] w-[76px]">
+                <a
+                  href="https://www.instagram.com/open_byte/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-[22px]"
+                >
+                  <Image
+                    src={socialIcons.instagram}
+                    alt="instagram logo"
+                    height={22}
+                    width={22}
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/open-byte-software-development/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-[22px]"
+                >
+                  <Image
+                    src={socialIcons.linkedin}
+                    alt="linkedin logo"
+                    height="22px"
+                    width="22px"
+                  />
+                </a>
+                <a
+                  href="https://www.facebook.com/openbyte.dev"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-[22px]"
+                >
+                  <Image
+                    src={socialIcons.facebook}
+                    alt="facebook logo"
+                    height="22px"
+                    width="22px"
+                  />
+                </a>
+                <a
+                  href="https://github.com/OpenByte-Software-Development"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-[22px]"
+                >
+                  <Image
+                    src={socialIcons.github}
+                    alt="github logo"
+                    height="22px"
+                    width="22px"
+                  />
+                </a>
               </div>
             </div>
 
@@ -133,17 +127,23 @@ const Footer = ({ variant = "dark" }) => {
                 <ul>
                   <li className=" text-gray">SERVICES</li>
                   <li className="mt-6">
-                    <Link prefetch={false} href="/services/web-development">
+                    <Link
+                      prefetch={false}
+                      href="/services/web-development-services"
+                    >
                       <a>Web Development Services</a>
                     </Link>
                   </li>
                   <li className="mt-6">
-                    <Link prefetch={false} href="/services/mobile-applications">
+                    <Link
+                      prefetch={false}
+                      href="/services/mobile-application-development"
+                    >
                       <a>Mobile Application Development</a>
                     </Link>
                   </li>
                   <li className="mt-6">
-                    <Link prefetch={false} href="/services/mvp-development">
+                    <Link prefetch={false} href="/services/mvp-app-development">
                       <a>MVP App Development</a>
                     </Link>
                   </li>
@@ -171,7 +171,7 @@ const Footer = ({ variant = "dark" }) => {
                     </Link>
                   </li>
                   <li className="mt-6">
-                    <Link prefetch={false} href="/calculator">
+                    <Link prefetch={false} href="/app-cost-calculator">
                       <a>Estimate App cost</a>
                     </Link>
                   </li>

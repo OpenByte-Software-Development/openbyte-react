@@ -47,11 +47,11 @@ const IndustryExpertise = ({ tags, title }) => {
 
         <div className="border-2 border-darkGray p-8 pb-[38px] rounded-3xl flex justify-between mt-12">
           <div className="text-white max-w-[766px]">
-            <h3 className="text-3xl font-bold leading-10">Ride-Sharing</h3>
+            <h3 className="text-3xl font-bold">Ride-Sharing</h3>
             <div className="block lg:hidden my-4">
               <ProjectMetadata />
             </div>
-            <p className="lg:text-xl text-base lg:leading-[32px] leading-[28px] mt-[21px] font-lato">
+            <p className="lg:text-xl text-base mt-[21px] leading-[32px] font-lato font-normal">
               The Ride-Sharing app helps to share your car with others during
               your trip, as a driver, you can add your car and set up your trip,
               also as a customer you can search for a destination and choose
@@ -60,9 +60,11 @@ const IndustryExpertise = ({ tags, title }) => {
 
             <div className="mt-[21px]">
               <Link prefetch={false} href="/case-studies/orange-car-sharing">
-                <button className=" text-orange text-sm py-5 font-extrabold ">
+                <button className=" text-orange text-sm">
                   <div className="flex items-center">
-                    <span className="mr-2 block">View Case Study</span>
+                    <span className="mr-2 block text-s font-extrabold">
+                      View Case Study
+                    </span>
                     <Image
                       src={arrowRight}
                       alt="arrow"

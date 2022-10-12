@@ -14,7 +14,7 @@ const ServicesHero = ({ title, description, ...imageProps }) => {
               {description}
             </p>
 
-            <Link prefetch={false} href="/contact">
+            <Link prefetch={false} href="/contact-us">
               <a>
                 <button className="py-[14px] px-8 bg-orange text-white text-base rounded-full font-extrabold lg:w-auto mt-11 w-full">
                   {"Let's talk"}
