@@ -323,54 +323,52 @@ const STEPS = {
 
 const calculatorStepOptions = Object.keys(STEPS);
 
-const CALCULATOR = {
-  countedHours: 0,
-  stepIndex: 0,
-  maxTab: 0,
-  type: {
-    options: [false, false, false],
-    isCompleted: false,
-    required: true,
-  },
-  authentication: {
-    options: [false, false, false, false],
-    isCompleted: false,
-    required: true,
-  },
-  profile: {
-    options: [false, false, false, false],
-    isCompleted: false,
-    required: false,
-  },
-  messages: {
-    isCompleted: false,
-    options: [false, false, false],
-    required: false,
-  },
-  payment: {
-    options: [false, false],
-    isCompleted: false,
-    required: false,
-  },
-  reports: {
-    options: [false],
-    isCompleted: false,
-    required: false,
-  },
-  reports: {
-    options: [false, false, false, false, false],
-    isCompleted: false,
-    required: false,
-  },
-  additional: {
-    isCompleted: false,
-    options: [],
-    required: false,
-  },
-};
-
-function init(initialState) {
-  return Object.assign({}, initialState);
+function getCalculatorInitialState() {
+  return {
+    countedHours: 0,
+    stepIndex: 0,
+    maxTab: 0,
+    type: {
+      options: [false, false, false],
+      isCompleted: false,
+      required: true,
+    },
+    authentication: {
+      options: [false, false, false, false],
+      isCompleted: false,
+      required: true,
+    },
+    profile: {
+      options: [false, false, false, false],
+      isCompleted: false,
+      required: false,
+    },
+    messages: {
+      isCompleted: false,
+      options: [false, false, false],
+      required: false,
+    },
+    payment: {
+      options: [false, false],
+      isCompleted: false,
+      required: false,
+    },
+    reports: {
+      options: [false],
+      isCompleted: false,
+      required: false,
+    },
+    reports: {
+      options: [false, false, false, false, false],
+      isCompleted: false,
+      required: false,
+    },
+    additional: {
+      isCompleted: false,
+      options: [],
+      required: false,
+    },
+  };
 }
 
 const calculatorReducer = (state, action) => {
@@ -393,7 +391,7 @@ const calculatorReducer = (state, action) => {
           calculatorState.countedHours + STEPS[step].options[index].hours;
       }
 
-      return calculatorState;
+      return { ...calculatorState };
     }
     case CALCULATOR_ACTIONS.COMPLETE_STEP: {
       const step = calculatorStepOptions[stepIndex];
@@ -402,14 +400,14 @@ const calculatorReducer = (state, action) => {
         calculatorState[step].isCompleted = true;
       }
 
-      return calculatorState;
+      return { ...calculatorState };
     }
     case CALCULATOR_ACTIONS.PREVIOUS_STEP: {
       if (stepIndex === 0) return calculatorState;
 
       calculatorState.stepIndex = stepIndex - 1;
 
-      return calculatorState;
+      return { ...calculatorState };
     }
     case CALCULATOR_ACTIONS.NEXT_STEP: {
       if (stepIndex + 1 === calculatorStepOptions.length)
@@ -421,24 +419,15 @@ const calculatorReducer = (state, action) => {
         calculatorState.maxTab = calculatorState.stepIndex;
       }
 
-      return calculatorState;
+      return { ...calculatorState };
     }
     case CALCULATOR_ACTIONS.SELECT_TAB: {
       const { index } = action;
-
       calculatorState.stepIndex = index;
-
-      return calculatorState;
+      return { ...calculatorState };
     }
     case CALCULATOR_ACTIONS.RESET_CALCULATOR: {
-      const payload = action.payload;
-      const newState = init({
-        ...payload,
-        steps: {
-          ...payload.steps,
-        },
-      });
-
+      const newState = getCalculatorInitialState();
       return newState;
     }
     default:
@@ -456,8 +445,8 @@ const Calculator = () => {
   const [showModal, setShowModal] = useState(false);
   const [calculator, dispatch] = useReducer(
     calculatorReducer,
-    CALCULATOR,
-    init
+    getCalculatorInitialState(),
+    getCalculatorInitialState
   );
 
   const cardClickHandler = (index) => {
@@ -479,7 +468,7 @@ const Calculator = () => {
   const resetCalculator = () =>
     dispatch({
       type: CALCULATOR_ACTIONS.RESET_CALCULATOR,
-      payload: CALCULATOR,
+      payload: getCalculatorInitialState(),
     });
 
   return (
