@@ -56,6 +56,7 @@ const ContactFormCta = ({ title = DEFAULT_TITLE }) => {
                       <Field
                         name="email"
                         id="email"
+                        type="email"
                         required
                         placeholder="Your Email"
                         className="rounded-[10px] px-4 py-3 text-darkGray"

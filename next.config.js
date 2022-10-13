@@ -4,4 +4,14 @@ const withPWA = require("next-pwa")({
   skipWaiting: true,
 });
 
-module.exports = withPWA({});
+module.exports = withPWA({
+  poweredByHeader: false,
+  async rewrites() {
+    return [
+      {
+        source: "/contact",
+        destination: "https://app.openbyte.dev/api/feedback",
+      },
+    ];
+  },
+});
