@@ -11,6 +11,7 @@ const TawkMessengerReact = dynamic(() =>
 import { ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
+import Script from "next/script";
 
 const MyApp = ({ Component, pageProps }) => {
   return (
@@ -33,6 +34,16 @@ const MyApp = ({ Component, pageProps }) => {
         propertyId="624c4d1a2abe5b455fc50397"
         widgetId="1fvt0qc0v"
       />
+      <Script id="google-analytics" strategy="lazyOnload">
+        {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            page_path: window.location.pathname,
+            });
+        `}
+      </Script>
       <CookiesConsent />
     </>
   );

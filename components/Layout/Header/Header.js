@@ -224,13 +224,15 @@ const Header = () => {
           </div>
           <div className="flex item s-center h-8 cursor-pointer">
             <Link href="/">
-              <Image
-                src={logo}
-                alt="Openbyte logo"
-                className="h-8"
-                height={logo.height}
-                width={logo.width}
-              />
+              <a>
+                <Image
+                  src={logo}
+                  alt="Openbyte logo"
+                  className="h-8"
+                  height={logo.height}
+                  width={logo.width}
+                />
+              </a>
             </Link>
           </div>
         </div>
