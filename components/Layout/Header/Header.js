@@ -111,7 +111,10 @@ const Header = () => {
                   >
                     <Popover.Panel className="border-t-3 border-orange bg-white absolute z-10 p-8 top-9 whitespace-nowrap max-w-fit">
                       <div className="w-full flex flex-col gap-4 text-sm font-bold">
-                        <Link prefetch={false} href="/services/web-development-services">
+                        <Link
+                          prefetch={false}
+                          href="/services/web-development-services"
+                        >
                           <a
                             className={`max-w-fit w-auto ${inactiveNavItemStyle}`}
                           >
@@ -128,7 +131,10 @@ const Header = () => {
                             Mobile Application Development
                           </a>
                         </Link>
-                        <Link prefetch={false} href="/services/mvp-app-development">
+                        <Link
+                          prefetch={false}
+                          href="/services/mvp-app-development"
+                        >
                           <a
                             className={`max-w-fit w-auto ${inactiveNavItemStyle}`}
                           >
@@ -181,7 +187,7 @@ const Header = () => {
               <Link prefetch={false} href="/contact-us">
                 <a
                   className={`${
-                    basePath === "/contact"
+                    basePath === "/contact-us"
                       ? activeNavItemStyle
                       : inactiveNavItemStyle
                   } text-sm font-bold`}
@@ -217,13 +223,15 @@ const Header = () => {
             />
           </div>
           <div className="flex item s-center h-8 cursor-pointer">
-            <Image
-              src={logo}
-              alt="Openbyte logo"
-              className="h-8"
-              height={logo.height}
-              width={logo.width}
-            />
+            <Link href="/">
+              <Image
+                src={logo}
+                alt="Openbyte logo"
+                className="h-8"
+                height={logo.height}
+                width={logo.width}
+              />
+            </Link>
           </div>
         </div>
         <MobileMenu show={showMobileMenu} basePath={basePath} />

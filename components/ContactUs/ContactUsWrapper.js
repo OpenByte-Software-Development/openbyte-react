@@ -1,4 +1,6 @@
 import ContactForm from "./ContactForm";
+import FormBuddy from "./FormBuddy";
+import FormBuddyMobile from "./FormBuddyMobile";
 
 const ContactUsWrapper = () => {
   return (
@@ -14,7 +16,11 @@ const ContactUsWrapper = () => {
                 your project at a good price and reduce unnecessary costs.
               </p>
             </div>
-            <ContactForm />
+            <div className="relative">
+              <ContactForm />
+              <FormBuddy />
+              <FormBuddyMobile />
+            </div>
           </div>
         </div>
       </div>
