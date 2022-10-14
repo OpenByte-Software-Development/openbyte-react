@@ -15,6 +15,7 @@ const CaseStudy = ({
   clutchProjectLink,
   className,
   previewBorder = true,
+  imageClassName = "object-cover object-left-top",
 }) => {
   const projectTags = tags.map((tagText, index) => (
     <Tag text={tagText} variant="blue" key={index} />
@@ -22,11 +23,42 @@ const CaseStudy = ({
 
   return (
     <div
-      className={`border-3 border-black rounded-3xl ${className} h-full flex justify-end items-center lg:py-8 lg:pl-12 lg:pr-0 py-6 px-9 `}
+      className={`${className} border-3 border-black rounded-3xl h-full flex justify-end items-center lg:py-8 lg:pl-12 lg:pr-0 py-6 px-9 `}
     >
-      <div className="h-max">
-        <div className="grid lg:grid-rows-1 lg:grid-cols-2 grid-rows-1 grid-cols-1 lg:gap-20">
-          <div className="order-2 lg:order-1 flex flex-col">
+      <div className="w-full">
+        <div className="lg:grid lg:grid-rows-1 lg:grid-cols-2 lg:gap-20 min-w-full order-2">
+          <div
+            className={`flex justify-end order-1 w-full relative lg:rounded-l-[25px] rounded-[25px] overflow-hidden lg:overflow-visible`}
+          >
+            <div
+              className={`${
+                previewBorder
+                  ? "border-3 lg:border-r-[0px] border-black lg:rounded-l-[25px] lg:rounded-r-[0px] rounded-[25px]"
+                  : "lg:pr-[32px] pr-0"
+              } grid overflow-hidden w-full`}
+            >
+              <Image
+                src={preview}
+                height={preview.height}
+                width={preview.width}
+                alt={imageAlt}
+                className={`${
+                  previewBorder
+                    ? imageClassName
+                    : " lg:object-fill object-cover object-left-top"
+                }`}
+              />
+            </div>
+
+            <div className="w-full h-full absolute top-0 left-0 flex justify-end flex-col bg-dark-gradient px-4 pb-3 lg:hidden">
+              <div className="text-white font-bold">
+                <h3 className="text-3xl">{title}</h3>
+                <h4 className="text-xl">{description}</h4>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col">
             <div>
               <h3 className="text-black text-6xl font-bold hidden lg:block">
                 {title}
@@ -42,7 +74,7 @@ const CaseStudy = ({
                   {projectTags}
                 </div>
 
-                <div className="lg:hidden flex items-end">
+                <div className="lg:hidden flex items-end justify-end">
                   <Link prefetch={false} href={clutchProjectLink}>
                     <a target="_blank" rel="noreferrer">
                       <Image
@@ -82,29 +114,6 @@ const CaseStudy = ({
                     </a>
                   </Link>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex justify-end order-1 w-full relative">
-            <div
-              className={`${
-                previewBorder &&
-                "border-3 lg:border-r-[0px] border-black lg:rounded-l-[27px] rounded-[25px] lg:rounded-none"
-              } grid overflow-hidden w-full h-[224px] lg:h-auto`}
-            >
-              <Image
-                src={preview}
-                height={preview.height}
-                width={preview.width}
-                alt={imageAlt}
-              />
-            </div>
-
-            <div className="w-full h-full absolute top-0 left-0 rounded-[25px] flex justify-end flex-col bg-dark-gradient px-4 pb-3 lg:hidden">
-              <div className="text-white font-bold">
-                <h3 className="text-3xl">{title}</h3>
-                <h4 className="text-xl">{description}</h4>
               </div>
             </div>
           </div>

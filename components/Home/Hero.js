@@ -64,7 +64,7 @@ const Hero = () => {
                           />
                         </div>
                         <span className="uppercase block font-lato text-sm">
-                          Reviews: 5
+                          {`Reviews: ${process.env.NEXT_PUBLIC_CLUTCH_REVIEWS}`}
                         </span>
                       </div>
                     </div>
