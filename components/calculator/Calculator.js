@@ -441,6 +441,28 @@ const getIsNextStepAvailable = (currentStep) => {
   return options.some((option) => option);
 };
 
+const formatCalculatorState = (calculatorState) => {
+  const state = {
+    days: Math.floor(calculatorState.countedHours / 8),
+    price: Math.floor(calculatorState.countedHours * hourlyRate),
+  };
+
+  calculatorStepOptions
+    .filter((step) => step !== "additional")
+    .forEach((step) => {
+      state[step] = {};
+
+      calculatorState[step].options.forEach((option, index) => {
+        state[step][[STEPS[step].options[index].title]] = calculatorState[step]
+          .options[index]
+          ? "Yes"
+          : "No";
+      });
+    });
+
+  return state;
+};
+
 const Calculator = () => {
   const [showModal, setShowModal] = useState(false);
   const [calculator, dispatch] = useReducer(
@@ -528,10 +550,7 @@ const Calculator = () => {
       <CalculatorCompleteModal
         showModal={showModal}
         setShowModal={setShowModal}
-        options={{
-          hours: calculator.countedHours,
-          price: Math.floor(calculator.countedHours * hourlyRate),
-        }}
+        options={formatCalculatorState(calculator)}
       />
     </section>
   );

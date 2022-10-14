@@ -51,7 +51,7 @@ const ContactFormCta = ({ title = DEFAULT_TITLE }) => {
                         id="name"
                         required
                         placeholder="Your Name"
-                        className="rounded-[10px] px-4 py-3 text-darkGray"
+                        className="rounded-[10px] px-4 py-3 text-black"
                       />
                       <Field
                         name="email"
@@ -59,7 +59,7 @@ const ContactFormCta = ({ title = DEFAULT_TITLE }) => {
                         type="email"
                         required
                         placeholder="Your Email"
-                        className="rounded-[10px] px-4 py-3 text-darkGray"
+                        className="rounded-[10px] px-4 py-3 text-black border-none focus:border-none outline-none focus:outline-none focus:ring-0"
                       />
                     </div>
 

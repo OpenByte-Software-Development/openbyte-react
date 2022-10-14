@@ -43,7 +43,7 @@ const ContactForm = () => {
           </div>
 
           <div>
-            <div className="grid lg:grid-rows-1 lg:grid-cols-3 grid-rows-3 grid-cols-1 lg:gap-8 gap-6">
+            <div className="grid lg:grid-rows-1 lg:grid-cols-3 grid-cols-1 lg:gap-[32px] gap-6">
               <div>
                 <label htmlFor="name" className="text-black font-bold text-xs">
                   NAME<span className="text-orange text-lg">*</span>
@@ -53,7 +53,7 @@ const ContactForm = () => {
                   name="name"
                   required
                   placeholder="Type something here"
-                  className="mt-4 py-4 px-4 text-black bg-white rounded-[10px] border-[1.5px] border-pale-orange focus:outline-none focus:border-orange w-full lg:w-auto"
+                  className="mt-4 py-[16px] px-4 text-black bg-white rounded-[10px] border-[1.5px] border-pale-orange focus:outline-none focus:border-orange w-full"
                 />
               </div>
 
@@ -67,7 +67,7 @@ const ContactForm = () => {
                   type="email"
                   required
                   placeholder="email@example.com "
-                  className="mt-4 py-[16px] px-4 rounded-[10px] bg-white border-[1.5px] text-black focus:ring-0 focus:border-[1.5px] border-pale-orange focus:border-orange w-full lg:w-auto"
+                  className="mt-4 py-[16px] px-4 rounded-[10px] bg-white border-[1.5px] text-black focus:ring-0 focus:border-[1.5px] border-pale-orange focus:border-orange w-full"
                 />
               </div>
 
@@ -77,14 +77,14 @@ const ContactForm = () => {
                   className="text-black font-bold text-xs"
                 >
                   PERSONAL LINKEDIN UL
-                  <span className="text-orange text-lg"></span>
+                  <span className="text-orange text-lg opacity-0"></span>
                 </label>
                 <Field
                   id="linkedin"
                   name="linkedin"
                   type="url"
                   placeholder="Type something here"
-                  className="mt-3 py-[16px] px-4 rounded-[10px] bg-white border-[1.5px] text-black focus:ring-0 focus:border-[1.5px] border-pale-orange focus:border-orange w-full lg:w-auto"
+                  className="mt-4 py-[16px] px-4 rounded-[10px] bg-white border-[1.5px] text-black focus:ring-0 focus:border-[1.5px] border-pale-orange focus:border-orange w-full"
                 />
               </div>
             </div>

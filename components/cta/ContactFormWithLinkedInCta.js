@@ -55,20 +55,21 @@ const ContactFormWithLinkedInCta = ({
                         id="name"
                         required
                         placeholder="Your Name"
-                        className="rounded-[10px] px-4 py-3 text-darkGray"
+                        className="rounded-[10px] px-4 py-3 text-black"
                       />
                       <Field
                         name="email"
                         id="email"
+                        type="email"
                         required
                         placeholder="Your Email"
-                        className="rounded-[10px] px-4 py-3 text-darkGray"
+                        className="rounded-[10px] px-4 py-3 border-none focus:border-none outline-none focus:outline-none focus:ring-0 text-black"
                       />
                       <Field
                         name="linkedIn"
                         id="linkedIn"
                         placeholder="LinkedIn URL"
-                        className="rounded-[10px] px-4 py-3 text-darkGray"
+                        className="rounded-[10px] px-4 py-3 text-black"
                       />
                     </div>
 

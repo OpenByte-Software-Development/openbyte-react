@@ -73,12 +73,3 @@ body {
 *:focus-visible {
   outline: none !important;
 }
-
-[type="email"]:focus {
-  outline: none !important;
-  offset: unset;
-  box-shadow: none;
-  outline-offset: unset;
-  inset: unset;
-  border: none;
-}
